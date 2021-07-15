@@ -1,0 +1,86 @@
+body {
+  background-color: #f4f4f4; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background: #fff;
+  color: #333;
+  line-height: 1.6rem;
+  box-sizing: border-box; }
+
+ul {
+  list-style: none; }
+
+a {
+  color: #333;
+  text-decoration: none; }
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2; }
+
+p {
+  margin: 10rem 0; }
+
+img {
+  width: 100%; }
+
+.img-logo {
+  width: 20rem; }
+
+.img-founder {
+  width: 20rem; }
+
+.img-local {
+  width: 20rem; }
+
+/* ---------Padding classes ---------- */
+/* padding top bottom*/
+.py-1 {
+  padding: 1.5rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+/* padding top bottom left right */
+.p-1 {
+  padding: 1.5rem; }
+
+.p-2 {
+  padding: 2rem; }
+
+.p-3 {
+  padding: 3rem; }
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 10rem;
+  overflow: hidden; }
+
+#main-nav {
+  background-color: #aaaaaa; }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  justify-content: center; }
+
+.nav-link {
+  font-size: 1.6rem; }
