@@ -1,0 +1,19 @@
+// Variables
+$website-width: 1280px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$dark-blue: #042744;
+$text-muted: #6c757d;
+$bg-image: url("../img/background.jpg");
+$font-numbers: "montserrat", sans-serif;
+
+// Set Text Color useful if you change any color it will evaluates color and set the new color if too light
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

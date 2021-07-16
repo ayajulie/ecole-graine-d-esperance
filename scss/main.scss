@@ -1,9 +1,7 @@
-$grey: #f4f4f4;
-$dark-grey: #aaaaaa;
-body {
-  background-color: $grey;
-}
-
+@import "config";
+@import "utilities";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+$light-grey: #f4f4f4;
 *,
 *::after,
 *::before {
@@ -17,7 +15,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   background: #fff;
   color: #333;
@@ -32,7 +30,9 @@ a {
   text-decoration: none;
 }
 h1,
-h2 {
+h2,
+h3,
+h4 {
   font-weight: 300;
   line-height: 1.2;
 }
@@ -54,44 +54,84 @@ img {
   }
 }
 
-/* ---------Padding classes ---------- */
-/* padding top bottom*/
-.py-1 {
-  padding: 1.5rem 0;
-}
-.py-2 {
-  padding: 2rem 0;
-}
-.py-3 {
-  padding: 3rem 0;
-}
-/* padding top bottom left right */
-.p-1 {
-  padding: 1.5rem;
-}
-.p-2 {
-  padding: 2rem;
-}
-.p-3 {
-  padding: 3rem;
-}
-.container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 0 10rem;
-  overflow: hidden;
-}
-#main-nav {
-  // height: 74px;
-  background-color: $dark-grey;
-}
-.navbar {
-  display: flex;
-  align-items: center;
-  align-content: space-between;
-  justify-content: center;
+// .navbar {
+//   display: flex;
+//   align-items: center;
+//   align-content: space-between;
+//   background-color: #fff;
+//   justify-content: center;
+//   height: 7rem;
+//   position: fixed;
+//   top: 0;
+//   padding: 0 3rem;
+//   width: 100%;
+
+//   ul {
+//     display: flex;
+//   }
+// }
+
+//------------------First section----------------//
+// Logo
+#logo {
+  width: 20rem;
 }
 
-.nav-link {
-  font-size: 1.6rem;
+// Main Nav
+//nav container
+#main-nav {
+  display: flex; //to be able to organize
+  justify-content: space-between; //for logo on one side and links & ul on the other
+  align-items: center;
+  padding-top: 1rem;
+
+  ul {
+    display: flex; //to be able to organize the li
+  }
+
+  li {
+    padding: 1rem 1.5rem; //adds padding between the lis
+  }
+
+  a {
+    text-decoration: none;
+    color: $dark-blue;
+    // text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-bottom: 3px transparent solid; //used for the hover effect
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s; //for smooth effect on the hover
+
+    &:hover {
+      border-color: $medium-color;
+    }
+  }
+}
+
+// Header
+#header {
+  // Header Home
+  &-home {
+    background: linear-gradient(to right top, #ffffff 0%, #d9e7ffbd 100%),
+      $bg-image no-repeat center right / cover;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    height: 95vh;
+
+    // Header text-box
+    .header-content {
+      text-align: left;
+      padding-right: 50%;
+      padding-top: 15%;
+      h1 {
+        font-size: 4rem;
+        line-height: 1.4;
+      }
+      p {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: $text-muted;
+      }
+    }
+  }
 }
