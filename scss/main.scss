@@ -17,7 +17,8 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  background: #fff;
+  background-color: #fdf2e9;
+
   color: #333;
   line-height: 1.6rem;
   box-sizing: border-box;
@@ -36,9 +37,14 @@ h4 {
   font-weight: 300;
   line-height: 1.2;
 }
-p {
-  margin: 10rem 0;
+h2 {
+  font-size: 4rem;
 }
+p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
 img {
   width: 100%;
 }
@@ -54,36 +60,27 @@ img {
   }
 }
 
-// .navbar {
-//   display: flex;
-//   align-items: center;
-//   align-content: space-between;
-//   background-color: #fff;
-//   justify-content: center;
-//   height: 7rem;
-//   position: fixed;
-//   top: 0;
-//   padding: 0 3rem;
-//   width: 100%;
-
-//   ul {
-//     display: flex;
-//   }
-// }
-
-//------------------First section----------------//
+//------------------HEADER----------------//
 // Logo
 #logo {
   width: 20rem;
 }
 
-// Main Nav
-//nav container
-#main-nav {
-  display: flex; //to be able to organize
-  justify-content: space-between; //for logo on one side and links & ul on the other
+#navbar {
   align-items: center;
-  padding-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0.8;
+  display: flex; //to be able to organize
+  flex-wrap: nowrap;
+  justify-content: space-between; //for logo on one side and links & ul on the other
+  left: 0;
+  max-width: $website-width;
+  margin: 0 auto;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: 100;
 
   ul {
     display: flex; //to be able to organize the li
@@ -96,9 +93,8 @@ img {
   a {
     text-decoration: none;
     color: $dark-blue;
-    // text-transform: uppercase;
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: bold;
     border-bottom: 3px transparent solid; //used for the hover effect
     padding-bottom: 0.5rem;
     transition: border-color 0.5s; //for smooth effect on the hover
@@ -108,29 +104,76 @@ img {
     }
   }
 }
-
+#navbar.top {
+  background: transparent;
+}
 // Header
 #header {
   // Header Home
   &-home {
-    background: linear-gradient(to right top, #ffffff 0%, #d9e7ffbd 100%),
+    background: linear-gradient(to right top, #ffffff 20%, #d9e7ff85 100%),
       $bg-image no-repeat center right / cover;
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
-    height: 95vh;
+    clip-path: ellipse(138% 100% at -0.16% 0%);
+    // clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    // clip-path: polygon(0% 0%, 0% 85%, 50% 100%, 100% 85%, 100% 0%);
+    height: 70vh;
 
     // Header text-box
     .header-content {
-      text-align: left;
-      padding-right: 50%;
-      padding-top: 15%;
+      width: 45%;
+      padding-top: 12%;
+      // padding-right: 50%;
+
       h1 {
-        font-size: 4rem;
+        font-size: 5rem;
         line-height: 1.4;
+        margin-bottom: 5rem;
       }
       p {
         font-size: 2rem;
-        line-height: 2.5rem;
         color: $text-muted;
+      }
+    }
+  }
+}
+
+//------------------SCHOOL SECTION----------------//
+#school {
+  background-color: #fdf2e9;
+  .commitment__title {
+    text-align: center;
+  }
+  .commitment__content {
+    margin-bottom: 4.5rem;
+    display: flex;
+    .commitment__photo {
+      width: 35rem;
+      border-radius: 1.8rem 0 0 1.8rem;
+      box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
+    }
+    .commitment__text-box {
+      display: flex;
+      font-size: 1.8rem;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: #fff;
+      border-radius: 0 1.8rem 1.8rem 0;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
+
+      // &--first {
+      //   color: blue;
+      // }
+      // &--second {
+      //   color: red;
+      // }
+      // &--third {
+      //   color: green;
+      // }
+      p {
+        font-size: 1.8rem;
       }
     }
   }

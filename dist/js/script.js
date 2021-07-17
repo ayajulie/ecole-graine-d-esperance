@@ -4,7 +4,7 @@ const navbar = document.getElementById('navbar');
 let scrolled = false; //we haven't started scoll yet
 
 window.onscroll = function () {
-  if (window.pageYOffset > 100) {  //under 100px 
+  if (window.pageYOffset > 500) {  //under 100px 
     navbar.classList.remove('top');     // remove the class "top" (the transparent bg)
     // if (!scrolled) {
     //   navbar.style.transform = 'translateY(-70px)';
