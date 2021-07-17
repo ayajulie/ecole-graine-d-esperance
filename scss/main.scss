@@ -140,9 +140,6 @@ img {
 //------------------SCHOOL SECTION----------------//
 #school {
   background-color: #fdf2e9;
-  .commitment__title {
-    text-align: center;
-  }
   .commitment__content {
     margin-bottom: 4.5rem;
     display: flex;
@@ -158,23 +155,38 @@ img {
       justify-content: space-around;
       background-color: #fff;
       border-radius: 0 1.8rem 1.8rem 0;
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
       box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
-
-      // &--first {
-      //   color: blue;
-      // }
-      // &--second {
-      //   color: red;
-      // }
-      // &--third {
-      //   color: green;
-      // }
       p {
         font-size: 1.8rem;
       }
     }
+  }
+}
+.values {
+  background-color: #fff;
+  padding-bottom: 5rem;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  &__boxes {
+    font-size: 1.8rem;
+    // background-color: $light-grey;
+    // border: solid black 1px;
+    text-align: center;
+    padding: 4rem 2rem;
+    line-height: 1.8rem;
+    color: $text-muted;
+    p {
+      font-size: 1.8rem;
+    }
+  }
+  i {
+    padding-bottom: 3rem;
+    background-color: white;
+    padding: 2rem;
   }
 }
