@@ -1,14 +1,16 @@
 // Variables
 $website-width: 1280px;
 $main-color: #ffbc00;
+$secondary-color: #e77f38;
 $light-yellow: #fdf2e9;
 $light-color: #fdfdfd;
-$medium-color: #ccc;
+$medium-color: #ddd;
 $dark-color: #333;
 $dark-blue: #042744;
 $text-muted: #6c757d;
 $bg-image: url("../img/background.jpg");
 $font-numbers: "montserrat", sans-serif;
+$shadow: 0 2.4rem 4.8rem #00000026;
 
 // Set Text Color useful if you change any color it will evaluates color and set the new color if too light
 @function set-text-color($color) {
