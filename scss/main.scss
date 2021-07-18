@@ -153,10 +153,9 @@ img {
       font-size: 1.8rem;
       flex-direction: column;
       justify-content: space-around;
-      background-color: #fff;
+      background-color: #f8f8f8;
       border-radius: 0 1.8rem 1.8rem 0;
-      padding-left: 3rem;
-      padding-right: 3rem;
+      padding: 0 6rem;
       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
       box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
       p {
@@ -166,7 +165,7 @@ img {
   }
 }
 .values {
-  background-color: #fff;
+  background-color: #f8f8f8;
   padding-bottom: 5rem;
   &__content {
     display: grid;
@@ -183,10 +182,29 @@ img {
     p {
       font-size: 1.8rem;
     }
+    .icons {
+      padding-bottom: 5rem;
+    }
   }
-  i {
-    padding-bottom: 3rem;
-    background-color: white;
-    padding: 2rem;
+}
+
+.founder {
+  &__content {
+    display: flex;
+    align-items: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  &__heading {
+    padding-bottom: 6rem;
+  }
+  &__img {
+    width: 30rem;
+    border-radius: 50%;
+    border: 5px solid #f8f8f8;
+  }
+  p {
+    font-size: 1.8rem;
+    color: $text-muted;
   }
 }
