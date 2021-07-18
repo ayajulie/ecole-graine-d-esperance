@@ -22,7 +22,10 @@
   <!-- HEADER -->
   <!-- NAVBAR -->
   <nav id="navbar" class="navbar top">
-    <img src="dist/img/logo.png" alt="logo de l'école" class="img-logo" id="logo">
+    <a href="#header-home">
+
+      <img src="dist/img/logo.png" alt="logo de l'école" class="img-logo" id="logo">
+    </a>
     <ul class="navbar">
       <!-- LOGO  -->
       <li class="nav-item"><a class="nav-link" href="#school">L'École</a></li>
@@ -236,36 +239,44 @@
   <section class="pricing" id="pricing">
     <div class="container">
 
-      <h2>Tarifs</h2>
+      <h2 class="title">Tarifs</h2>
+      <div class="bottom-line"></div>
       <h4>texte explicatif</h4>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum dicta quos itaque amet magni omnis quaerat
-        iusto sint nemo, doloribus iste delectus laborum nisi laboriosam incidunt vero consequuntur, ipsum ex magnam
-        minima! Corporis ullam cupiditate asperiores expedita quisquam eligendi odio soluta voluptatum amet tempora!
-        Quo,
-        quod esse? Nostrum consequuntur nam, ipsum unde eius assumenda! Molestiae pariatur corrupti, iste repellendus
-        cum
-        voluptate suscipit incidunt provident nisi esse alias iusto quisquam? Suscipit corporis illum ab alias
-        molestias?
-      </p>
-      <p>Pas de subvention de l'état</p>
-      <p>Volonté d'accueillir le plus grand nombre</p>
+      <div class="pricing__text">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum dicta quos itaque amet
+          magni omnis quaerat
+          iusto sint nemo, doloribus iste delectus laborum nisi laboriosam incidunt vero consequuntur, ipsum ex magnam
+          minima! Corporis ullam cupiditate asperiores expedita quisquam eligendi odio soluta voluptatum amet tempora!
+          Quo,
+          quod esse? Nostrum consequuntur nam, ipsum unde eius assumenda! Molestiae pariatur corrupti, iste repellendus
+          cum
+          voluptate suscipit incidunt provident nisi esse alias iusto quisquam? Suscipit corporis illum ab alias
+          molestias?
+        </p>
+        <p>Pas de subvention de l'état</p>
+        <p>Volonté d'accueillir le plus grand nombre</p>
+      </div>
 
-      <table>
+      <table id="princing__table">
         <thead>
-          <th>header col1</th>
-          <th>header col2</th>
-          <th>header col3</th>
+          <th>QF</th>
+          <th>Inférieur de 1000</th>
+          <th>1001 à 1200</th>
+          <th>+ 1201</th>
         </thead>
         <tbody>
           <tr>
-            <td>row1 col1</td>
-            <td>row1 col2</td>
-            <td>row1 col3</td>
+            <td scope="col">Temps plein</td>
+            <td> 275 &euro; / 11 mois </td>
+            <td> 350 &euro; / 11 mois </td>
+            <td>425 &euro; / 11 mois </td>
           </tr>
           <tr>
-            <td>row2 col1</td>
-            <td>row2 col2</td>
-            <td>row2 col3</td>
+            <td>Enfants de 3 - 6 ans à mi-temps</td>
+            <td> 160 &euro; / 11 mois</td>
+            <td> 235 &euro; / 11 mois</td>
+            <td> 310 &euro; / 11 mois</td>
+
           </tr>
         </tbody>
       </table>
@@ -273,6 +284,8 @@
   </section>
   <section class="contact" id="contact">
     <div class="container">
+      <h2 class="title">Tarifs</h2>
+      <div class="bottom-line"></div>
       <h2>Vous pouvez nous contacter au <span><a href="tel:+33785220611">07 85 22 06 11</a></span></h2>
       <!-- CONTACT FORM -->
       <div class="form-container">

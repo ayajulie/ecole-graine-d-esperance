@@ -266,3 +266,47 @@ img {
     }
   }
 }
+
+.pricing {
+  background: $light-color;
+  padding-bottom: 6rem;
+
+  .pricing__text {
+    padding-bottom: 5rem;
+  }
+  #princing__table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.8rem;
+    color: $text-muted;
+    margin: 0 auto;
+    line-height: 1.4;
+    table-layout: fixed;
+  }
+  #princing__table td,
+  #princing__table th {
+    border: 0.1rem solid #ddd;
+    padding: 0.8rem;
+  }
+
+  #princing__table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  #princing__table td:first-child {
+    background-color: $main-color;
+    color: $light-color;
+  }
+
+  #princing__table td {
+    width: 50%;
+  }
+
+  #princing__table th {
+    font-size: 1.8rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: $main-color;
+    color: white;
+  }
+}
