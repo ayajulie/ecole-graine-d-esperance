@@ -10,9 +10,16 @@
   color: #6c757d; }
 
 .title {
-  padding-top: 3rem;
-  padding-bottom: 6rem;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
   text-align: center; }
+
+.bottom-line {
+  height: 3px;
+  width: 6rem;
+  background: #ffbc00;
+  display: block;
+  margin: 0 auto 3rem auto; }
 
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
@@ -28,7 +35,7 @@
 
 .btn-light {
   color: #333;
-  background-color: #f4f4f4; }
+  background-color: #fdfdfd; }
 
 .btn-dark {
   color: #f4f4f4;
@@ -48,7 +55,7 @@ input[class^="btn-"]:hover {
   color: #fff; }
 
 .bg-light {
-  background: #f4f4f4;
+  background: #fdfdfd;
   color: #000; }
 
 .bg-medium {
@@ -106,13 +113,6 @@ input[class^="btn-"]:hover {
   font-weight: 100;
   text-transform: uppercase; }
 
-.bottom-line {
-  height: 3px;
-  width: 4rem;
-  background: #ffbc00;
-  display: block;
-  margin: 0 auto 1rem auto; }
-
 *,
 *::after,
 *::before {
@@ -147,6 +147,12 @@ h4 {
 
 h2 {
   font-size: 4rem; }
+
+h3 {
+  font-size: 3rem; }
+
+h4 {
+  font-size: 2rem; }
 
 p {
   font-size: 1.6rem;
@@ -215,30 +221,28 @@ img {
       font-size: 2rem;
       color: #6c757d; }
 
-#school {
-  background-color: #fdf2e9; }
-  #school .commitment__content {
-    margin-bottom: 4.5rem;
-    display: flex; }
-    #school .commitment__content .commitment__photo {
-      width: 35rem;
-      border-radius: 1.8rem 0 0 1.8rem;
-      box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px; }
-    #school .commitment__content .commitment__text-box {
-      display: flex;
-      font-size: 1.8rem;
-      flex-direction: column;
-      justify-content: space-around;
-      background-color: #f8f8f8;
-      border-radius: 0 1.8rem 1.8rem 0;
-      padding: 0 6rem;
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-      box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px; }
-      #school .commitment__content .commitment__text-box p {
-        font-size: 1.8rem; }
+#school .commitment__content {
+  margin-bottom: 4.5rem;
+  display: flex; }
+  #school .commitment__content .commitment__photo {
+    width: 35rem;
+    border-radius: 1.8rem 0 0 1.8rem;
+    box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px; }
+  #school .commitment__content .commitment__text-box {
+    display: flex;
+    font-size: 1.8rem;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fdfdfd;
+    border-radius: 0 1.8rem 1.8rem 0;
+    padding: 0 6rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px; }
+    #school .commitment__content .commitment__text-box p {
+      font-size: 1.8rem; }
 
 .values {
-  background-color: #f8f8f8;
+  background-color: #fdfdfd;
   padding-bottom: 5rem; }
   .values__content {
     display: grid;
@@ -266,8 +270,34 @@ img {
 .founder__img {
   width: 30rem;
   border-radius: 50%;
-  border: 5px solid #f8f8f8; }
+  border: 6px solid #ffbc00; }
 
 .founder p {
   font-size: 1.8rem;
   color: #6c757d; }
+
+.project {
+  background: #fdfdfd;
+  padding-bottom: 10rem; }
+  .project .pedagogy {
+    margin-bottom: 5rem; }
+  .project #slideshow {
+    position: relative;
+    height: 30rem;
+    border-radius: 0 1.8rem 0 1.8rem;
+    background: #fdf2e9;
+    padding: 2rem 5rem 10rem; }
+    .project #slideshow h2 {
+      padding-bottom: 2rem;
+      text-align: center; }
+    .project #slideshow h4 {
+      padding-bottom: 2rem; }
+    .project #slideshow div {
+      position: absolute;
+      top: 7rem;
+      left: 5rem;
+      right: 5rem;
+      bottom: 3rem;
+      padding: 2rem;
+      background: #fdfdfd;
+      border-radius: 1.8rem; }

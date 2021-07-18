@@ -18,6 +18,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   background-color: #fdf2e9;
+  // background-color: #ffbc00;
 
   color: #333;
   line-height: 1.6rem;
@@ -39,6 +40,12 @@ h4 {
 }
 h2 {
   font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2rem;
 }
 p {
   font-size: 1.6rem;
@@ -139,7 +146,6 @@ img {
 
 //------------------SCHOOL SECTION----------------//
 #school {
-  background-color: #fdf2e9;
   .commitment__content {
     margin-bottom: 4.5rem;
     display: flex;
@@ -153,7 +159,7 @@ img {
       font-size: 1.8rem;
       flex-direction: column;
       justify-content: space-around;
-      background-color: #f8f8f8;
+      background-color: $light-color;
       border-radius: 0 1.8rem 1.8rem 0;
       padding: 0 6rem;
       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -165,7 +171,7 @@ img {
   }
 }
 .values {
-  background-color: #f8f8f8;
+  background-color: $light-color;
   padding-bottom: 5rem;
   &__content {
     display: grid;
@@ -173,8 +179,6 @@ img {
   }
   &__boxes {
     font-size: 1.8rem;
-    // background-color: $light-grey;
-    // border: solid black 1px;
     text-align: center;
     padding: 4rem 2rem;
     line-height: 1.8rem;
@@ -201,10 +205,43 @@ img {
   &__img {
     width: 30rem;
     border-radius: 50%;
-    border: 5px solid #f8f8f8;
+    border: 6px solid $main-color;
+    // box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
   }
   p {
     font-size: 1.8rem;
     color: $text-muted;
+  }
+}
+
+.project {
+  background: $light-color;
+  padding-bottom: 10rem;
+  .pedagogy {
+    margin-bottom: 5rem;
+  }
+  #slideshow {
+    position: relative;
+    height: 30rem;
+    border-radius: 0 1.8rem 0 1.8rem;
+    background: $light-yellow;
+    padding: 2rem 5rem 10rem;
+    h2 {
+      padding-bottom: 2rem;
+      text-align: center;
+    }
+    h4 {
+      padding-bottom: 2rem;
+    }
+    div {
+      position: absolute;
+      top: 7rem;
+      left: 5rem;
+      right: 5rem;
+      bottom: 3rem;
+      padding: 2rem;
+      background: $light-color;
+      border-radius: 1.8rem;
+    }
   }
 }
