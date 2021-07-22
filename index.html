@@ -269,7 +269,7 @@
         <table id="princing__table">
           <thead>
             <th>QF</th>
-            <th>Inférieur de 1000</th>
+            <th>Inférieur à 1000</th>
             <th>1001 à 1200</th>
             <th>+ 1201</th>
           </thead>
@@ -296,25 +296,33 @@
       <div class="container">
         <h2 class="title">Contact</h2>
         <div class="bottom-line"></div>
-        <h2>Vous pouvez nous contacter au <span><a href="tel:+33785220611">07 85 22 06 11</a></span></h2>
         <!-- CONTACT FORM -->
         <div class="form-container">
+          <h3>Nous sommes également joignable au <span><a href="tel:+33785220611">07
+                85
+                22 06 11</a></span></h3>
           <form action="">
-            <select name="title" id="title">
-              <option value="Madame">Madame</option>
-              <option value="Monsieur">Monsieur</option>
-            </select>
-            <input type="text" name="name" id="name" placeholder="Votre nom">
-            <input type="email" name="email" id="email" placeholder="Votre email">
-            <input type="tel" name="tel" id="tel" placeholder="Votre numéro">
-            <textarea name="message" id="message" cols="50" rows="10" placeholder="Votre Message"></textarea>
+            <div class="text-fields">
+              <select name="title" id="title" class="form-input title-input ">
+                <option value="Madame">Madame</option>
+                <option value="Monsieur">Monsieur</option>
+              </select>
+              <input type="text" name="name" id="name" placeholder="Prénom Nom" class="form-input name-input">
+              <input type="email" name="email" id="email" placeholder="example@gmail.com"
+                class="form-input email-input">
+              <input type="tel" name="tel" id="tel" placeholder="0610203040" class="form-input phone-input">
+              <input type="text" name="subject" id="subject" placeholder="Objet" class="form-input subject-input">
+              <textarea name="message" id="message" cols="50" rows="5" placeholder="Votre Message"
+                class="form-input message-input"></textarea>
+            </div>
             <button type="submit">Envoyer</button>
           </form>
+
         </div>
       </div>
     </section>
   </main>
-  <footer>
+  <footer id="footer">
     <div class="container">
       <p>adresse</p>
       <p>Mentions légales</p>

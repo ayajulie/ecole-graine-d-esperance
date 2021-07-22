@@ -9,6 +9,9 @@ $light-grey: #f4f4f4;
   padding: 0;
   box-sizing: inherit;
 }
+*:focus {
+  outline: none;
+}
 
 html {
   font-size: 62.5%;
@@ -120,6 +123,7 @@ img {
   &-home {
     background: linear-gradient(to right top, #ffffff 20%, #d9e7ff85 100%),
       $bg-image no-repeat center right / cover;
+
     clip-path: ellipse(138% 100% at -0.16% 0%);
     // clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
     // clip-path: polygon(0% 0%, 0% 85%, 50% 100%, 100% 85%, 100% 0%);
@@ -142,6 +146,7 @@ img {
       p {
         font-size: 2rem;
         color: $text-muted;
+        // color: #fff;
       }
     }
   }
@@ -173,6 +178,7 @@ img {
 .values {
   background-color: $light-color;
   padding-bottom: 5rem;
+
   &__content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -182,7 +188,9 @@ img {
     text-align: center;
     padding: 4rem 2rem;
     line-height: 1.8rem;
+    font-family: "Montserrat";
     color: $text-muted;
+
     .icons {
       padding-bottom: 5rem;
     }
@@ -214,6 +222,11 @@ img {
 .project {
   background: $light-color;
   padding-bottom: 10rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/dist/img/leo-rivas-wtxcaDIdOCM-unsplash.jpg);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
   .pedagogy {
     margin-bottom: 5rem;
   }
@@ -223,12 +236,14 @@ img {
     border-radius: 0 1.8rem 0 1.8rem;
     background: $light-yellow;
     padding: 2rem 5rem 10rem;
+    color: $text-muted;
     h2 {
       padding-bottom: 2rem;
       text-align: center;
     }
-    h4 {
-      padding-bottom: 2rem;
+    h3 {
+      padding-bottom: 3rem;
+      color: $dark-blue;
     }
     div {
       position: absolute;
@@ -242,6 +257,8 @@ img {
     }
   }
 }
+
+//------------------PREMISES SECTION----------------//
 .premises {
   &__text {
     display: inline-block;
@@ -267,6 +284,7 @@ img {
   }
 }
 
+//------------------PRICING SECTION----------------//
 .pricing {
   background: $light-color;
   padding-bottom: 6rem;
@@ -276,72 +294,117 @@ img {
   }
   #princing__table {
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
     font-size: 1.8rem;
     color: $text-muted;
     margin: 0 auto;
     line-height: 1.4;
     table-layout: fixed;
-  }
-  #princing__table td,
-  #princing__table th {
-    border: 0.1rem solid #ddd;
-    padding: 0.8rem;
-  }
-
-  #princing__table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  #princing__table td:first-child {
-    background-color: $main-color;
-    color: $light-color;
-  }
-
-  #princing__table td {
-    width: 50%;
-  }
-
-  #princing__table th {
-    font-size: 1.8rem;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: $main-color;
-    color: white;
+    td,
+    th {
+      border: 0.1rem solid #ddd;
+      padding: 0.8rem;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    td:first-child {
+      background-color: $main-color;
+      // color: $light-color;
+    }
+    td {
+      width: 50%;
+    }
+    th {
+      font-size: 1.8rem;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: $main-color;
+      color: $text-muted;
+    }
   }
 }
+//------------------CONTACT SECTION----------------//
 #contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/dist/img/markus-spiske-IFCloi6PYOA-unsplash.jpg);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
   .form-container {
-    border-radius: 5px;
-    background-color: $secondary-color;
-    padding: 20px;
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea,
-    select {
-      width: 33%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
+    background-color: $main-color;
+    padding: 2rem 4rem;
+    text-align: center;
+    border-radius: 18px;
+    font-size: 1.8rem;
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      color: $text-muted;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
     }
+    .text-fields {
+      .form-input {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: $text-muted;
+        font-size: 1.8rem;
+        font-family: "Montserrat";
+        padding: 0.9rem 2rem;
+        margin: 0.8rem auto;
+        outline-color: $main-color;
+        width: 100%;
+      }
+      display: grid;
+      grid-template-areas:
+        "title name"
+        "phone email"
+        "subject subject"
+        "message message";
+      grid-gap: 1.2rem;
 
+      .title-input {
+        grid-area: title;
+      }
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+      }
+    }
     button[type="submit"] {
-      width: 100%;
-      background-color: $text-muted;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
+      background-color: #ffbc00;
       border: none;
       border-radius: 4px;
+      color: $text-muted;
       cursor: pointer;
+      font-size: 1.8rem;
+      font-family: "Montserrat";
+      padding: 14px 20px;
+      margin: 8px 0;
+      width: 100%;
     }
 
     button[type="submit"]:hover {
-      background-color: #45a049;
+      background-color: #cca028;
+      color: #fff;
     }
   }
 }
+
+//------------------FOOTER  SECTION----------------//
