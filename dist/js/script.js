@@ -35,13 +35,19 @@ $('#navbar a, .btn').on('click', function (e) {
   }
 });
 
-$("#slideshow > div:gt(0)").hide();
-
+var counter = 1;
 setInterval(function () {
-  $('#slideshow > div:first')
-    .fadeOut(1000)
-    .next()
-    .fadeIn(1000)
-    .end()
-    .appendTo('#slideshow');
-}, 3000)
+  document.getElementById('radio' + counter).checked = true;
+  counter++;
+  if (counter > 5) {
+    counter = 1;
+  }
+}, 6000);
+
+
+///////////////////////////////////////////////////////////
+// Set current year
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
+
