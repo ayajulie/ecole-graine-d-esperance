@@ -4,11 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="École Montessori Graine d'Espérance basée à Lyon dans le troisième arrondissement">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="École Montessori Graine d'Espérance basée à Lyon dans le troisième arrondissement">
   <meta name="author" content="Aya Koffi">
+
+  <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+  <meta property="og:site_name" content="" /> <!-- website name -->
+  <meta property="og:site" content="" /> <!-- website link -->
+  <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+  <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+  <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+  <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+  <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
 
   <link rel="icon" href="img/favicon.png" />
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
@@ -16,7 +28,7 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
@@ -89,13 +101,11 @@
             <img src="dist/img/kid-drawing.jpg" alt="Photo d'un enfant utilisant du matériel de la pédagogie Montessori"
               class="commitment__photo">
             <div class="commitment__text-box text-muted">
-              <p class="text-muted">
-              <div class="commitment__text-box--first">
-                <p>Nous ne pouvons pas limiter notre travail à la
-                  transmission du savoir et des fondamentaux, Notre but est plus global.</p>
-              </div>
-              <div class="commitment__text-box--second">
-                <p>Nous savons à quel point l’enfance a un impact sur la construction psychologique d’une personne.
+              <div class="container">
+                <p class="text-muted">Nous ne pouvons pas limiter notre travail à la
+                  transmission du savoir et des fondamentaux, Notre but est plus global.
+
+                  Nous savons à quel point l’enfance a un impact sur la construction psychologique d’une personne. <br>
                   C’est
                   pour
                   cela que nous voulons œuvrer au côté des familles pour préserver l’élan vital de ces précieuses
@@ -103,21 +113,16 @@
                   et
                   poser les jalons qui feront de cet enfant un adulte instruit, équilibré, épanoui, capable de faire
                   ses
-                  propres choix et de contribuer positivement à la société. </p>
+                  propres choix et de contribuer positivement à la société. <br>
+
+                  Notre souhait est que l’enfant apprenne dans la joie. Nous faisons confiance à l’enfant et lui
+                  accordons le
+                  droit à l’erreur car l’erreur est un cadeau, une opportunité pour apprendre. <br>
+                  Nous sommes conscients que chaque individu vient au monde avec un trésor enfoui en lui, une réponse
+                  pour l’humanité. Notre travail au quotidien
+                  est de pouvoir faire émerger cela.
+                </p>
               </div>
-              <div class="commitment__text-box--third">
-                <p> Notre souhait est que l’enfant apprenne dans la joie. Nous faisons confiance à
-                  l’enfant
-                  et
-                  lui accordons le
-                  droit à l’erreur car l’erreur est un cadeau, une opportunité pour apprendre. Nous sommes conscients
-                  que
-                  chaque
-                  individu vient au monde avec un trésor enfoui en lui, une réponse pour l’humanité. Notre travail au
-                  quotidien
-                  est de pouvoir faire émerger cela. </p>
-              </div>
-              </p>
             </div>
           </div>
         </div>
@@ -132,11 +137,11 @@
             <div class="values__content">
               <div class="values__boxes first">
                 <i class="fas fa-hand-holding-heart fa-4x icons"></i>
-                <p>La bienveillance</p>
+                <p>La Bienveillance</p>
               </div>
               <div class="values__boxes second">
                 <i class="fas fa-chalkboard-teacher fa-4x icons"></i>
-                <p>Le travail</p>
+                <p>Le Travail</p>
               </div>
               <div class="values__boxes third">
                 <i class="fas fa-child fa-4x icons"></i>
@@ -144,11 +149,11 @@
               </div>
               <div class="values__boxes fourth">
                 <i class="fas fa-heart fa-4x icons"></i>
-                <p>L'écoute, la patience, la bienveillance</p>
+                <p>L'écoute,<br> la patience,<br> la bienveillance</p>
               </div>
               <div class="values__boxes ">
                 <i class="fab fa-slideshare fa-4x icons"></i>
-                <p>Le partage, la solidarité</p>
+                <p>Le partage,<br> la solidarité</p>
               </div>
             </div>
           </div>
@@ -182,7 +187,8 @@
         <div class="bottom-line"></div>
 
         <div class="pedagogy">
-          <p><span>La pédagogie Montessori</span> part du postulat que tous les enfants sont curieux, aiment apprendre
+          <p class="intro"><span>La pédagogie Montessori</span> part du postulat que tous les enfants sont curieux,
+            aiment apprendre
             et
             travailler
             pourvu
@@ -204,7 +210,7 @@
               <!--slide images start-->
               <div class="slide first ">
                 <div>
-                  <h4>un environnement préparé</h4>
+                  <h4>Un environnement préparé</h4>
                   <p>qui répond à leurs périodes sensibles qui sont le mouvement, le raffinement sensoriel, l’ordre et
                     le
                     langage.
@@ -217,7 +223,7 @@
               </div>
               <div class="slide ">
                 <div>
-                  <h4>un temps de travail sans interruption </h4>
+                  <h4>Un temps de travail sans interruption </h4>
                   <p>qui permet une exploration libre sans contrainte et la répétition de l’activité choisie ; la
                     conséquence
                     est
@@ -289,6 +295,7 @@
             <!--manual navigation end-->
           </div>
           <!--image slider end-->
+
 
     </section>
 
@@ -406,6 +413,7 @@
     integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
   <!-- <script src="js/lightbox.min.js"></script> -->
   <script src="dist/js/script.js"></script>
+
 </body>
 
 </html>

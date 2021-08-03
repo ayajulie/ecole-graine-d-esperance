@@ -117,8 +117,7 @@ strong {
 
 .container {
   max-width: 1280px;
-  padding: 4rem 3rem;
-  padding: 0 3rem;
+  padding: 4rem 4rem;
   margin: 0 auto;
   overflow: hidden; }
 
@@ -298,7 +297,6 @@ strong {
   color: #6c757d; }
 
 .title {
-  padding-top: 6rem;
   padding-bottom: 3rem;
   text-align: center; }
 
@@ -702,16 +700,22 @@ input[class^="btn-"]:hover {
     justify-content: space-around;
     background-color: #fdfdfd;
     border-radius: 0 1.8rem 1.8rem 0;
-    padding: 0 6rem;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px; }
 
 .values {
   background-color: #fdfdfd;
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/dist//img/kid-drawing.jpg) no-repeat center right/cover;
+  background-attachment: fixed; }
+  .values h2 {
+    color: #fff; }
   .values__content {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); }
+    grid-template-columns: repeat(5, 1fr);
+    color: #fff; }
+    .values__content div {
+      color: #fff; }
   .values__boxes {
     font-size: 1.8rem;
     text-align: center;
@@ -719,6 +723,8 @@ input[class^="btn-"]:hover {
     line-height: 1.8rem;
     font-family: "Montserrat";
     color: #6c757d; }
+    .values__boxes p {
+      font-weight: 500; }
     .values__boxes .icons {
       padding-bottom: 5rem; }
 
@@ -741,44 +747,49 @@ input[class^="btn-"]:hover {
   color: #6c757d; }
 
 .project {
-  background: #fdfdfd;
   padding-bottom: 10rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/dist/img/pedagogy-bg.jpg);
+  background-color: #fdfdfd;
   background-size: cover;
-  color: #fff;
-  background-attachment: fixed;
   /*-------slideshow-----*/
   /*css for manual slide navigation (buttons)*/
   /*css for automatic navigation*/ }
   .project .pedagogy {
     margin-bottom: 5rem;
     position: relative; }
+    .project .pedagogy .intro {
+      padding-bottom: 4rem; }
   .project .slider {
-    width: 800px;
-    height: 500px;
+    width: 900px;
+    height: 300px;
     border-radius: 10px;
     overflow: hidden;
     margin: auto; }
     .project .slider .slides {
       width: 500%;
-      height: 500px;
-      display: flex; }
+      height: 300px;
+      display: flex;
+      background: #c184fa; }
+      .project .slider .slides h4 {
+        display: inline-block;
+        font-weight: 500;
+        padding: 2rem 3rem;
+        text-align: center; }
+      .project .slider .slides p {
+        padding: 0 3rem; }
       .project .slider .slides input {
         display: none; }
       .project .slider .slides .slide {
         width: 20%;
-        transition: 2s; }
-        .project .slider .slides .slide img {
-          width: 800px;
-          height: 500px; }
+        transition: 2s;
+        color: #fff; }
   .project .navigation-manual {
     position: absolute;
-    width: 800px;
+    width: 900px;
     margin-top: -40px;
     display: flex;
     justify-content: center; }
   .project .manual-btn {
-    border: 2px solid #40d3dc;
+    border: 2px solid #ffbc00;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -804,22 +815,22 @@ input[class^="btn-"]:hover {
     justify-content: center;
     margin-top: 460px; }
   .project .navigation-auto div {
-    border: 2px solid #40d3dc;
+    border: 2px solid #ffbc00;
     padding: 5px;
     border-radius: 10px;
     transition: 1s; }
     .project .navigation-auto div:not(:last-child) {
       margin-right: 40px; }
   .project #radio1:checked ~ .navigation-auto .auto-btn1 {
-    background: #40d3dc; }
+    background: #ffbc00; }
   .project #radio2:checked ~ .navigation-auto .auto-btn2 {
-    background: #40d3dc; }
+    background: #ffbc00; }
   .project #radio3:checked ~ .navigation-auto .auto-btn3 {
-    background: #40d3dc; }
+    background: #ffbc00; }
   .project #radio4:checked ~ .navigation-auto .auto-btn4 {
-    background: #40d3dc; }
+    background: #ffbc00; }
   .project #radio5:checked ~ .navigation-auto .auto-btn5 {
-    background: #40d3dc; }
+    background: #ffbc00; }
 
 .premises__text {
   display: inline-block;
@@ -871,7 +882,7 @@ input[class^="btn-"]:hover {
       color: #6c757d; }
 
 #contact {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/dist/img/markus-spiske-IFCloi6PYOA-unsplash.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/dist/img/pencils-color-light.jpg);
   background-size: cover;
   color: #fff;
   background-attachment: fixed; }
