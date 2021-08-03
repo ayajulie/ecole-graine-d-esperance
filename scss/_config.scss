@@ -106,10 +106,6 @@ $bg-dark: #eb984e;
   padding: 0;
   box-sizing: inherit;
 }
-*:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.8rem #e67d2280;
-}
 
 html {
   font-size: 62.5%;
@@ -159,4 +155,7 @@ img {
 
 strong {
   font-weight: 500;
+}
+*:focus {
+  outline: none;
 }
