@@ -1,6 +1,6 @@
 .container {
   max-width: $website-width;
-  padding: 4rem 4rem;
+  padding: 4rem 4.5rem;
   // padding: 0 3rem;
   margin: 0 auto;
   overflow: hidden;
@@ -232,6 +232,7 @@ strong {
   height: 3px;
   width: 6rem;
   background: #ffbc00;
+  background: $purple-color;
   display: block;
   margin: 0 auto 3rem auto;
 }

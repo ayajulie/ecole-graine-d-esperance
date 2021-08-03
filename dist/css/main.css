@@ -117,7 +117,7 @@ strong {
 
 .container {
   max-width: 1280px;
-  padding: 4rem 4rem;
+  padding: 4rem 4.5rem;
   margin: 0 auto;
   overflow: hidden; }
 
@@ -304,6 +304,7 @@ strong {
   height: 3px;
   width: 6rem;
   background: #ffbc00;
+  background: #c184fa;
   display: block;
   margin: 0 auto 3rem auto; }
 
@@ -624,15 +625,6 @@ input[class^="btn-"]:hover {
     margin-right: 0;
     margin-bottom: 4.8rem; } }
 
-.img-logo {
-  width: 20rem; }
-
-.img-founder {
-  width: 20rem; }
-
-.img-local {
-  width: 20rem; }
-
 #logo {
   width: 20rem; }
 
@@ -650,13 +642,16 @@ input[class^="btn-"]:hover {
   top: 0;
   position: fixed;
   z-index: 100; }
+  #navbar .img-logo {
+    width: 20rem; }
   #navbar ul {
     display: flex; }
   #navbar li {
     padding: 1rem 1.5rem; }
   #navbar .nav-link {
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    color: #734f96;
     font-weight: bold;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
@@ -673,16 +668,24 @@ input[class^="btn-"]:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/background.jpg") no-repeat center right/cover;
   clip-path: ellipse(138% 100% at -0.16% 0%);
   color: #fff;
-  height: 70vh; }
+  height: 85vh; }
   #header-home .header-content {
-    width: 45%;
+    width: 50%;
     padding-top: 12%;
-    color: #fff; }
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start; }
     #header-home .header-content .heading-primary {
-      font-size: 5rem;
+      font-size: 3.5rem;
+      font-weight: 600;
       line-height: 1.4;
       margin-bottom: 5rem;
       color: #fff; }
+      #header-home .header-content .heading-primary--sub {
+        font-weight: 300;
+        font-style: italic; }
     #header-home .header-content p {
       font-size: 2rem; }
 
@@ -740,7 +743,7 @@ input[class^="btn-"]:hover {
 .founder__img {
   width: 30rem;
   border-radius: 50%;
-  border: 0.8rem solid #ffde84; }
+  border: 0.8rem solid #c184fa; }
 
 .founder p {
   font-size: 1.8rem;
@@ -879,7 +882,8 @@ input[class^="btn-"]:hover {
       padding-bottom: 12px;
       text-align: left;
       background-color: #ffde84;
-      color: #6c757d; }
+      background-color: #734f96;
+      color: #fff; }
 
 #contact {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/dist/img/pencils-color-light.jpg);
@@ -928,10 +932,10 @@ input[class^="btn-"]:hover {
       #contact .form-container .text-fields .message-input {
         grid-area: message; }
     #contact .form-container button[type="submit"] {
-      background-color: #ffbc00;
+      background-color: #734f96;
       border: none;
       border-radius: 4px;
-      color: #6c757d;
+      color: #fff;
       cursor: pointer;
       font-size: 1.8rem;
       font-family: "Montserrat";
