@@ -220,202 +220,84 @@
   /* Slideshow container */
   .slideshow-container {
     position: relative;
-    background: #f1f1f1f1;
-  }
+    background: $dark-purple;
+    color: #fff;
+    /* Slides */
 
-  /* Slides */
-  .mySlides {
-    display: none;
-    padding: 80px;
-    text-align: center;
-  }
+    /* Add an italic font style to all quotes */
+    q {
+      font-style: italic;
+    }
 
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 16px;
-    color: #888;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
+    /* Add a blue color to the author */
 
-  /* Position the "next button" to the right */
-  .next {
-    position: absolute;
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    .mySlides {
+      display: none;
+      padding: 3rem 8rem;
+      // text-align: center;
+      .slide-title {
+        color: $yellow-dark;
+        font-weight: 500;
+        padding-bottom: 1.5rem;
+        text-align: center;
+      }
+      p {
+        font-weight: 500;
+        height: 10rem;
+      }
+    }
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -3rem;
+      padding: 1.6rem;
+      color: $yellow-dark;
+      font-weight: bold;
+      font-size: 2rem;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      &:hover {
+        background-color: $yellow-light;
+        color: white;
+        color: $dark-purple;
+      }
+    }
+    /* Position the "next button" to the right */
+    .next {
+      position: absolute;
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
   }
 
   /* The dot/bullet/indicator container */
   .dot-container {
     text-align: center;
-    padding: 20px;
-    background: #ddd;
-  }
-
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  /* Add a background color to the active dot/circle */
-  .active,
-  .dot:hover {
-    background-color: #717171;
-  }
-
-  /* Add an italic font style to all quotes */
-  q {
-    font-style: italic;
-  }
-
-  /* Add a blue color to the author */
-  .author {
-    color: cornflowerblue;
-  }
-  /*-------slideshow-----*/
-  .slider {
-    width: 900px;
-    height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: auto;
-    .slides {
-      width: 500%;
-      height: 300px;
-      display: flex;
-      background: $purple-color;
-      background-color: $dark-purple;
-      align-content: center;
-
-      h4 {
-        font-weight: 500;
-        padding: 4rem 3rem;
-        margin: 0 auto;
-        color: $yellow-light;
-      }
-      p {
-        padding: 0 3rem;
-      }
-      input {
-        display: none;
-      }
-      .slide {
-        width: 20%;
-        transition: 2s;
-        color: #fff;
-      }
+    padding: 2rem;
+    background: $yellow-light;
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
     }
-  }
 
-  /*css for manual slide navigation (buttons)*/
-
-  .navigation-manual {
-    position: absolute;
-    width: 900px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .manual-btn {
-    border: 2px solid $purple-color;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-  }
-
-  .manual-btn:not(:last-child) {
-    margin-right: 40px;
-  }
-
-  .manual-btn:hover {
-    background: #40d3dc;
-  }
-
-  #radio1:checked ~ .first {
-    margin-left: 0;
-  }
-
-  #radio2:checked ~ .first {
-    margin-left: -20%;
-  }
-
-  #radio3:checked ~ .first {
-    margin-left: -40%;
-  }
-
-  #radio4:checked ~ .first {
-    margin-left: -60%;
-  }
-  #radio5:checked ~ .first {
-    margin-left: -80%;
-  }
-
-  /*css for automatic navigation*/
-
-  .navigation-auto {
-    position: absolute;
-    display: flex;
-    width: 800px;
-    justify-content: center;
-    margin-top: 460px;
-  }
-
-  .navigation-auto {
-    div {
-      border: 2px solid $yellow-dark;
-      padding: 5px;
-      border-radius: 10px;
-      transition: 1s;
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
+    /* Add a background color to the active dot/circle */
+    .active,
+    .dot:hover {
+      background-color: $yellow-dark;
     }
-  }
-
-  #radio1:checked ~ .navigation-auto .auto-btn1 {
-    background: $yellow-dark;
-  }
-
-  #radio2:checked ~ .navigation-auto .auto-btn2 {
-    background: $yellow-dark;
-  }
-
-  #radio3:checked ~ .navigation-auto .auto-btn3 {
-    background: $yellow-dark;
-  }
-
-  #radio4:checked ~ .navigation-auto .auto-btn4 {
-    background: $yellow-dark;
-  }
-  #radio5:checked ~ .navigation-auto .auto-btn5 {
-    background: $yellow-dark;
   }
 }
-
 //------------------PREMISES SECTION----------------//
 .premises {
   &__text {
