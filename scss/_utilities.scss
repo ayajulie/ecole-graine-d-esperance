@@ -1,22 +1,15 @@
 .container {
   max-width: $website-width;
-  padding: 4rem 4.5rem;
-  // padding: 0 3rem;
+
+  padding: 4rem 1.6rem;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .grid {
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
-
-  /* margin-bottom: 9.6rem; */
 }
-
-/* .grid:last-child {
-  margin-bottom: 0;
-} */
 
 .grid:not(:last-child) {
   margin-bottom: 9.6rem;
@@ -40,44 +33,6 @@
 
 .grid--center-v {
   align-items: center;
-}
-
-.heading-primary,
-.heading-secondary,
-.heading-tertiary {
-  font-weight: 700;
-  color: #333;
-  /* color: #45260a; */
-  /* color: #343a40; */
-  letter-spacing: -0.5px;
-}
-
-.heading-primary {
-  font-size: 5.2rem;
-  line-height: 1.05;
-  margin-bottom: 3.2rem;
-}
-
-.heading-secondary {
-  font-size: 4.4rem;
-  line-height: 1.2;
-  margin-bottom: 9.6rem;
-}
-
-.heading-tertiary {
-  font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 3.2rem;
-}
-
-.subheading {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #cf711f;
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
-  letter-spacing: 0.75px;
 }
 
 .btn,
@@ -224,7 +179,6 @@ strong {
 .bottom-line {
   height: 3px;
   width: 6rem;
-  background: #ffbc00;
   background: $purple-color;
   display: block;
   margin: 0 auto 3rem auto;
@@ -244,13 +198,13 @@ strong {
   &-main {
     @extend %btn-shared;
     color: #333;
-    background-color: $main-color;
+    background-color: $yellow-light;
   }
 
   &-light {
     @extend %btn-shared;
     color: #333;
-    background-color: $light-color;
+    background-color: $bg-light;
   }
 
   &-dark {
@@ -263,22 +217,22 @@ strong {
 button[class^="btn-"]:hover, //selects any button that has a class of btn-
 a[class^="btn-"]:hover, //selects any link that has class of btn-
 input[class^="btn-"]:hover {
-  background-color: $main-color; //for all selected change the bcg
+  background-color: $yellow-light; //for all selected change the bcg
 }
 
 // Backgrounds colors
 .bg {
   &-main {
-    background: $main-color;
-    color: set-text-color($main-color);
+    background: $yellow-light;
+    color: set-text-color($yellow-light);
   }
   &-dark {
     background: $dark-color;
     color: set-text-color($dark-color);
   }
   &-light {
-    background: $light-color;
-    color: set-text-color($light-color);
+    background: $bg-light;
+    color: set-text-color($bg-light);
   }
   &-medium {
     background: $medium-color;

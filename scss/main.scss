@@ -1,7 +1,6 @@
 @import "config";
 @import "utilities";
 @import "queries";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
 
 //------------------HEADER----------------//
 // Logo
@@ -47,11 +46,11 @@
     transition: border-color 0.5s; //for smooth effect on the hover
 
     &:hover {
-      border-color: $main-color;
+      border-color: $yellow-light;
     }
     &:focus {
-      // outline: 4px solid $main-color;
-      border-color: $main-color;
+      // outline: 4px solid $yellow-light;
+      border-color: $yellow-light;
     }
   }
 }
@@ -84,18 +83,18 @@
 
       .heading-primary {
         font-size: 3.5rem;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 1.4;
         margin-bottom: 5rem;
         color: #fff;
         &--sub {
           font-weight: 300;
-          font-style: italic;
+
           color: $purple-color;
         }
       }
       p {
-        font-size: 2rem;
+        font-size: 1.8rem;
 
         // color: #fff;
       }
@@ -103,37 +102,48 @@
   }
 }
 
-//------------------SCHOOL SECTION----------------//
+//-------------------------------SCHOOL SECTION---------------------------//
 #school {
   .commitment__content {
-    margin-bottom: 4.5rem;
-    display: flex;
-    .commitment__photo {
-      height: auto;
-      max-height: 60rem;
-      border-radius: 1.8rem 0 0 1.8rem;
-      box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
-    }
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     .commitment__text-box {
-      display: flex;
-      flex-grow: 2;
-      font-size: 1.8rem;
-      flex-direction: column;
-      justify-content: space-around;
-      background-color: $light-color;
-      border-radius: 0 1.8rem 1.8rem 0;
+      font-size: 1.6rem;
+      background-color: $bg-white;
+      padding: 0 4rem;
+      .highlighted-text {
+        font-weight: 500;
+        color: $dark-purple;
+      }
+    }
 
-      // padding: 6rem;
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-      box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
+    .gradient-overlay {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-image: linear-gradient(
+          to bottom left,
+          $dark-color,
+          $purple-color
+        );
+        opacity: 0.4;
+      }
     }
   }
 }
+
+//-----------------------------VALUES SECTION--------------------------//
 .values {
-  background-color: $light-color;
+  background-color: $bg-white;
   padding-bottom: 5rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/dist//img/maths.jpg) no-repeat center right / cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/dist/img/maths.jpg) no-repeat center / cover;
   background-attachment: fixed;
 
   h2 {
@@ -148,10 +158,10 @@
     }
   }
   &__boxes {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-align: center;
     padding: 4rem 2rem;
-    line-height: 1.8rem;
+    line-height: 1.6rem;
     font-family: "Montserrat";
     color: $text-muted;
     p {
@@ -170,23 +180,26 @@
       padding-bottom: 6rem;
     }
     &__heading {
-      padding-bottom: 6rem;
+      padding-bottom: 4rem;
     }
     &__img {
-      width: 30rem;
+      width: 40rem;
       border-radius: 50%;
-      border: 0.8rem solid $main-color;
+      border: 0.8rem solid $yellow-light;
       // box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
     }
     p {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       color: $text-muted;
+      padding-bottom: 1.5rem;
+      font-weight: 500;
+      // color: $text-muted;
     }
   }
 }
 .project {
   padding-bottom: 10rem;
-  background-color: $light-color;
+  background-color: $bg-white;
   background-size: cover;
 
   .pedagogy {
@@ -195,9 +208,92 @@
 
     .intro {
       padding-bottom: 4rem;
+      font-weight: 500;
+      // line-height: 2;
+      span {
+        font-weight: 600;
+        color: $purple-color;
+        font-size: 1.8rem;
+      }
     }
   }
+  /* Slideshow container */
+  .slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+  }
 
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  /* Add a background color to the active dot/circle */
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Add an italic font style to all quotes */
+  q {
+    font-style: italic;
+  }
+
+  /* Add a blue color to the author */
+  .author {
+    color: cornflowerblue;
+  }
   /*-------slideshow-----*/
   .slider {
     width: 900px;
@@ -210,13 +306,14 @@
       height: 300px;
       display: flex;
       background: $purple-color;
-      // align-items: center;
-      // padding: 0 2rem;
+      background-color: $dark-purple;
+      align-content: center;
+
       h4 {
-        display: inline-block;
         font-weight: 500;
-        padding: 2rem 3rem;
-        text-align: center;
+        padding: 4rem 3rem;
+        margin: 0 auto;
+        color: $yellow-light;
       }
       p {
         padding: 0 3rem;
@@ -243,7 +340,7 @@
   }
 
   .manual-btn {
-    border: 2px solid $highlight-color;
+    border: 2px solid $purple-color;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -289,7 +386,7 @@
 
   .navigation-auto {
     div {
-      border: 2px solid $highlight-color;
+      border: 2px solid $yellow-dark;
       padding: 5px;
       border-radius: 10px;
       transition: 1s;
@@ -300,22 +397,22 @@
   }
 
   #radio1:checked ~ .navigation-auto .auto-btn1 {
-    background: $highlight-color;
+    background: $yellow-dark;
   }
 
   #radio2:checked ~ .navigation-auto .auto-btn2 {
-    background: $highlight-color;
+    background: $yellow-dark;
   }
 
   #radio3:checked ~ .navigation-auto .auto-btn3 {
-    background: $highlight-color;
+    background: $yellow-dark;
   }
 
   #radio4:checked ~ .navigation-auto .auto-btn4 {
-    background: $highlight-color;
+    background: $yellow-dark;
   }
   #radio5:checked ~ .navigation-auto .auto-btn5 {
-    background: $highlight-color;
+    background: $yellow-dark;
   }
 }
 
@@ -324,9 +421,11 @@
   &__text {
     display: inline-block;
     text-align: center;
+    font-weight: 500;
   }
   &__text--sub {
     padding-bottom: 5rem;
+    color: $dark-purple;
   }
   .premises__container {
     display: flex;
@@ -346,19 +445,26 @@
 
 //------------------PRICING SECTION----------------//
 .pricing {
-  background: $light-color;
+  background: $bg-white;
   padding-bottom: 6rem;
-
+  &__heading {
+    padding-bottom: 3rem;
+    font-weight: 500;
+    font-size: 2rem;
+  }
   .pricing__text {
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
+    p {
+      padding-bottom: 1rem;
+    }
   }
   #princing__table {
     border-collapse: collapse;
     width: 90%;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: $text-muted;
     margin: 0 auto;
-    line-height: 1.4;
+    line-height: 1.6;
     table-layout: fixed;
     td,
     th {
@@ -369,19 +475,20 @@
       background-color: #f2f2f2;
     }
     td:first-child {
-      background-color: $main-color;
-      // color: $light-color;
+      background-color: $yellow-light;
+      // font-size: 1.6rem;
+      // color: $bg-white;
     }
     td {
       width: 50%;
     }
     th {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
-      background-color: $main-color;
       background-color: $dark-purple;
+
       color: #fff;
     }
   }
@@ -394,7 +501,8 @@
   color: #fff;
   background-attachment: fixed;
   .form-container {
-    background-color: $main-color;
+    background-color: $yellow-light;
+
     padding: 2rem 4rem;
     text-align: center;
     border-radius: 18px;
@@ -408,17 +516,22 @@
       color: $text-muted;
       font-size: 1.8rem;
       margin-bottom: 2rem;
+      font-weight: 500;
+      span a {
+        color: $dark-purple;
+        font-weight: 600;
+      }
     }
     .text-fields {
       .form-input {
         border: 1px solid #ccc;
         border-radius: 5px;
         color: $text-muted;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-family: "Montserrat";
         padding: 0.9rem 2rem;
         margin: 0.8rem auto;
-        outline-color: $main-color;
+        outline-color: $yellow-light;
         width: 100%;
       }
       display: grid;
@@ -456,16 +569,24 @@
       cursor: pointer;
       font-size: 1.8rem;
       font-family: "Montserrat";
+      font-weight: 500;
       padding: 14px 20px;
       margin: 8px 0;
       width: 100%;
     }
 
     button[type="submit"]:hover {
-      background-color: #cca028;
-      color: #fff;
+      background-color: $purple-color;
+      color: $dark-purple;
+      font-weight: 500;
     }
   }
 }
 
 //------------------FOOTER  SECTION----------------//
+#footer {
+  .footer-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+}
