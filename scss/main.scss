@@ -222,15 +222,8 @@
     position: relative;
     background: $dark-purple;
     color: #fff;
+
     /* Slides */
-
-    /* Add an italic font style to all quotes */
-    q {
-      font-style: italic;
-    }
-
-    /* Add a blue color to the author */
-
     .mySlides {
       display: none;
       padding: 3rem 8rem;
@@ -458,8 +451,8 @@
     }
 
     button[type="submit"]:hover {
-      background-color: $purple-color;
-      color: $dark-purple;
+      background-color: $hover-purple;
+      color: #fff;
       font-weight: 500;
     }
   }

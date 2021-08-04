@@ -560,7 +560,7 @@ input[class^="btn-"]:hover {
   #navbar .nav-link {
     text-decoration: none;
     font-size: 1.6rem;
-    color: #734f96;
+    color: #8f72ab;
     font-weight: bold;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
@@ -609,7 +609,7 @@ input[class^="btn-"]:hover {
     padding: 0 4rem; }
     #school .commitment__content .commitment__text-box .highlighted-text {
       font-weight: 500;
-      color: #734f96; }
+      color: #8f72ab; }
   #school .commitment__content .gradient-overlay {
     position: relative; }
     #school .commitment__content .gradient-overlay::after {
@@ -684,15 +684,11 @@ input[class^="btn-"]:hover {
         font-size: 1.8rem; }
   .project .slideshow-container {
     position: relative;
-    background: #734f96;
+    background: #8f72ab;
     color: #fff;
     /* Slides */
-    /* Add an italic font style to all quotes */
-    /* Add a blue color to the author */
     /* Next & previous buttons */
     /* Position the "next button" to the right */ }
-    .project .slideshow-container q {
-      font-style: italic; }
     .project .slideshow-container .mySlides {
       display: none;
       padding: 3rem 8rem; }
@@ -721,7 +717,7 @@ input[class^="btn-"]:hover {
       .project .slideshow-container .next:hover {
         background-color: #ffde84;
         color: white;
-        color: #734f96; }
+        color: #8f72ab; }
     .project .slideshow-container .next {
       position: absolute;
       right: 0;
@@ -752,7 +748,7 @@ input[class^="btn-"]:hover {
 
 .premises__text--sub {
   padding-bottom: 5rem;
-  color: #734f96; }
+  color: #8f72ab; }
 
 .premises .premises__container {
   display: flex;
@@ -799,7 +795,7 @@ input[class^="btn-"]:hover {
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
-      background-color: #734f96;
+      background-color: #8f72ab;
       color: #fff; }
 
 #contact {
@@ -824,7 +820,7 @@ input[class^="btn-"]:hover {
       margin-bottom: 2rem;
       font-weight: 500; }
       #contact .form-container h3 span a {
-        color: #734f96;
+        color: #8f72ab;
         font-weight: 600; }
     #contact .form-container .text-fields {
       display: grid;
@@ -853,7 +849,7 @@ input[class^="btn-"]:hover {
       #contact .form-container .text-fields .message-input {
         grid-area: message; }
     #contact .form-container button[type="submit"] {
-      background-color: #734f96;
+      background-color: #8f72ab;
       border: none;
       border-radius: 4px;
       color: #fff;
@@ -865,8 +861,8 @@ input[class^="btn-"]:hover {
       margin: 8px 0;
       width: 100%; }
     #contact .form-container button[type="submit"]:hover {
-      background-color: #c184fa;
-      color: #734f96;
+      background-color: #5c3f78;
+      color: #fff;
       font-weight: 500; }
 
 #footer .footer-container {
