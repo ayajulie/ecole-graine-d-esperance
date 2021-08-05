@@ -170,7 +170,7 @@
   background-color: $bg-white;
   padding-bottom: 5rem;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/dist/img/maths.jpg) no-repeat center / cover;
+    url(img/maths.jpg) no-repeat center / cover;
   background-attachment: fixed;
 
   h2 {
@@ -400,7 +400,7 @@
 //------------------CONTACT SECTION----------------//
 #contact {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(/dist/img/pencils-color-light.jpg);
+    url(img/pencils-color-light.jpg);
   background-size: cover;
   color: #fff;
   background-attachment: fixed;
