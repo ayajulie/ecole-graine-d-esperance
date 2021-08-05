@@ -29,6 +29,7 @@
 
   ul {
     display: flex; //to be able to organize the li
+    margin-right: 1rem;
   }
 
   li {
@@ -43,7 +44,7 @@
     font-weight: bold;
     border-bottom: 3px transparent solid; //used for the hover effect
     padding-bottom: 0.5rem;
-    transition: border-color 0.5s; //for smooth effect on the hover
+    transition: border-color 0.4s; //for smooth effect on the hover
 
     &:hover {
       border-color: $yellow-light;
@@ -51,6 +52,21 @@
     &:focus {
       // outline: 4px solid $yellow-light;
       border-color: $yellow-light;
+    }
+  }
+  .cta {
+    background-color: $dark-purple;
+    background-color: $yellow-dark;
+    border-radius: 18px;
+    a {
+      border-bottom: none;
+      &:focus {
+        // outline: 4px solid $yellow-light;
+        border-color: $yellow-light;
+      }
+    }
+    &:hover {
+      background-color: $yellow-light;
     }
   }
 }
@@ -107,18 +123,25 @@
   .commitment__content {
     display: grid;
     grid-template-columns: 1fr 2fr;
+
     .commitment__text-box {
       font-size: 1.6rem;
       background-color: $bg-white;
-      padding: 0 4rem;
+      padding: 4rem 4rem;
+      border-radius: 0 18px 18px 0;
       .highlighted-text {
         font-weight: 500;
         color: $dark-purple;
+      }
+      p {
+        padding-bottom: 1.5rem;
       }
     }
 
     .gradient-overlay {
       position: relative;
+      overflow: hidden;
+      border-radius: 18px 0 0 18px;
       &::after {
         content: "";
         position: absolute;
@@ -126,13 +149,15 @@
         left: 0;
         width: 100%;
         height: 100%;
-
         background-image: linear-gradient(
           to bottom left,
           $dark-color,
           $purple-color
         );
         opacity: 0.4;
+      }
+      .commitment__photo {
+        border-radius: 18px 0 0 18px;
       }
     }
   }
@@ -212,7 +237,7 @@
       // line-height: 2;
       span {
         font-weight: 600;
-        color: $purple-color;
+        color: $dark-purple;
         font-size: 1.8rem;
       }
     }
@@ -231,8 +256,9 @@
       .slide-title {
         color: $yellow-dark;
         font-weight: 500;
-        padding-bottom: 1.5rem;
-        text-align: center;
+        padding-bottom: 2rem;
+
+        font-size: 2.5rem;
       }
       p {
         font-weight: 500;
@@ -338,7 +364,7 @@
     width: 90%;
     font-size: 1.6rem;
     color: $text-muted;
-    margin: 0 auto;
+    margin: 0 auto 4rem;
     line-height: 1.6;
     table-layout: fixed;
     td,

@@ -60,132 +60,6 @@ strong {
   padding: 4rem 1.6rem;
   margin: 0 auto; }
 
-.grid {
-  display: grid;
-  column-gap: 6.4rem;
-  row-gap: 9.6rem; }
-
-.grid:not(:last-child) {
-  margin-bottom: 9.6rem; }
-
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr); }
-
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr); }
-
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr); }
-
-/* .grid--5-cols {
-  grid-template-columns: repeat(5, 1fr);
-} */
-.grid--center-v {
-  align-items: center; }
-
-.btn,
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.6rem 3.2rem;
-  border-radius: 9px;
-  /* Only necessary for .btn */
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  /* Put transition on original "state" */
-  /* transition: background-color 0.3s; */
-  transition: all 0.3s; }
-
-.btn--full:link,
-.btn--full:visited {
-  background-color: #e67e22;
-  color: #fff; }
-
-.btn--full:hover,
-.btn--full:active {
-  background-color: #cf711f; }
-
-.btn--outline:link,
-.btn--outline:visited {
-  background-color: #fff;
-  color: #555; }
-
-.btn--outline:hover,
-.btn--outline:active {
-  background-color: #fdf2e9;
-  /* border: 3px solid #fff; */
-  /* Trick to add border inside */
-  box-shadow: inset 0 0 0 3px #fff; }
-
-.btn--form {
-  background-color: #45260a;
-  color: #fdf2e9;
-  align-self: end;
-  padding: 1.2rem; }
-
-.btn--form:hover {
-  background-color: #fff;
-  color: #555; }
-
-.link:link,
-.link:visited {
-  display: inline-block;
-  color: #e67e22;
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 2px;
-  transition: all 0.3s; }
-
-.link:hover,
-.link:active {
-  color: #cf711f;
-  border-bottom: 1px solid transparent; }
-
-.list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem; }
-
-.list-item {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  line-height: 1.2; }
-
-.list-icon {
-  width: 3rem;
-  height: 3rem;
-  color: #e67e22; }
-
-/* HELPER/SETTINGS CLASSES */
-.margin-right-sm {
-  margin-right: 1.6rem !important; }
-
-.margin-bottom-md {
-  margin-bottom: 4.8rem !important; }
-
-.center-text {
-  text-align: center; }
-
-strong {
-  font-weight: 500; }
-
-/* HELPER/SETTINGS CLASSES */
-.margin-right-sm {
-  margin-right: 1.6rem !important; }
-
-.margin-bottom-md {
-  margin-bottom: 4.8rem !important; }
-
-.center-text {
-  text-align: center; }
-
 /**************************/
 /* GENRAL REUSABLE COMPONENTS */
 /**************************/
@@ -244,10 +118,6 @@ input[class^="btn-"]:hover {
   background: #ddd;
   color: set-text-color(#ddd); }
 
-.lead {
-  font-size: 1.3rem;
-  margin-bottom: 1rem; }
-
 .text-center {
   text-align: center; }
 
@@ -294,6 +164,49 @@ input[class^="btn-"]:hover {
   text-align: center;
   font-weight: 100;
   text-transform: uppercase; }
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem; }
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem; }
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr); }
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr); }
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr); }
+
+/* .grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+} */
+.grid--center-v {
+  align-items: center; }
+
+/* HELPER/SETTINGS CLASSES */
+.margin-right-sm {
+  margin-right: 1.6rem !important; }
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important; }
+
+.center-text {
+  text-align: center; }
+
+/* HELPER/SETTINGS CLASSES */
+.margin-right-sm {
+  margin-right: 1.6rem !important; }
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important; }
+
+.center-text {
+  text-align: center; }
 
 /* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
 /**************************/
@@ -553,7 +466,8 @@ input[class^="btn-"]:hover {
   #navbar .img-logo {
     width: 20rem; }
   #navbar ul {
-    display: flex; }
+    display: flex;
+    margin-right: 1rem; }
   #navbar li {
     justify-content: space-between;
     padding: 1rem 1.5rem; }
@@ -564,11 +478,21 @@ input[class^="btn-"]:hover {
     font-weight: bold;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
-    transition: border-color 0.5s; }
+    transition: border-color 0.4s; }
     #navbar .nav-link:hover {
       border-color: #ffde84; }
     #navbar .nav-link:focus {
       border-color: #ffde84; }
+  #navbar .cta {
+    background-color: #8f72ab;
+    background-color: #ffbc00;
+    border-radius: 18px; }
+    #navbar .cta a {
+      border-bottom: none; }
+      #navbar .cta a:focus {
+        border-color: #ffde84; }
+    #navbar .cta:hover {
+      background-color: #ffde84; }
 
 #navbar.top {
   background: transparent; }
@@ -606,12 +530,17 @@ input[class^="btn-"]:hover {
   #school .commitment__content .commitment__text-box {
     font-size: 1.6rem;
     background-color: #fdfdfd;
-    padding: 0 4rem; }
+    padding: 4rem 4rem;
+    border-radius: 0 18px 18px 0; }
     #school .commitment__content .commitment__text-box .highlighted-text {
       font-weight: 500;
       color: #8f72ab; }
+    #school .commitment__content .commitment__text-box p {
+      padding-bottom: 1.5rem; }
   #school .commitment__content .gradient-overlay {
-    position: relative; }
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px 0 0 18px; }
     #school .commitment__content .gradient-overlay::after {
       content: "";
       position: absolute;
@@ -621,6 +550,8 @@ input[class^="btn-"]:hover {
       height: 100%;
       background-image: linear-gradient(to bottom left, #333, #c184fa);
       opacity: 0.4; }
+    #school .commitment__content .gradient-overlay .commitment__photo {
+      border-radius: 18px 0 0 18px; }
 
 .values {
   background-color: #fdfdfd;
@@ -680,7 +611,7 @@ input[class^="btn-"]:hover {
       font-weight: 500; }
       .project .pedagogy .intro span {
         font-weight: 600;
-        color: #c184fa;
+        color: #8f72ab;
         font-size: 1.8rem; }
   .project .slideshow-container {
     position: relative;
@@ -695,8 +626,8 @@ input[class^="btn-"]:hover {
       .project .slideshow-container .mySlides .slide-title {
         color: #ffbc00;
         font-weight: 500;
-        padding-bottom: 1.5rem;
-        text-align: center; }
+        padding-bottom: 2rem;
+        font-size: 2.5rem; }
       .project .slideshow-container .mySlides p {
         font-weight: 500;
         height: 10rem; }
@@ -777,7 +708,7 @@ input[class^="btn-"]:hover {
     width: 90%;
     font-size: 1.6rem;
     color: #6c757d;
-    margin: 0 auto;
+    margin: 0 auto 4rem;
     line-height: 1.6;
     table-layout: fixed; }
     .pricing #princing__table td,
