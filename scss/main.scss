@@ -57,7 +57,7 @@
   .cta {
     background-color: $dark-purple;
     background-color: $yellow-dark;
-    border-radius: 18px;
+    border-radius: 99px;
     a {
       border-bottom: none;
       &:focus {
@@ -488,6 +488,21 @@
 #footer {
   .footer-container {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2fr 2fr 2fr;
+    p {
+      padding-bottom: 1rem;
+    }
+    .footer-box {
+      border-left: 1px solid $dark-purple;
+      padding: 0 2rem;
+    }
+    .adress-icons {
+      margin-right: 0.5rem;
+      color: $dark-purple;
+    }
+  }
+  .copyright {
+    padding-bottom: 3rem;
+    color: $dark-purple;
   }
 }

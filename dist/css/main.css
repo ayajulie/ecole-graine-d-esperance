@@ -486,7 +486,7 @@ input[class^="btn-"]:hover {
   #navbar .cta {
     background-color: #8f72ab;
     background-color: #ffbc00;
-    border-radius: 18px; }
+    border-radius: 99px; }
     #navbar .cta a {
       border-bottom: none; }
       #navbar .cta a:focus {
@@ -798,4 +798,16 @@ input[class^="btn-"]:hover {
 
 #footer .footer-container {
   display: grid;
-  grid-template-columns: 2fr 3fr; }
+  grid-template-columns: 2fr 2fr 2fr; }
+  #footer .footer-container p {
+    padding-bottom: 1rem; }
+  #footer .footer-container .footer-box {
+    border-left: 1px solid #8f72ab;
+    padding: 0 2rem; }
+  #footer .footer-container .adress-icons {
+    margin-right: 0.5rem;
+    color: #8f72ab; }
+
+#footer .copyright {
+  padding-bottom: 3rem;
+  color: #8f72ab; }
