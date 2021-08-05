@@ -450,7 +450,7 @@ input[class^="btn-"]:hover {
 
 #navbar {
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -484,10 +484,10 @@ input[class^="btn-"]:hover {
     #navbar .nav-link:focus {
       border-color: #ffde84; }
   #navbar .cta {
-    background-color: #8f72ab;
-    background-color: #ffbc00;
+    background-color: #ffde84;
     border-radius: 99px; }
     #navbar .cta a {
+      color: #8f72ab;
       border-bottom: none; }
       #navbar .cta a:focus {
         border-color: #ffde84; }
@@ -498,6 +498,8 @@ input[class^="btn-"]:hover {
   background: transparent; }
   #navbar.top .nav-link {
     color: #fff; }
+  #navbar.top ul li:last-child a {
+    color: #8f72ab; }
 
 #header-home {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/dist/img/background.jpg") no-repeat center right/cover;
@@ -520,7 +522,7 @@ input[class^="btn-"]:hover {
       color: #fff; }
       #header-home .header-content .heading-primary--sub {
         font-weight: 300;
-        color: #c184fa; }
+        font-size: 3rem; }
     #header-home .header-content p {
       font-size: 1.8rem; }
 
@@ -589,7 +591,8 @@ input[class^="btn-"]:hover {
 #team .founder__img {
   width: 40rem;
   border-radius: 50%;
-  border: 0.8rem solid #ffde84; }
+  border: 0.8rem solid #ffde84;
+  border: 0.8rem solid #fff; }
 
 #team .founder p {
   font-size: 1.6rem;
@@ -735,7 +738,7 @@ input[class^="btn-"]:hover {
   color: #fff;
   background-attachment: fixed; }
   #contact .form-container {
-    background-color: #ffde84;
+    background-color: #fdf2e9;
     padding: 2rem 4rem;
     text-align: center;
     border-radius: 18px;
@@ -804,9 +807,19 @@ input[class^="btn-"]:hover {
   #footer .footer-container .footer-box {
     border-left: 1px solid #8f72ab;
     padding: 0 2rem; }
-  #footer .footer-container .adress-icons {
+  #footer .footer-container .footer-icons {
     margin-right: 0.5rem;
     color: #8f72ab; }
+    #footer .footer-container .footer-icons:hover {
+      color: #5c3f78; }
+  #footer .footer-container .logo-box {
+    margin: 0 auto; }
+  #footer .footer-container .social-box {
+    display: flex;
+    align-content: center;
+    margin: 0 auto; }
+    #footer .footer-container .social-box i {
+      margin-right: 3rem; }
 
 #footer .copyright {
   padding-bottom: 3rem;

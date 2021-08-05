@@ -10,7 +10,7 @@
 
 #navbar {
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   display: flex; //to be able to organize
   flex-wrap: nowrap;
   justify-content: space-between; //for logo on one side and links & ul on the other
@@ -55,10 +55,10 @@
     }
   }
   .cta {
-    background-color: $dark-purple;
-    background-color: $yellow-dark;
+    background-color: $yellow-light;
     border-radius: 99px;
     a {
+      color: $dark-purple;
       border-bottom: none;
       &:focus {
         // outline: 4px solid $yellow-light;
@@ -74,6 +74,9 @@
   background: transparent;
   .nav-link {
     color: #fff;
+  }
+  ul li:last-child a {
+    color: $dark-purple;
   }
 }
 // Header
@@ -105,8 +108,7 @@
         color: #fff;
         &--sub {
           font-weight: 300;
-
-          color: $purple-color;
+          font-size: 3rem;
         }
       }
       p {
@@ -211,6 +213,7 @@
       width: 40rem;
       border-radius: 50%;
       border: 0.8rem solid $yellow-light;
+      border: 0.8rem solid #fff;
       // box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
     }
     p {
@@ -402,7 +405,7 @@
   color: #fff;
   background-attachment: fixed;
   .form-container {
-    background-color: $yellow-light;
+    background-color: $bg-light;
 
     padding: 2rem 4rem;
     text-align: center;
@@ -496,9 +499,23 @@
       border-left: 1px solid $dark-purple;
       padding: 0 2rem;
     }
-    .adress-icons {
+    .footer-icons {
       margin-right: 0.5rem;
       color: $dark-purple;
+      &:hover {
+        color: $hover-purple;
+      }
+    }
+    .logo-box {
+      margin: 0 auto;
+    }
+    .social-box {
+      display: flex;
+      align-content: center;
+      margin: 0 auto;
+      i {
+        margin-right: 3rem;
+      }
     }
   }
   .copyright {
