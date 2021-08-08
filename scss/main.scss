@@ -1,11 +1,11 @@
+@import "queries";
 @import "config";
 @import "utilities";
-@import "queries";
 
 //------------------HEADER----------------//
 // Logo
 #logo {
-  width: 20rem;
+  width: 25rem;
 }
 
 #navbar {
@@ -24,7 +24,7 @@
   z-index: 100;
   border-radius: 0 0 18px 18px;
   .img-logo {
-    width: 20rem;
+    width: 15rem;
   }
 
   ul {
@@ -84,7 +84,7 @@
   // Header Home
   &-home {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      $bg-image no-repeat center right / cover;
+      url(../img/background.jpg) no-repeat center right / cover;
     clip-path: ellipse(138% 100% at -0.16% 0%);
     color: #fff;
     height: 85vh;
@@ -99,6 +99,9 @@
       align-content: center;
       align-items: flex-start;
       // justify-content: flex-start;
+      @media (max-width: 34em) {
+        width: 100%;
+      }
 
       .heading-primary {
         font-size: 3.5rem;
@@ -106,13 +109,23 @@
         line-height: 1.4;
         margin-bottom: 5rem;
         color: #fff;
+        @media (max-width: 34em) {
+          font-size: 3rem;
+        }
         &--sub {
           font-weight: 300;
           font-size: 3rem;
+          @media (max-width: 34em) {
+            font-size: 2rem;
+          }
         }
       }
       p {
         font-size: 1.8rem;
+        @media (max-width: 34em) {
+          font-size: 1.4rem;
+          text-align: justify;
+        }
 
         // color: #fff;
       }
@@ -125,12 +138,20 @@
   .commitment__content {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    @media (max-width: 34em) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     .commitment__text-box {
       font-size: 1.6rem;
       background-color: $bg-white;
       padding: 4rem 4rem;
       border-radius: 0 18px 18px 0;
+      @media (max-width: 34em) {
+        border-radius: 18px 18px 0 0;
+        text-justify: distribute;
+      }
       .highlighted-text {
         font-weight: 500;
         color: $dark-purple;
@@ -170,7 +191,7 @@
   background-color: $bg-white;
   padding-bottom: 5rem;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/img/maths.jpg) no-repeat center / cover;
+    url(../img/maths.jpg) no-repeat center / cover;
   background-attachment: fixed;
 
   h2 {
@@ -400,7 +421,7 @@
 //------------------CONTACT SECTION----------------//
 #contact {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(/img/pencils-color-light.jpg);
+    url(../img/pencils-color-light.jpg);
   background-size: cover;
   color: #fff;
   background-attachment: fixed;
