@@ -343,7 +343,7 @@ input[class^="btn-"]:hover {
   text-align: center; }
 
 #logo {
-  width: 25rem; }
+  width: 30rem; }
 
 #navbar {
   align-items: center;
@@ -433,7 +433,7 @@ input[class^="btn-"]:hover {
       font-size: 1.8rem; }
       @media (max-width: 34em) {
         #header-home .header-content p {
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           text-align: justify; } }
 
 #school .commitment__content {
@@ -442,7 +442,8 @@ input[class^="btn-"]:hover {
   @media (max-width: 34em) {
     #school .commitment__content {
       display: flex;
-      flex-direction: column-reverse; } }
+      flex-direction: column-reverse;
+      justify-content: space-between; } }
   #school .commitment__content .commitment__text-box {
     font-size: 1.6rem;
     background-color: #fdfdfd;
@@ -450,17 +451,22 @@ input[class^="btn-"]:hover {
     border-radius: 0 18px 18px 0; }
     @media (max-width: 34em) {
       #school .commitment__content .commitment__text-box {
-        border-radius: 18px 18px 0 0;
-        text-justify: distribute; } }
+        border-radius: 18px 18px 0 0; } }
     #school .commitment__content .commitment__text-box .highlighted-text {
       font-weight: 500;
       color: #8f72ab; }
     #school .commitment__content .commitment__text-box p {
       padding-bottom: 1.5rem; }
+      @media (max-width: 34em) {
+        #school .commitment__content .commitment__text-box p {
+          text-justify: justify; } }
   #school .commitment__content .gradient-overlay {
     position: relative;
     overflow: hidden;
     border-radius: 18px 0 0 18px; }
+    @media (max-width: 34em) {
+      #school .commitment__content .gradient-overlay {
+        border-radius: 0 0 18px 18px; } }
     #school .commitment__content .gradient-overlay::after {
       content: "";
       position: absolute;
@@ -502,6 +508,9 @@ input[class^="btn-"]:hover {
   display: flex;
   align-items: center;
   padding-bottom: 6rem; }
+  @media (max-width: 34em) {
+    #team .founder__content {
+      flex-direction: column-reverse; } }
 
 #team .founder__heading {
   padding-bottom: 4rem; }
@@ -511,12 +520,18 @@ input[class^="btn-"]:hover {
   border-radius: 50%;
   border: 0.8rem solid #ffde84;
   border: 0.8rem solid #fff; }
+  @media (max-width: 34em) {
+    #team .founder__img {
+      width: 25rem; } }
 
 #team .founder p {
   font-size: 1.6rem;
   color: #6c757d;
   padding-bottom: 1.5rem;
   font-weight: 500; }
+  @media (max-width: 34em) {
+    #team .founder p {
+      text-justify: justify; } }
 
 .project {
   padding-bottom: 10rem;
@@ -688,6 +703,12 @@ input[class^="btn-"]:hover {
         margin: 0.8rem auto;
         outline-color: #ffde84;
         width: 100%; }
+        @media (max-width: 34em) {
+          #contact .form-container .text-fields .form-input {
+            margin: 0.2rem auto; } }
+      @media (max-width: 34em) {
+        #contact .form-container .text-fields {
+          grid-template-areas: "title" "name" "phone" "email" "subject" "message"; } }
       #contact .form-container .text-fields .title-input {
         grid-area: title; }
       #contact .form-container .text-fields .name-input {

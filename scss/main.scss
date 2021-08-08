@@ -5,7 +5,7 @@
 //------------------HEADER----------------//
 // Logo
 #logo {
-  width: 25rem;
+  width: 30rem;
 }
 
 #navbar {
@@ -123,7 +123,7 @@
       p {
         font-size: 1.8rem;
         @media (max-width: 34em) {
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           text-align: justify;
         }
 
@@ -141,6 +141,7 @@
     @media (max-width: 34em) {
       display: flex;
       flex-direction: column-reverse;
+      justify-content: space-between;
     }
 
     .commitment__text-box {
@@ -150,7 +151,6 @@
       border-radius: 0 18px 18px 0;
       @media (max-width: 34em) {
         border-radius: 18px 18px 0 0;
-        text-justify: distribute;
       }
       .highlighted-text {
         font-weight: 500;
@@ -158,6 +158,9 @@
       }
       p {
         padding-bottom: 1.5rem;
+        @media (max-width: 34em) {
+          text-justify: justify;
+        }
       }
     }
 
@@ -165,6 +168,9 @@
       position: relative;
       overflow: hidden;
       border-radius: 18px 0 0 18px;
+      @media (max-width: 34em) {
+        border-radius: 0 0 18px 18px;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -226,6 +232,9 @@
       display: flex;
       align-items: center;
       padding-bottom: 6rem;
+      @media (max-width: 34em) {
+        flex-direction: column-reverse;
+      }
     }
     &__heading {
       padding-bottom: 4rem;
@@ -235,6 +244,9 @@
       border-radius: 50%;
       border: 0.8rem solid $yellow-light;
       border: 0.8rem solid #fff;
+      @media (max-width: 34em) {
+        width: 25rem;
+      }
       // box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
     }
     p {
@@ -243,6 +255,9 @@
       padding-bottom: 1.5rem;
       font-weight: 500;
       // color: $text-muted;
+      @media (max-width: 34em) {
+        text-justify: justify;
+      }
     }
   }
 }
@@ -458,6 +473,9 @@
         margin: 0.8rem auto;
         outline-color: $yellow-light;
         width: 100%;
+        @media (max-width: 34em) {
+          margin: 0.2rem auto;
+        }
       }
       display: grid;
       grid-template-areas:
@@ -466,7 +484,15 @@
         "subject subject"
         "message message";
       grid-gap: 1.2rem;
-
+      @media (max-width: 34em) {
+        grid-template-areas:
+          "title"
+          "name"
+          "phone"
+          "email"
+          "subject"
+          "message";
+      }
       .title-input {
         grid-area: title;
       }
