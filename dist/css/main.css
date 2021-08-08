@@ -681,6 +681,10 @@ input[class^="btn-"]:hover {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    @media (max-width: 34em) {
+      #contact .form-container {
+        width: 100%;
+        padding: 2rem 2rem; } }
     #contact .form-container h3 {
       color: #6c757d;
       font-size: 1.8rem;
