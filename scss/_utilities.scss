@@ -19,11 +19,13 @@
   // padding-top: 6rem;
   padding-bottom: 3rem;
   text-align: center;
+  color: $blue;
+  font-weight: 500;
 }
 .bottom-line {
-  height: 3px;
-  width: 6rem;
-  background: $purple-color;
+  height: 0.8rem;
+  width: 20rem;
+  background: $pink;
   display: block;
   margin: 0 auto 3rem auto;
 }

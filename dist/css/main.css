@@ -147,7 +147,9 @@ html {
   overflow-x: hidden; }
 
 body {
-  background-color: #fdf2e9;
+  background-color: #ffbc00;
+  background-color: #ffef64;
+  background-color: #fdfdfd;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -202,12 +204,14 @@ strong {
 
 .title {
   padding-bottom: 3rem;
-  text-align: center; }
+  text-align: center;
+  color: #30d4d4;
+  font-weight: 500; }
 
 .bottom-line {
-  height: 3px;
-  width: 6rem;
-  background: #c184fa;
+  height: 0.8rem;
+  width: 20rem;
+  background: #fc17c6;
   display: block;
   margin: 0 auto 3rem auto; }
 
@@ -371,7 +375,7 @@ input[class^="btn-"]:hover {
   #navbar .nav-link {
     text-decoration: none;
     font-size: 1.6rem;
-    color: #8f72ab;
+    color: #fc17c6;
     font-weight: bold;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
@@ -381,22 +385,22 @@ input[class^="btn-"]:hover {
     #navbar .nav-link:focus {
       border-color: #ffde84; }
   #navbar .cta {
-    background-color: #ffde84;
+    background-color: #ffbc00;
     border-radius: 99px; }
     #navbar .cta a {
-      color: #8f72ab;
+      color: #30d4d4;
       border-bottom: none; }
       #navbar .cta a:focus {
         border-color: #ffde84; }
     #navbar .cta:hover {
-      background-color: #ffbc00; }
+      background-color: #ffde84; }
 
 #navbar.top {
   background: transparent; }
   #navbar.top .nav-link {
     color: #fff; }
   #navbar.top ul li:last-child a {
-    color: #8f72ab; }
+    color: #fc17c6; }
 
 #header-home {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/background.jpg) no-repeat center right/cover;
@@ -405,7 +409,7 @@ input[class^="btn-"]:hover {
   height: 85vh; }
   #header-home .header-content {
     width: 50%;
-    padding-top: 12%;
+    padding-top: 18%;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -419,13 +423,14 @@ input[class^="btn-"]:hover {
       font-weight: 600;
       line-height: 1.4;
       margin-bottom: 5rem;
-      color: #fff; }
+      color: #fc17c6; }
       @media (max-width: 34em) {
         #header-home .header-content .heading-primary {
           font-size: 3rem; } }
       #header-home .header-content .heading-primary--sub {
         font-weight: 300;
-        font-size: 3rem; }
+        font-size: 3rem;
+        color: #30d4d4; }
         @media (max-width: 34em) {
           #header-home .header-content .heading-primary--sub {
             font-size: 2rem; } }
@@ -453,8 +458,12 @@ input[class^="btn-"]:hover {
       #school .commitment__content .commitment__text-box {
         border-radius: 18px 18px 0 0; } }
     #school .commitment__content .commitment__text-box .highlighted-text {
-      font-weight: 500;
-      color: #8f72ab; }
+      font-weight: 400;
+      background-color: #ffbc00;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      color: #fff;
+      margin-bottom: 2rem; }
     #school .commitment__content .commitment__text-box p {
       padding-bottom: 1.5rem; }
       @media (max-width: 34em) {
@@ -480,10 +489,8 @@ input[class^="btn-"]:hover {
       border-radius: 18px 0 0 18px; }
 
 .values {
-  background-color: #fdfdfd;
   padding-bottom: 5rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/maths.jpg) no-repeat center/cover;
-  background-attachment: fixed; }
+  background-color: #ffbc00; }
   .values h2 {
     color: #fff; }
   .values__content {
@@ -518,8 +525,8 @@ input[class^="btn-"]:hover {
 #team .founder__img {
   width: 40rem;
   border-radius: 50%;
-  border: 0.8rem solid #ffde84;
-  border: 0.8rem solid #fff; }
+  border: 0.8rem solid #fff;
+  border: 0.8rem solid #ffbc00; }
   @media (max-width: 34em) {
     #team .founder__img {
       width: 25rem; } }

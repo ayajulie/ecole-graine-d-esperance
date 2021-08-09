@@ -40,7 +40,7 @@
   .nav-link {
     text-decoration: none;
     font-size: 1.6rem;
-    color: $dark-purple;
+    color: $pink;
     font-weight: bold;
     border-bottom: 3px transparent solid; //used for the hover effect
     padding-bottom: 0.5rem;
@@ -55,10 +55,10 @@
     }
   }
   .cta {
-    background-color: $yellow-light;
+    background-color: $yellow-dark;
     border-radius: 99px;
     a {
-      color: $dark-purple;
+      color: $blue;
       border-bottom: none;
       &:focus {
         // outline: 4px solid $yellow-light;
@@ -66,7 +66,7 @@
       }
     }
     &:hover {
-      background-color: $yellow-dark;
+      background-color: $yellow-light;
     }
   }
 }
@@ -76,7 +76,7 @@
     color: #fff;
   }
   ul li:last-child a {
-    color: $dark-purple;
+    color: $pink;
   }
 }
 // Header
@@ -92,7 +92,7 @@
     // Header text-box
     .header-content {
       width: 50%;
-      padding-top: 12%;
+      padding-top: 18%;
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -108,13 +108,14 @@
         font-weight: 600;
         line-height: 1.4;
         margin-bottom: 5rem;
-        color: #fff;
+        color: $pink;
         @media (max-width: 34em) {
           font-size: 3rem;
         }
         &--sub {
           font-weight: 300;
           font-size: 3rem;
+          color: $blue;
           @media (max-width: 34em) {
             font-size: 2rem;
           }
@@ -152,8 +153,14 @@
         border-radius: 18px 18px 0 0;
       }
       .highlighted-text {
-        font-weight: 500;
-        color: $dark-purple;
+        font-weight: 400;
+        background-color: $yellow-dark;
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        color: #fff;
+        margin-bottom: 2rem;
+
+        // color: $pink;
       }
       p {
         padding-bottom: 1.5rem;
@@ -193,11 +200,8 @@
 
 //-----------------------------VALUES SECTION--------------------------//
 .values {
-  background-color: $bg-white;
   padding-bottom: 5rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../img/maths.jpg) no-repeat center / cover;
-  background-attachment: fixed;
+  background-color: $yellow-dark;
 
   h2 {
     color: #fff;
@@ -241,8 +245,8 @@
     &__img {
       width: 40rem;
       border-radius: 50%;
-      border: 0.8rem solid $yellow-light;
       border: 0.8rem solid #fff;
+      border: 0.8rem solid $yellow-dark;
       @media (max-width: 34em) {
         width: 25rem;
       }
