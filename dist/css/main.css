@@ -504,12 +504,14 @@ input[class^="btn-"]:hover {
     text-align: center;
     padding: 4rem 2rem;
     line-height: 1.6rem;
-    font-family: "Montserrat";
-    color: #6c757d; }
-    .values__boxes p {
-      font-weight: 500; }
+    font-family: "Montserrat"; }
+    .values__boxes .value-text {
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem; }
     .values__boxes .icons {
-      padding-bottom: 5rem; }
+      padding-bottom: 5rem;
+      color: #30d4d4; }
 
 #team .founder__content {
   display: flex;
@@ -522,11 +524,17 @@ input[class^="btn-"]:hover {
 #team .founder__heading {
   padding-bottom: 4rem; }
 
+#team .founder__name {
+  padding-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #fc17c6;
+  font-weight: 500; }
+
 #team .founder__img {
   width: 40rem;
   border-radius: 50%;
   border: 0.8rem solid #fff;
-  border: 0.8rem solid #ffbc00; }
+  border: 1rem solid #ffbc00; }
   @media (max-width: 34em) {
     #team .founder__img {
       width: 25rem; } }

@@ -220,12 +220,15 @@
     padding: 4rem 2rem;
     line-height: 1.6rem;
     font-family: "Montserrat";
-    color: $text-muted;
-    p {
+
+    .value-text {
       font-weight: 500;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
     }
     .icons {
       padding-bottom: 5rem;
+      color: $blue;
     }
   }
 }
@@ -242,11 +245,17 @@
     &__heading {
       padding-bottom: 4rem;
     }
+    &__name {
+      padding-bottom: 2rem;
+      font-size: 1.8rem;
+      color: $pink;
+      font-weight: 500;
+    }
     &__img {
       width: 40rem;
       border-radius: 50%;
       border: 0.8rem solid #fff;
-      border: 0.8rem solid $yellow-dark;
+      border: 1rem solid $yellow-dark;
       @media (max-width: 34em) {
         width: 25rem;
       }
