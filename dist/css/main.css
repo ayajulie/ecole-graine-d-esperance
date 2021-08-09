@@ -552,6 +552,8 @@ input[class^="btn-"]:hover {
   background-size: cover;
   /* Slideshow container */
   /* The dot/bullet/indicator container */ }
+  .project #project-title {
+    color: #fff; }
   .project .pedagogy {
     margin-bottom: 5rem;
     position: relative; }
@@ -559,12 +561,12 @@ input[class^="btn-"]:hover {
       padding-bottom: 4rem; }
       .project .pedagogy .intro span {
         font-weight: 600;
-        color: #8f72ab;
+        color: #fc17c6;
         font-size: 1.8rem; }
   .project .slideshow-container {
     position: relative;
-    background: #8f72ab;
-    color: #fff;
+    background: #fdfdfd;
+    color: #ffbc00;
     /* Slides */
     /* Next & previous buttons */
     /* Position the "next button" to the right */ }
@@ -578,7 +580,8 @@ input[class^="btn-"]:hover {
         font-size: 2.5rem; }
       .project .slideshow-container .mySlides p {
         font-weight: 500;
-        height: 10rem; }
+        height: 10rem;
+        color: #042744; }
     .project .slideshow-container .prev,
     .project .slideshow-container .next {
       cursor: pointer;
@@ -587,7 +590,7 @@ input[class^="btn-"]:hover {
       width: auto;
       margin-top: -3rem;
       padding: 1.6rem;
-      color: #ffbc00;
+      color: #fc17c6;
       font-weight: bold;
       font-size: 2rem;
       border-radius: 0 3px 3px 0;
@@ -596,7 +599,7 @@ input[class^="btn-"]:hover {
       .project .slideshow-container .next:hover {
         background-color: #ffde84;
         color: white;
-        color: #8f72ab; }
+        color: #ae6fe9; }
     .project .slideshow-container .next {
       position: absolute;
       right: 0;
@@ -618,7 +621,7 @@ input[class^="btn-"]:hover {
       transition: background-color 0.6s ease; }
     .project .dot-container .active,
     .project .dot-container .dot:hover {
-      background-color: #ffbc00; }
+      background-color: #fc17c6; }
 
 .premises__text {
   display: inline-block;
@@ -627,7 +630,7 @@ input[class^="btn-"]:hover {
 
 .premises__text--sub {
   padding-bottom: 5rem;
-  color: #8f72ab; }
+  color: #ae6fe9; }
 
 .premises .premises__container {
   display: flex;
@@ -666,7 +669,7 @@ input[class^="btn-"]:hover {
     .pricing #princing__table tr:nth-child(even) {
       background-color: #f2f2f2; }
     .pricing #princing__table td:first-child {
-      background-color: #ffde84; }
+      background-color: #ffbc00; }
     .pricing #princing__table td {
       width: 50%; }
     .pricing #princing__table th {
@@ -674,7 +677,7 @@ input[class^="btn-"]:hover {
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
-      background-color: #8f72ab;
+      background-color: #30d4d4;
       color: #fff; }
 
 #contact {
@@ -703,7 +706,7 @@ input[class^="btn-"]:hover {
       margin-bottom: 2rem;
       font-weight: 500; }
       #contact .form-container h3 span a {
-        color: #8f72ab;
+        color: #ae6fe9;
         font-weight: 600; }
     #contact .form-container .text-fields {
       display: grid;
@@ -738,7 +741,7 @@ input[class^="btn-"]:hover {
       #contact .form-container .text-fields .message-input {
         grid-area: message; }
     #contact .form-container button[type="submit"] {
-      background-color: #8f72ab;
+      background-color: #ae6fe9;
       border: none;
       border-radius: 4px;
       color: #fff;
@@ -760,11 +763,11 @@ input[class^="btn-"]:hover {
   #footer .footer-container p {
     padding-bottom: 1rem; }
   #footer .footer-container .footer-box {
-    border-left: 1px solid #8f72ab;
+    border-left: 1px solid #ae6fe9;
     padding: 0 2rem; }
   #footer .footer-container .footer-icons {
     margin-right: 0.5rem;
-    color: #8f72ab; }
+    color: #ae6fe9; }
     #footer .footer-container .footer-icons:hover {
       color: #5c3f78; }
   #footer .footer-container .logo-box {
@@ -778,4 +781,4 @@ input[class^="btn-"]:hover {
 
 #footer .copyright {
   padding-bottom: 3rem;
-  color: #8f72ab; }
+  color: #ae6fe9; }

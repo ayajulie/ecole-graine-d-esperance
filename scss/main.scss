@@ -276,18 +276,20 @@
   padding-bottom: 10rem;
   background-color: $blue;
   background-size: cover;
+  #project-title {
+    color: #fff;
+  }
 
   .pedagogy {
     margin-bottom: 5rem;
     position: relative;
-
     .intro {
       padding-bottom: 4rem;
       // font-weight: 500;
       // line-height: 2;
       span {
         font-weight: 600;
-        color: $dark-purple;
+        color: $pink;
         font-size: 1.8rem;
       }
     }
@@ -295,8 +297,8 @@
   /* Slideshow container */
   .slideshow-container {
     position: relative;
-    background: $dark-purple;
-    color: #fff;
+    background: $bg-white;
+    color: $yellow-dark;
 
     /* Slides */
     .mySlides {
@@ -313,6 +315,7 @@
       p {
         font-weight: 500;
         height: 10rem;
+        color: $dark-blue;
       }
     }
     /* Next & previous buttons */
@@ -324,7 +327,7 @@
       width: auto;
       margin-top: -3rem;
       padding: 1.6rem;
-      color: $yellow-dark;
+      color: $pink;
       font-weight: bold;
       font-size: 2rem;
       border-radius: 0 3px 3px 0;
@@ -363,7 +366,7 @@
     /* Add a background color to the active dot/circle */
     .active,
     .dot:hover {
-      background-color: $yellow-dark;
+      background-color: $pink;
     }
   }
 }
@@ -424,9 +427,10 @@
     }
     tr:nth-child(even) {
       background-color: #f2f2f2;
+      // color: #fff;
     }
     td:first-child {
-      background-color: $yellow-light;
+      background-color: $yellow-dark;
       // font-size: 1.6rem;
       // color: $bg-white;
     }
@@ -438,7 +442,7 @@
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
-      background-color: $dark-purple;
+      background-color: $blue;
 
       color: #fff;
     }
