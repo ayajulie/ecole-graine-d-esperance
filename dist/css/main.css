@@ -77,9 +77,9 @@
 /**************************/
 /* BELOW 544px (Phones) */
 /**************************/
-@media (max-width: 34em) {
-  .header-content {
-    width: 100%; } }
+@media (max-width: 544px) {
+  .heading-primary {
+    color: red; } }
 
 /**************/
 /* Fixing Safari flexbox gap */
@@ -416,7 +416,7 @@ input[class^="btn-"]:hover {
         width: 100%; } }
     #header-home .header-content .heading-primary {
       font-size: 3.5rem;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 1.4;
       margin-bottom: 5rem;
       color: #fff; }
@@ -526,9 +526,7 @@ input[class^="btn-"]:hover {
 
 #team .founder p {
   font-size: 1.6rem;
-  color: #6c757d;
-  padding-bottom: 1.5rem;
-  font-weight: 500; }
+  padding-bottom: 1.5rem; }
   @media (max-width: 34em) {
     #team .founder p {
       text-justify: justify; } }
@@ -543,8 +541,7 @@ input[class^="btn-"]:hover {
     margin-bottom: 5rem;
     position: relative; }
     .project .pedagogy .intro {
-      padding-bottom: 4rem;
-      font-weight: 500; }
+      padding-bottom: 4rem; }
       .project .pedagogy .intro span {
         font-weight: 600;
         color: #8f72ab;

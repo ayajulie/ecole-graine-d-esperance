@@ -124,9 +124,9 @@
 /* BELOW 544px (Phones) */
 /**************************/
 
-@media (max-width: 34em) {
-  .header-content {
-    width: 100%;
+@media (max-width: 544px) {
+  .heading-primary {
+    color: red;
   }
 }
 
