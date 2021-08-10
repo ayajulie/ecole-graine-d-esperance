@@ -211,7 +211,8 @@ strong {
   width: 20rem;
   display: block;
   margin: 0 auto 3rem auto;
-  background: linear-gradient(90deg, #ff47da 35%, #9679f6 75%); }
+  background: linear-gradient(90deg, #ff47da 35%, #9679f6 75%);
+  background: linear-gradient(90deg, #ff47da 25%, #ffbc00 50%, #9679f6 75%); }
 
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
