@@ -558,6 +558,10 @@ input[class^="btn-"]:hover {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     color: #fff; }
+    @media only screen and (max-width: 768px) {
+      .values__content {
+        display: flex;
+        flex-direction: column; } }
     .values__content div {
       color: #fff; }
   .values__boxes {
@@ -566,6 +570,9 @@ input[class^="btn-"]:hover {
     padding: 4rem 2rem;
     line-height: 1.6rem;
     font-family: "Montserrat"; }
+    @media only screen and (max-width: 768px) {
+      .values__boxes {
+        border-bottom: 2px solid #fff; } }
     .values__boxes .value-text {
       font-weight: 500;
       letter-spacing: 0.1rem;
@@ -829,6 +836,10 @@ input[class^="btn-"]:hover {
   #footer .footer-container {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr; }
+    @media only screen and (max-width: 768px) {
+      #footer .footer-container {
+        display: flex;
+        flex-direction: column; } }
     #footer .footer-container p {
       padding-bottom: 1rem;
       color: #fff; }

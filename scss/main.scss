@@ -282,6 +282,10 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     color: #fff;
+    @media only screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
     div {
       color: #fff;
     }
@@ -292,6 +296,9 @@
     padding: 4rem 2rem;
     line-height: 1.6rem;
     font-family: "Montserrat";
+    @media only screen and (max-width: 768px) {
+      border-bottom: 2px solid #fff;
+    }
 
     .value-text {
       font-weight: 500;
@@ -641,6 +648,10 @@
   .footer-container {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
+    @media only screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
     p {
       padding-bottom: 1rem;
       color: #fff;
