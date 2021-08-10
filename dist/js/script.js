@@ -6,13 +6,7 @@ let scrolled = false; //we haven't started scoll yet
 window.onscroll = function () {
   if (window.pageYOffset > 500) {  //under 100px 
     navbar.classList.remove('top');     // remove the class "top" (the transparent bg)
-    // if (!scrolled) {
-    //   navbar.style.transform = 'translateY(-70px)';
-    // }
-    // setTimeout(function () {
-    //   navbar.style.transform = 'translateY(0)';
-    //   scrolled = true;
-    // }, 200);
+
   } else {
     navbar.classList.add('top');
     scrolled = false;
@@ -20,7 +14,7 @@ window.onscroll = function () {
 };
 
 // Smooth Scrolling
-$('#navbar a, .btn').on('click', function (e) {
+$('.navbar a, .btn').on('click', function (e) {
   if (this.hash !== '') {
     e.preventDefault();
 
@@ -64,9 +58,4 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-///////////////////////////////////////////////////////////
-// Set current year
-const yearEl = document.querySelector(".year");
-const currentYear = new Date().getFullYear();
-yearEl.textContent = currentYear;
 

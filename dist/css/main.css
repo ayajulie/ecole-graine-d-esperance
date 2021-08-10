@@ -369,7 +369,8 @@ input[class^="btn-"]:hover {
   top: 0;
   position: fixed;
   z-index: 100;
-  border-radius: 0 0 18px 18px; }
+  border-radius: 0 0 18px 18px;
+  padding: 0 1rem; }
   #navbar .img-logo {
     width: 15rem; }
   #navbar ul {
