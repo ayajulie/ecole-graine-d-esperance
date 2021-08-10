@@ -211,7 +211,7 @@ strong {
   width: 20rem;
   display: block;
   margin: 0 auto 3rem auto;
-  background: linear-gradient(90deg, #ff47da 25%, #ffbc00 50%, #9679f6 75%); }
+  background: #fc17c6; }
 
 .white-line {
   height: 0.2rem;
@@ -401,6 +401,38 @@ input[class^="btn-"]:hover {
         border-color: #ffde84; }
     #navbar .cta:hover {
       background-color: #ffde84; }
+  #navbar .hamburger {
+    display: none; }
+    @media only screen and (max-width: 768px) {
+      #navbar .hamburger {
+        display: block;
+        cursor: pointer; } }
+  #navbar .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffbc00; }
+  @media only screen and (max-width: 768px) {
+    #navbar .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05); } }
+  @media only screen and (max-width: 768px) {
+    #navbar .nav-menu .active {
+      left: 0; } }
+  @media only screen and (max-width: 768px) {
+    #navbar .nav-menu .nav-item {
+      margin: 2.5rem 0; } }
 
 #navbar.top {
   background: transparent; }
@@ -658,6 +690,9 @@ input[class^="btn-"]:hover {
     max-width: 1280px;
     box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
     margin: auto; }
+  .premises .premises__container a {
+    color: #fc17c6;
+    font-size: 1.8rem; }
 
 .pricing {
   background: #fcc8c2;

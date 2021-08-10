@@ -27,12 +27,7 @@
   width: 20rem;
   display: block;
   margin: 0 auto 3rem auto;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 71, 218, 1) 25%,
-    $yellow-dark 50%,
-    #9679f6 75%
-  );
+  background: $pink;
 }
 .white-line {
   height: 0.2rem;
