@@ -58,7 +58,7 @@
     background-color: $yellow-dark;
     border-radius: 99px;
     a {
-      color: $blue;
+      color: $pink;
       border-bottom: none;
       &:focus {
         // outline: 4px solid $yellow-light;
@@ -137,13 +137,40 @@
   .commitment__content {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    align-items: center;
 
     @media (max-width: 34em) {
       display: flex;
       flex-direction: column-reverse;
       justify-content: space-between;
     }
+    .gradient-overlay {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px 0 0 18px;
+      border-radius: 50%;
+      object-fit: fill;
+      height: 35rem;
+      width: 35rem;
 
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+          to bottom left,
+          $dark-color,
+          $purple-color
+        );
+        opacity: 0.4;
+      }
+      .commitment__photo {
+        border-radius: 18px 0 0 18px;
+      }
+    }
     .commitment__text-box {
       font-size: 1.6rem;
       background-color: $bg-white;
@@ -170,32 +197,6 @@
         @media (max-width: 34em) {
           text-justify: justify;
         }
-      }
-    }
-
-    .gradient-overlay {
-      position: relative;
-      overflow: hidden;
-      border-radius: 18px 0 0 18px;
-      @media (max-width: 34em) {
-        border-radius: 0 0 18px 18px;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(
-          to bottom left,
-          $dark-color,
-          $purple-color
-        );
-        opacity: 0.4;
-      }
-      .commitment__photo {
-        border-radius: 18px 0 0 18px;
       }
     }
   }
@@ -228,6 +229,10 @@
       font-weight: 500;
       letter-spacing: 0.1rem;
       font-size: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      color: #fff;
     }
     .icons {
       padding-bottom: 5rem;
@@ -235,6 +240,8 @@
     }
   }
 }
+
+//------------------TEAM SECTION----------------//
 #team {
   .founder {
     &__content {
@@ -275,6 +282,8 @@
     }
   }
 }
+
+//------------------PROJECT PEDAGOGY  SECTION----------------//
 .project {
   padding-bottom: 10rem;
   background-color: $blue;
@@ -288,16 +297,18 @@
     position: relative;
     .intro {
       padding-bottom: 4rem;
-      // font-weight: 500;
-      // line-height: 2;
       span {
         font-weight: 600;
         color: $pink;
         font-size: 1.8rem;
       }
+      .quotation {
+        font-style: italic;
+        font-weight: 600;
+      }
     }
   }
-  /* Slideshow container */
+  //--------- Slideshow container------------//
   .slideshow-container {
     position: relative;
     background: $bg-white;
@@ -321,7 +332,7 @@
         color: $dark-blue;
       }
     }
-    /* Next & previous buttons */
+    //----------Next & previous buttons -----//
     .prev,
     .next {
       cursor: pointer;
@@ -336,9 +347,9 @@
       border-radius: 0 3px 3px 0;
       user-select: none;
       &:hover {
-        background-color: $yellow-light;
+        background-color: $yellow-dark;
         color: white;
-        color: $dark-purple;
+        // color: $dark-purple;
       }
     }
     /* Position the "next button" to the right */
@@ -354,8 +365,7 @@
     text-align: center;
     padding: 2rem;
     background: $yellow-light;
-    background: $tickle-pink;
-    background: $midnight-blue;
+
     /* The dots/bullets/indicators */
     .dot {
       cursor: pointer;
@@ -405,14 +415,14 @@
 //------------------PRICING SECTION----------------//
 .pricing {
   background: $baby-pink;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
   &__heading {
     padding-bottom: 3rem;
     font-weight: 500;
     font-size: 2rem;
   }
   .pricing__text {
-    padding-bottom: 4rem;
+    padding-bottom: 0.5rem;
     p {
       padding-bottom: 1rem;
     }
@@ -422,22 +432,21 @@
     width: 90%;
     font-size: 1.6rem;
     color: $text-muted;
-    margin: 0 auto 4rem;
+    margin: 0 auto 2rem;
     line-height: 1.6;
     table-layout: fixed;
+    background-color: #fff;
     td,
     th {
-      border: 0.1rem solid #ddd;
+      border: 0.1rem solid #fff;
       padding: 0.8rem;
     }
     tr:nth-child(even) {
       background-color: #f2f2f2;
-      // color: #fff;
     }
     td:first-child {
       background-color: $yellow-dark;
-      // font-size: 1.6rem;
-      // color: $bg-white;
+      // background-color: #fff;
     }
     td {
       width: 50%;
@@ -448,20 +457,16 @@
       padding-bottom: 12px;
       text-align: left;
       background-color: $blue;
-
       color: #fff;
     }
   }
 }
 //------------------CONTACT SECTION----------------//
 #contact {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../img/pencils-color-light.jpg);
-  background-size: cover;
-  color: #fff;
   background-attachment: fixed;
   .form-container {
-    background-color: $bg-light;
+    background-color: #feedec;
+    background-color: $yellow-light;
     padding: 2rem 4rem;
     text-align: center;
     border-radius: 18px;
@@ -477,12 +482,11 @@
       padding: 2rem 2rem;
     }
     h3 {
-      color: $text-muted;
       font-size: 1.8rem;
       margin-bottom: 2rem;
       font-weight: 500;
       span a {
-        color: $dark-purple;
+        color: $pink;
         font-weight: 600;
       }
     }
@@ -537,7 +541,7 @@
       }
     }
     button[type="submit"] {
-      background-color: $dark-purple;
+      background-color: $blue;
       border: none;
       border-radius: 4px;
       color: #fff;
@@ -551,7 +555,7 @@
     }
 
     button[type="submit"]:hover {
-      background-color: $hover-purple;
+      background-color: #24babc;
       color: #fff;
       font-weight: 500;
     }
@@ -560,19 +564,26 @@
 
 //------------------FOOTER  SECTION----------------//
 #footer {
+  background-color: $midnight-blue;
+  color: #fff;
   .footer-container {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     p {
       padding-bottom: 1rem;
+      color: #fff;
+    }
+
+    a {
+      color: #fff;
     }
     .footer-box {
-      border-left: 1px solid $dark-purple;
+      border-left: 1px solid $baby-pink;
       padding: 0 2rem;
     }
     .footer-icons {
       margin-right: 0.5rem;
-      color: $dark-purple;
+      color: $pink;
       &:hover {
         color: $hover-purple;
       }
@@ -591,6 +602,6 @@
   }
   .copyright {
     padding-bottom: 3rem;
-    color: $dark-purple;
+    color: $baby-pink;
   }
 }

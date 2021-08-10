@@ -27,8 +27,6 @@
   width: 20rem;
   display: block;
   margin: 0 auto 3rem auto;
-  // background: $pink;
-  background: linear-gradient(90deg, rgba(255, 71, 218, 1) 35%, #9679f6 75%);
   background: linear-gradient(
     90deg,
     rgba(255, 71, 218, 1) 25%,
@@ -36,7 +34,14 @@
     #9679f6 75%
   );
 }
-
+.white-line {
+  height: 0.2rem;
+  width: 5rem;
+  display: block;
+  margin: 1.5rem auto 1.5rem;
+  background: #fff;
+  background: $blue;
+}
 // config for all buttons
 %btn-shared {
   display: inline-block;

@@ -211,8 +211,15 @@ strong {
   width: 20rem;
   display: block;
   margin: 0 auto 3rem auto;
-  background: linear-gradient(90deg, #ff47da 35%, #9679f6 75%);
   background: linear-gradient(90deg, #ff47da 25%, #ffbc00 50%, #9679f6 75%); }
+
+.white-line {
+  height: 0.2rem;
+  width: 5rem;
+  display: block;
+  margin: 1.5rem auto 1.5rem;
+  background: #fff;
+  background: #30d4d4; }
 
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
@@ -387,7 +394,7 @@ input[class^="btn-"]:hover {
     background-color: #ffbc00;
     border-radius: 99px; }
     #navbar .cta a {
-      color: #30d4d4;
+      color: #fc17c6;
       border-bottom: none; }
       #navbar .cta a:focus {
         border-color: #ffde84; }
@@ -442,12 +449,32 @@ input[class^="btn-"]:hover {
 
 #school .commitment__content {
   display: grid;
-  grid-template-columns: 1fr 3fr; }
+  grid-template-columns: 1fr 3fr;
+  align-items: center; }
   @media (max-width: 34em) {
     #school .commitment__content {
       display: flex;
       flex-direction: column-reverse;
       justify-content: space-between; } }
+  #school .commitment__content .gradient-overlay {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px 0 0 18px;
+    border-radius: 50%;
+    object-fit: fill;
+    height: 35rem;
+    width: 35rem; }
+    #school .commitment__content .gradient-overlay::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to bottom left, #333, #c184fa);
+      opacity: 0.4; }
+    #school .commitment__content .gradient-overlay .commitment__photo {
+      border-radius: 18px 0 0 18px; }
   #school .commitment__content .commitment__text-box {
     font-size: 1.6rem;
     background-color: #fdfdfd;
@@ -471,24 +498,6 @@ input[class^="btn-"]:hover {
       @media (max-width: 34em) {
         #school .commitment__content .commitment__text-box p {
           text-justify: justify; } }
-  #school .commitment__content .gradient-overlay {
-    position: relative;
-    overflow: hidden;
-    border-radius: 18px 0 0 18px; }
-    @media (max-width: 34em) {
-      #school .commitment__content .gradient-overlay {
-        border-radius: 0 0 18px 18px; } }
-    #school .commitment__content .gradient-overlay::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(to bottom left, #333, #c184fa);
-      opacity: 0.4; }
-    #school .commitment__content .gradient-overlay .commitment__photo {
-      border-radius: 18px 0 0 18px; }
 
 .values {
   padding-bottom: 5rem;
@@ -510,7 +519,11 @@ input[class^="btn-"]:hover {
     .values__boxes .value-text {
       font-weight: 500;
       letter-spacing: 0.1rem;
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      color: #fff; }
     .values__boxes .icons {
       padding-bottom: 5rem;
       color: #30d4d4; }
@@ -552,7 +565,6 @@ input[class^="btn-"]:hover {
   padding-bottom: 10rem;
   background-color: #30d4d4;
   background-size: cover;
-  /* Slideshow container */
   /* The dot/bullet/indicator container */ }
   .project #project-title {
     color: #fff; }
@@ -565,12 +577,14 @@ input[class^="btn-"]:hover {
         font-weight: 600;
         color: #fc17c6;
         font-size: 1.8rem; }
+      .project .pedagogy .intro .quotation {
+        font-style: italic;
+        font-weight: 600; }
   .project .slideshow-container {
     position: relative;
     background: #fdfdfd;
     color: #ffbc00;
     /* Slides */
-    /* Next & previous buttons */
     /* Position the "next button" to the right */ }
     .project .slideshow-container .mySlides {
       display: none;
@@ -599,9 +613,8 @@ input[class^="btn-"]:hover {
       user-select: none; }
       .project .slideshow-container .prev:hover,
       .project .slideshow-container .next:hover {
-        background-color: #ffde84;
-        color: white;
-        color: #ae6fe9; }
+        background-color: #ffbc00;
+        color: white; }
     .project .slideshow-container .next {
       position: absolute;
       right: 0;
@@ -610,8 +623,6 @@ input[class^="btn-"]:hover {
     text-align: center;
     padding: 2rem;
     background: #ffde84;
-    background: #ff87ab;
-    background: #1b065e;
     /* The dots/bullets/indicators */
     /* Add a background color to the active dot/circle */ }
     .project .dot-container .dot {
@@ -649,13 +660,13 @@ input[class^="btn-"]:hover {
 
 .pricing {
   background: #fcc8c2;
-  padding-bottom: 6rem; }
+  padding-bottom: 4rem; }
   .pricing__heading {
     padding-bottom: 3rem;
     font-weight: 500;
     font-size: 2rem; }
   .pricing .pricing__text {
-    padding-bottom: 4rem; }
+    padding-bottom: 0.5rem; }
     .pricing .pricing__text p {
       padding-bottom: 1rem; }
   .pricing #princing__table {
@@ -663,12 +674,13 @@ input[class^="btn-"]:hover {
     width: 90%;
     font-size: 1.6rem;
     color: #6c757d;
-    margin: 0 auto 4rem;
+    margin: 0 auto 2rem;
     line-height: 1.6;
-    table-layout: fixed; }
+    table-layout: fixed;
+    background-color: #fff; }
     .pricing #princing__table td,
     .pricing #princing__table th {
-      border: 0.1rem solid #ddd;
+      border: 0.1rem solid #fff;
       padding: 0.8rem; }
     .pricing #princing__table tr:nth-child(even) {
       background-color: #f2f2f2; }
@@ -685,12 +697,10 @@ input[class^="btn-"]:hover {
       color: #fff; }
 
 #contact {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/pencils-color-light.jpg);
-  background-size: cover;
-  color: #fff;
   background-attachment: fixed; }
   #contact .form-container {
-    background-color: #fdf2e9;
+    background-color: #feedec;
+    background-color: #ffde84;
     padding: 2rem 4rem;
     text-align: center;
     border-radius: 18px;
@@ -705,12 +715,11 @@ input[class^="btn-"]:hover {
         width: 100%;
         padding: 2rem 2rem; } }
     #contact .form-container h3 {
-      color: #6c757d;
       font-size: 1.8rem;
       margin-bottom: 2rem;
       font-weight: 500; }
       #contact .form-container h3 span a {
-        color: #ae6fe9;
+        color: #fc17c6;
         font-weight: 600; }
     #contact .form-container .text-fields {
       display: grid;
@@ -745,7 +754,7 @@ input[class^="btn-"]:hover {
       #contact .form-container .text-fields .message-input {
         grid-area: message; }
     #contact .form-container button[type="submit"] {
-      background-color: #ae6fe9;
+      background-color: #30d4d4;
       border: none;
       border-radius: 4px;
       color: #fff;
@@ -757,32 +766,37 @@ input[class^="btn-"]:hover {
       margin: 8px 0;
       width: 100%; }
     #contact .form-container button[type="submit"]:hover {
-      background-color: #5c3f78;
+      background-color: #24babc;
       color: #fff;
       font-weight: 500; }
 
-#footer .footer-container {
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr; }
-  #footer .footer-container p {
-    padding-bottom: 1rem; }
-  #footer .footer-container .footer-box {
-    border-left: 1px solid #ae6fe9;
-    padding: 0 2rem; }
-  #footer .footer-container .footer-icons {
-    margin-right: 0.5rem;
-    color: #ae6fe9; }
-    #footer .footer-container .footer-icons:hover {
-      color: #5c3f78; }
-  #footer .footer-container .logo-box {
-    margin: 0 auto; }
-  #footer .footer-container .social-box {
-    display: flex;
-    align-content: center;
-    margin: 0 auto; }
-    #footer .footer-container .social-box i {
-      margin-right: 3rem; }
-
-#footer .copyright {
-  padding-bottom: 3rem;
-  color: #ae6fe9; }
+#footer {
+  background-color: #1b065e;
+  color: #fff; }
+  #footer .footer-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr; }
+    #footer .footer-container p {
+      padding-bottom: 1rem;
+      color: #fff; }
+    #footer .footer-container a {
+      color: #fff; }
+    #footer .footer-container .footer-box {
+      border-left: 1px solid #fcc8c2;
+      padding: 0 2rem; }
+    #footer .footer-container .footer-icons {
+      margin-right: 0.5rem;
+      color: #fc17c6; }
+      #footer .footer-container .footer-icons:hover {
+        color: #5c3f78; }
+    #footer .footer-container .logo-box {
+      margin: 0 auto; }
+    #footer .footer-container .social-box {
+      display: flex;
+      align-content: center;
+      margin: 0 auto; }
+      #footer .footer-container .social-box i {
+        margin-right: 3rem; }
+  #footer .copyright {
+    padding-bottom: 3rem;
+    color: #fcc8c2; }
