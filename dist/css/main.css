@@ -387,6 +387,9 @@ input[class^="btn-"]:hover {
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
     transition: border-color 0.4s; }
+    @media only screen and (max-width: 768px) {
+      #navbar .nav-link {
+        padding-bottom: 0; } }
     #navbar .nav-link:hover {
       border-color: #ffde84; }
     #navbar .nav-link:focus {
@@ -407,6 +410,15 @@ input[class^="btn-"]:hover {
       #navbar .hamburger {
         display: block;
         cursor: pointer; } }
+    @media only screen and (max-width: 768px) {
+      #navbar .hamburger.active .bar:nth-child(2) {
+        opacity: 0; } }
+    @media only screen and (max-width: 768px) {
+      #navbar .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg); } }
+    @media only screen and (max-width: 768px) {
+      #navbar .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg); } }
   #navbar .bar {
     display: block;
     width: 25px;
@@ -422,22 +434,27 @@ input[class^="btn-"]:hover {
       top: 5rem;
       flex-direction: column;
       background-color: #fff;
+      color: #fc17c6;
       width: 100%;
       border-radius: 10px;
       text-align: center;
       transition: 0.3s;
       box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05); } }
   @media only screen and (max-width: 768px) {
-    #navbar .nav-menu .active {
-      left: 0; } }
+    #navbar .nav-menu.active {
+      left: 0;
+      padding: 0 3rem; } }
   @media only screen and (max-width: 768px) {
-    #navbar .nav-menu .nav-item {
+    #navbar .nav-item {
       margin: 2.5rem 0; } }
 
 #navbar.top {
   background: transparent; }
   #navbar.top .nav-link {
     color: #fff; }
+    @media only screen and (max-width: 768px) {
+      #navbar.top .nav-link {
+        color: #fc17c6; } }
   #navbar.top ul li:last-child a {
     color: #fc17c6; }
 

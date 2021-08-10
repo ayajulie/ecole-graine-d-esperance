@@ -46,7 +46,9 @@
     border-bottom: 3px transparent solid; //used for the hover effect
     padding-bottom: 0.5rem;
     transition: border-color 0.4s; //for smooth effect on the hover
-
+    @media only screen and (max-width: 768px) {
+      padding-bottom: 0;
+    }
     &:hover {
       border-color: $yellow-light;
     }
@@ -76,6 +78,23 @@
       display: block;
       cursor: pointer;
     }
+    &.active .bar:nth-child(2) {
+      @media only screen and (max-width: 768px) {
+        opacity: 0;
+      }
+    }
+
+    &.active .bar:nth-child(1) {
+      @media only screen and (max-width: 768px) {
+        transform: translateY(8px) rotate(45deg);
+      }
+    }
+
+    &.active .bar:nth-child(3) {
+      @media only screen and (max-width: 768px) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
   }
 
   .bar {
@@ -94,21 +113,23 @@
       top: 5rem;
       flex-direction: column;
       background-color: #fff;
+      color: $pink;
       width: 100%;
       border-radius: 10px;
       text-align: center;
       transition: 0.3s;
       box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
-    .active {
+    &.active {
       @media only screen and (max-width: 768px) {
         left: 0;
+        padding: 0 3rem;
       }
     }
-    .nav-item {
-      @media only screen and (max-width: 768px) {
-        margin: 2.5rem 0;
-      }
+  }
+  .nav-item {
+    @media only screen and (max-width: 768px) {
+      margin: 2.5rem 0;
     }
   }
 }
@@ -117,7 +138,11 @@
   background: transparent;
   .nav-link {
     color: #fff;
+    @media only screen and (max-width: 768px) {
+      color: $pink;
+    }
   }
+
   ul li:last-child a {
     color: $pink;
   }
