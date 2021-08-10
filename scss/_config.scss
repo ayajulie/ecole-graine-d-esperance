@@ -9,6 +9,10 @@ $purple-color: #c184fa;
 $hover-purple: #5c3f78;
 $pink: #fc17c6;
 $blue: #30d4d4;
+$tickle-pink: #ff87ab;
+$baby-pink: #fcc8c2;
+$midnight-blue: #1b065e;
+
 $dark-purple: #ae6fe9;
 
 $medium-color: #ddd;
@@ -38,13 +42,11 @@ html {
 }
 
 body {
-  background-color: $yellow-dark;
-  background-color: $yellow-1;
   background-color: $bg-white;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: $dark-blue;
+  color: $midnight-blue;
   line-height: 1;
   overflow-x: hidden;
   font-size: 1.6rem;

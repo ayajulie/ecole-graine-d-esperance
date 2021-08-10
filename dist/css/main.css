@@ -147,13 +147,11 @@ html {
   overflow-x: hidden; }
 
 body {
-  background-color: #ffbc00;
-  background-color: #ffef64;
   background-color: #fdfdfd;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #042744;
+  color: #1b065e;
   line-height: 1;
   overflow-x: hidden;
   font-size: 1.6rem; }
@@ -211,9 +209,9 @@ strong {
 .bottom-line {
   height: 0.8rem;
   width: 20rem;
-  background: #fc17c6;
   display: block;
-  margin: 0 auto 3rem auto; }
+  margin: 0 auto 3rem auto;
+  background: linear-gradient(90deg, #ff47da 35%, #9679f6 75%); }
 
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
@@ -443,7 +441,7 @@ input[class^="btn-"]:hover {
 
 #school .commitment__content {
   display: grid;
-  grid-template-columns: 1fr 2fr; }
+  grid-template-columns: 1fr 3fr; }
   @media (max-width: 34em) {
     #school .commitment__content {
       display: flex;
@@ -453,16 +451,19 @@ input[class^="btn-"]:hover {
     font-size: 1.6rem;
     background-color: #fdfdfd;
     padding: 4rem 4rem;
-    border-radius: 0 18px 18px 0; }
+    border-radius: 0 18px 18px 0;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between; }
     @media (max-width: 34em) {
       #school .commitment__content .commitment__text-box {
         border-radius: 18px 18px 0 0; } }
     #school .commitment__content .commitment__text-box .highlighted-text {
-      font-weight: 400;
-      background-color: #ffbc00;
+      font-weight: 500;
+      font-size: 1.7rem;
       display: inline-block;
       padding-bottom: 0.5rem;
-      color: #fff;
+      color: #30d4d4;
       margin-bottom: 2rem; }
     #school .commitment__content .commitment__text-box p {
       padding-bottom: 1.5rem; }
@@ -490,7 +491,7 @@ input[class^="btn-"]:hover {
 
 .values {
   padding-bottom: 5rem;
-  background-color: #ffbc00; }
+  background-color: #ff87ab; }
   .values h2 {
     color: #fff; }
   .values__content {
@@ -608,6 +609,8 @@ input[class^="btn-"]:hover {
     text-align: center;
     padding: 2rem;
     background: #ffde84;
+    background: #ff87ab;
+    background: #1b065e;
     /* The dots/bullets/indicators */
     /* Add a background color to the active dot/circle */ }
     .project .dot-container .dot {
@@ -644,7 +647,7 @@ input[class^="btn-"]:hover {
     margin: auto; }
 
 .pricing {
-  background: #fdfdfd;
+  background: #fcc8c2;
   padding-bottom: 6rem; }
   .pricing__heading {
     padding-bottom: 3rem;

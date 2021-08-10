@@ -25,9 +25,10 @@
 .bottom-line {
   height: 0.8rem;
   width: 20rem;
-  background: $pink;
   display: block;
   margin: 0 auto 3rem auto;
+  // background: $pink;
+  background: linear-gradient(90deg, rgba(255, 71, 218, 1) 35%, #9679f6 75%);
 }
 
 // config for all buttons

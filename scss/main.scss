@@ -136,7 +136,7 @@
 #school {
   .commitment__content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
 
     @media (max-width: 34em) {
       display: flex;
@@ -149,18 +149,21 @@
       background-color: $bg-white;
       padding: 4rem 4rem;
       border-radius: 0 18px 18px 0;
+      display: flex;
+      flex-direction: column;
+      // justify-content: flex-start;
+      align-content: space-between;
+
       @media (max-width: 34em) {
         border-radius: 18px 18px 0 0;
       }
       .highlighted-text {
-        font-weight: 400;
-        background-color: $yellow-dark;
+        font-weight: 500;
+        font-size: 1.7rem;
         display: inline-block;
         padding-bottom: 0.5rem;
-        color: #fff;
+        color: $blue;
         margin-bottom: 2rem;
-
-        // color: $pink;
       }
       p {
         padding-bottom: 1.5rem;
@@ -201,7 +204,7 @@
 //-----------------------------VALUES SECTION--------------------------//
 .values {
   padding-bottom: 5rem;
-  background-color: $yellow-dark;
+  background-color: $tickle-pink;
 
   h2 {
     color: #fff;
@@ -351,6 +354,8 @@
     text-align: center;
     padding: 2rem;
     background: $yellow-light;
+    background: $tickle-pink;
+    background: $midnight-blue;
     /* The dots/bullets/indicators */
     .dot {
       cursor: pointer;
@@ -399,7 +404,7 @@
 
 //------------------PRICING SECTION----------------//
 .pricing {
-  background: $bg-white;
+  background: $baby-pink;
   padding-bottom: 6rem;
   &__heading {
     padding-bottom: 3rem;
