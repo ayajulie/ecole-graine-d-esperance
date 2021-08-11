@@ -341,8 +341,10 @@
                 target="_blank"> 211
                 avenue Felix Faure 69003 Lyon </a></p>
           </div>
-          <iframe class="map" width="1200" height="450" style="border:0" loading="lazy" allowfullscreen
-            src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJhVXiUdbB9EcR7W1E1CyzfOg&destination=place_id:ChIJhVXiUdbB9EcR7W1E1CyzfOg&5oyVb70uoo"></iframe>
+          <div class="map-responsive">
+            <iframe class="map" width="1200" height="450" style="border:0" loading="lazy" allowfullscreen
+              src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJhVXiUdbB9EcR7W1E1CyzfOg&destination=place_id:ChIJhVXiUdbB9EcR7W1E1CyzfOg&5oyVb70uoo"></iframe>
+          </div>
         </div>
         <!-- <img class="img-local" src="https://via.placeholder.com/1000" alt="Photo de l'intérieur du local">
     <img class="img-local" src="https://via.placeholder.com/1000" alt="Photo de l'intérieur du local">
@@ -459,17 +461,14 @@
   <footer id="footer">
     <div class="container footer-container">
       <div class="logo-box ">
-        <p>LOGO</p>
-        <div class="social-box ">
-          <div>
-            <p><a href="#"><i class="fab fa-twitter fa-2x footer-icons"></i></a></p>
-          </div>
-          <div>
-            <p><a href=""><i class="fab fa-facebook fa-2x footer-icons"></i></a></p>
-          </div>
-        </div>
-
+        <div class="logo-footer"><img src="./img/logo-color.png" alt="Logo des clochettes d esperance"></div>
       </div>
+
+      <div class="footer-box logo-box">
+        <p><a href="#"><i class="fab fa-twitter fa-2x footer-icons twitter"></i></a></p>
+        <p><a href="#"><i class="fab fa-facebook fa-2x footer-icons"></i></a></p>
+      </div>
+
       <div class="adress footer-box">
         <p><i class="fas fa-map-marker-alt footer-icons"></i><a
             href="https://maps.google.com/?ll=45.7555868509154,4.873046240372218" target="_blank"> 211
@@ -478,11 +477,14 @@
             85
             22 06 11</a></p>
       </div>
+
       <div class="footer-box">
         <p>Mentions légales</p>
       </div>
 
     </div>
+
+
     <p class="copyright text-center">Les Clochettes d'Espérance &copy; 2021</p>
   </footer>
   <script src="https://code.jquery.com/jquery-3.5.0.min.js"
