@@ -713,8 +713,7 @@ input[class^="btn-"]:hover {
   .premises .premises__container .map-responsive {
     overflow: hidden;
     position: relative;
-    padding-bottom: 30%;
-    border: 5px solid #30d4d4; }
+    padding-bottom: 30%; }
   .premises .premises__container .map-responsive iframe {
     left: 0;
     top: 0;
