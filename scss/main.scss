@@ -285,9 +285,6 @@
       display: flex;
       flex-direction: column;
     }
-    div {
-      color: #fff;
-    }
   }
   &__boxes {
     font-size: 1.6rem;
@@ -314,7 +311,7 @@
       display: flex;
       flex-direction: column;
       align-content: space-between;
-      color: $blue;
+      color: $dark-blue;
     }
     .icons {
       padding-bottom: 5rem;
@@ -531,6 +528,13 @@
     p {
       padding-bottom: 1rem;
     }
+    .text-pricing {
+      // padding-left: 2rem;
+      span {
+        color: $pink;
+        font-weight: 500;
+      }
+    }
   }
   #princing__table {
     border-collapse: collapse;
@@ -676,7 +680,7 @@
   background-color: $blue;
   .footer-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 
     @media only screen and (max-width: 768px) {
       display: flex;
@@ -684,7 +688,7 @@
     }
 
     .logo-footer {
-      width: 20rem;
+      width: 25rem;
     }
     p {
       padding-bottom: 1rem;
@@ -692,7 +696,7 @@
 
     .footer-box {
       border-left: 1px solid $pink;
-      padding: 0 2rem;
+      padding: 3rem 2rem;
     }
     .footer-icons {
       margin-right: 0.5rem;
@@ -701,25 +705,18 @@
         color: $hover-purple;
       }
     }
-    .logo-box {
-      display: flex;
-      justify-content: center;
-      padding: 0 8rem;
-      .twitter {
-        padding-right: 5rem;
-      }
-    }
     .social-box {
       display: flex;
+      justify-content: center;
       align-content: center;
-      margin: 0 auto;
-      i {
-        margin-right: 3rem;
+      padding: 3rem 8rem;
+      .twitter {
+        padding-right: 5rem;
       }
     }
   }
   .copyright {
     padding-bottom: 3rem;
-    color: $baby-pink;
+    color: $pink;
   }
 }
