@@ -394,7 +394,8 @@ input[class^="btn-"]:hover {
     @media only screen and (max-width: 34em) {
       .values__content {
         display: flex;
-        flex-direction: column; } }
+        flex-direction: column;
+        padding: 0 2rem; } }
   .values__boxes {
     font-size: 1.6rem;
     text-align: center;
@@ -411,7 +412,6 @@ input[class^="btn-"]:hover {
         flex-direction: row-reverse; } }
     .values__boxes .value-text {
       font-weight: 500;
-      letter-spacing: 0.1rem;
       font-size: 1.8rem;
       display: flex;
       flex-direction: column;
