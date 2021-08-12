@@ -335,9 +335,15 @@
       padding-bottom: 4rem;
     }
     &__name {
-      padding-bottom: 2rem;
       font-size: 1.8rem;
       color: $pink;
+      font-weight: 500;
+      padding-bottom: 1rem;
+    }
+    &__title {
+      padding-bottom: 2rem;
+      font-size: 1.6rem;
+      color: $yellow-dark;
       font-weight: 500;
     }
     &__img {

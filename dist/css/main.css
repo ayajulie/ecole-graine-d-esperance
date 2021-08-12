@@ -427,9 +427,15 @@ input[class^="btn-"]:hover {
   padding-bottom: 4rem; }
 
 #team .founder__name {
-  padding-bottom: 2rem;
   font-size: 1.8rem;
   color: #fc17c6;
+  font-weight: 500;
+  padding-bottom: 1rem; }
+
+#team .founder__title {
+  padding-bottom: 2rem;
+  font-size: 1.6rem;
+  color: #ffbc00;
   font-weight: 500; }
 
 #team .founder__img {
