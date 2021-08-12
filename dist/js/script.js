@@ -1,4 +1,5 @@
 
+
 // transparent navbar
 const navbar = document.getElementById('navbar');
 let scrolled = false; //we haven't started scoll yet
@@ -12,6 +13,7 @@ window.onscroll = function () {
     scrolled = false;
   }
 };
+
 
 // Smooth Scrolling
 $('.navbar a, .btn').on('click', function (e) {

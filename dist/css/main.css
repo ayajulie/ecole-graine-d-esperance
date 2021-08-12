@@ -151,7 +151,7 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #1b065e;
+  color: #333;
   line-height: 1;
   overflow-x: hidden;
   font-size: 1.6rem; }
@@ -572,7 +572,12 @@ input[class^="btn-"]:hover {
     font-family: "Montserrat"; }
     @media only screen and (max-width: 768px) {
       .values__boxes {
-        border-bottom: 2px solid #fff; } }
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 2rem; } }
+    @media only screen and (max-width: 768px) {
+      .values__boxes:nth-child(even) {
+        flex-direction: row-reverse; } }
     .values__boxes .value-text {
       font-weight: 500;
       letter-spacing: 0.1rem;
@@ -646,15 +651,23 @@ input[class^="btn-"]:hover {
     .project .slideshow-container .mySlides {
       display: none;
       padding: 3rem 8rem; }
+      @media (max-width: 34em) {
+        .project .slideshow-container .mySlides {
+          padding: 2rem 6rem; } }
       .project .slideshow-container .mySlides .slide-title {
         color: #ffbc00;
         font-weight: 500;
         padding-bottom: 2rem;
         font-size: 2.5rem; }
+        @media (max-width: 34em) {
+          .project .slideshow-container .mySlides .slide-title {
+            font-size: 2rem; } }
       .project .slideshow-container .mySlides p {
         font-weight: 500;
-        height: 10rem;
         color: #042744; }
+        @media (min-width: 764px) {
+          .project .slideshow-container .mySlides p {
+            height: 10rem; } }
     .project .slideshow-container .prev,
     .project .slideshow-container .next {
       cursor: pointer;
@@ -835,6 +848,8 @@ input[class^="btn-"]:hover {
       background-color: #24babc;
       color: #fff;
       font-weight: 500; }
+  #contact .safe {
+    height: 10rem; }
 
 #footer {
   border-top: 4px solid #1b065e; }

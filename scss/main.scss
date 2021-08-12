@@ -297,7 +297,15 @@
     line-height: 1.6rem;
     font-family: "Montserrat";
     @media only screen and (max-width: 768px) {
-      border-bottom: 2px solid #fff;
+      // border-bottom: 1px solid rgb(236, 236, 236);
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem 2rem;
+    }
+    &:nth-child(even) {
+      @media only screen and (max-width: 768px) {
+        flex-direction: row-reverse;
+      }
     }
 
     .value-text {
@@ -388,23 +396,33 @@
     position: relative;
     background: $bg-white;
     color: $yellow-dark;
+    // @media (max-width: 34em) {
+    //   height: 60rem;
+    // }
 
     /* Slides */
     .mySlides {
       display: none;
       padding: 3rem 8rem;
-      // text-align: center;
+      @media (max-width: 34em) {
+        padding: 2rem 6rem;
+      }
       .slide-title {
         color: $yellow-dark;
         font-weight: 500;
         padding-bottom: 2rem;
-
         font-size: 2.5rem;
+        @media (max-width: 34em) {
+          font-size: 2rem;
+        }
       }
       p {
         font-weight: 500;
-        height: 10rem;
+        // height: 10rem;
         color: $dark-blue;
+        @media (min-width: 764px) {
+          height: 10rem;
+        }
       }
     }
     //----------Next & previous buttons -----//
@@ -653,6 +671,9 @@
       color: #fff;
       font-weight: 500;
     }
+  }
+  .safe {
+    height: 10rem;
   }
 }
 
