@@ -695,6 +695,9 @@
 
     .logo-footer {
       width: 25rem;
+      @media (max-width: 768px) {
+        margin: 0 auto;
+      }
     }
     p {
       padding-bottom: 1rem;
@@ -703,6 +706,10 @@
     .footer-box {
       border-left: 1px solid $pink;
       padding: 3rem 2rem;
+      @media (max-width: 34em) {
+        padding: 2rem 2rem;
+        border-left: none;
+      }
     }
     .footer-icons {
       margin-right: 0.5rem;
@@ -716,6 +723,9 @@
       justify-content: center;
       align-content: center;
       padding: 3rem 8rem;
+      @media (max-width: 34em) {
+        padding: 0 2rem;
+      }
       .twitter {
         padding-right: 5rem;
       }
