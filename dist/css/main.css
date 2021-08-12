@@ -151,7 +151,7 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #333;
+  color: #1e1e1e;
   line-height: 1;
   overflow-x: hidden;
   font-size: 1.6rem; }
@@ -239,7 +239,7 @@ strong {
 
 .btn-dark {
   color: #f4f4f4;
-  background-color: #333; }
+  background-color: #1e1e1e; }
 
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
@@ -251,8 +251,8 @@ input[class^="btn-"]:hover {
   color: set-text-color(#ffde84); }
 
 .bg-dark {
-  background: #333;
-  color: set-text-color(#333); }
+  background: #1e1e1e;
+  color: set-text-color(#1e1e1e); }
 
 .bg-light {
   background: #fdf2e9;
@@ -500,7 +500,8 @@ input[class^="btn-"]:hover {
 #school .commitment__content {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  align-items: center; }
+  align-items: center;
+  padding-bottom: 3rem; }
   @media (max-width: 34em) {
     #school .commitment__content {
       display: flex;
@@ -521,7 +522,7 @@ input[class^="btn-"]:hover {
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(to bottom left, #333, #c184fa);
+      background-image: linear-gradient(to bottom left, #1e1e1e, #c184fa);
       opacity: 0.4; }
     #school .commitment__content .gradient-overlay .commitment__photo {
       border-radius: 18px 0 0 18px; }
@@ -551,7 +552,7 @@ input[class^="btn-"]:hover {
 
 .values {
   padding-bottom: 5rem;
-  background-color: #ffbc00; }
+  background-color: #ffef64; }
   .values h2 {
     color: #fff; }
   .values__content {
@@ -585,7 +586,7 @@ input[class^="btn-"]:hover {
       display: flex;
       flex-direction: column;
       align-content: space-between;
-      color: #fff; }
+      color: #30d4d4; }
     .values__boxes .icons {
       padding-bottom: 5rem;
       color: #30d4d4; }
