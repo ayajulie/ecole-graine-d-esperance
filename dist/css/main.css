@@ -314,7 +314,7 @@ input[class^="btn-"]:hover {
       color: #fc17c6; }
       @media (max-width: 34em) {
         #header-home .header-content .heading-primary {
-          font-size: 3rem; } }
+          font-size: 2.7rem; } }
       #header-home .header-content .heading-primary--sub {
         font-weight: 300;
         font-size: 3rem;
@@ -552,6 +552,9 @@ input[class^="btn-"]:hover {
   display: inline-block;
   text-align: center;
   font-weight: 500; }
+
+.premises__text--main {
+  padding-bottom: 2rem; }
 
 .premises__text--sub {
   padding-bottom: 5rem; }
