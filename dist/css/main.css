@@ -71,6 +71,9 @@ strong {
   text-align: center;
   color: #30d4d4;
   font-weight: 500; }
+  @media only screen and (max-width: 500px) {
+    .title {
+      font-size: 2.5rem; } }
 
 .bottom-line {
   height: 0.8rem;
@@ -196,12 +199,15 @@ input[class^="btn-"]:hover {
   position: fixed;
   z-index: 100;
   border-radius: 0 0 18px 18px;
-  padding: 0 1rem; }
+  padding: 0 2rem; }
   #navbar .img-logo {
-    width: 15rem; }
+    width: 17rem; }
   #navbar ul {
     display: flex;
     margin-right: 1rem; }
+    @media only screen and (max-width: 768px) {
+      #navbar ul {
+        display: none; } }
   #navbar li {
     justify-content: space-between;
     padding: 1rem 1.5rem; }
@@ -211,7 +217,7 @@ input[class^="btn-"]:hover {
     color: #fc17c6;
     font-weight: bold;
     border-bottom: 3px transparent solid;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.6rem;
     transition: border-color 0.4s; }
     @media only screen and (max-width: 768px) {
       #navbar .nav-link {
@@ -289,6 +295,9 @@ input[class^="btn-"]:hover {
   clip-path: ellipse(138% 100% at -0.16% 0%);
   color: #fff;
   height: 85vh; }
+  @media only screen and (max-width: 768px) {
+    #header-home {
+      background-position: 50% 30%; } }
   #header-home .header-content {
     width: 50%;
     padding-top: 18%;
@@ -328,7 +337,7 @@ input[class^="btn-"]:hover {
   grid-template-columns: 1fr 3fr;
   align-items: center;
   padding-bottom: 3rem; }
-  @media (max-width: 34em) {
+  @media (max-width: 48em) {
     #school .commitment__content {
       display: flex;
       flex-direction: column-reverse;
@@ -385,7 +394,7 @@ input[class^="btn-"]:hover {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     color: #fff; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 34em) {
       .values__content {
         display: flex;
         flex-direction: column; } }
@@ -395,12 +404,12 @@ input[class^="btn-"]:hover {
     padding: 4rem 2rem;
     line-height: 1.6rem;
     font-family: "Montserrat"; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 34em) {
       .values__boxes {
         display: flex;
         justify-content: space-between;
         padding: 2rem 2rem; } }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 34em) {
       .values__boxes:nth-child(even) {
         flex-direction: row-reverse; } }
     .values__boxes .value-text {
@@ -419,7 +428,7 @@ input[class^="btn-"]:hover {
   display: flex;
   align-items: center;
   padding-bottom: 6rem; }
-  @media (max-width: 34em) {
+  @media (max-width: 768px) {
     #team .founder__content {
       flex-direction: column-reverse; } }
 
@@ -482,7 +491,7 @@ input[class^="btn-"]:hover {
     .project .slideshow-container .mySlides {
       display: none;
       padding: 3rem 8rem; }
-      @media (max-width: 34em) {
+      @media (max-width: 768px) {
         .project .slideshow-container .mySlides {
           padding: 2rem 6rem; } }
       .project .slideshow-container .mySlides .slide-title {
@@ -496,7 +505,7 @@ input[class^="btn-"]:hover {
       .project .slideshow-container .mySlides p {
         font-weight: 500;
         color: #042744; }
-        @media (min-width: 764px) {
+        @media (min-width: 770px) {
           .project .slideshow-container .mySlides p {
             height: 10rem; } }
     .project .slideshow-container .prev,

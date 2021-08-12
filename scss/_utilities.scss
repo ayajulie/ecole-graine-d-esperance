@@ -20,6 +20,9 @@
   text-align: center;
   color: $blue;
   font-weight: 500;
+  @media only screen and (max-width: 500px) {
+    font-size: 2.5rem;
+  }
 }
 .bottom-line {
   height: 0.8rem;
