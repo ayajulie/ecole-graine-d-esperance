@@ -205,9 +205,6 @@ input[class^="btn-"]:hover {
   #navbar ul {
     display: flex;
     margin-right: 1rem; }
-    @media only screen and (max-width: 768px) {
-      #navbar ul {
-        display: none; } }
   #navbar li {
     justify-content: space-between;
     padding: 1rem 1.5rem; }

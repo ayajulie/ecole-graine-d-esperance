@@ -30,9 +30,6 @@
   ul {
     display: flex; //to be able to organize the li
     margin-right: 1rem;
-    @media only screen and (max-width: 768px) {
-      display: none;
-    }
   }
 
   li {
@@ -168,7 +165,6 @@
       flex-direction: column;
       align-content: center;
       align-items: flex-start;
-      // justify-content: flex-start;
       @media (max-width: 34em) {
         width: 100%;
       }
