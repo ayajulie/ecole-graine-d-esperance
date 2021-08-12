@@ -1,4 +1,3 @@
-@import "queries";
 @import "config";
 @import "utilities";
 
@@ -231,7 +230,7 @@
         background-image: linear-gradient(
           to bottom left,
           $dark-color,
-          $purple-color
+          $yellow-1
         );
         opacity: 0.4;
       }
@@ -257,7 +256,7 @@
         font-size: 1.7rem;
         display: inline-block;
         padding-bottom: 0.5rem;
-        color: $blue;
+        color: $yellow-dark;
         margin-bottom: 2rem;
       }
       p {
@@ -396,9 +395,6 @@
     position: relative;
     background: $bg-white;
     color: $yellow-dark;
-    // @media (max-width: 34em) {
-    //   height: 60rem;
-    // }
 
     /* Slides */
     .mySlides {
@@ -444,6 +440,9 @@
         color: white;
         // color: $dark-purple;
       }
+      &:active {
+        color: $pink;
+      }
     }
     /* Position the "next button" to the right */
     .next {
@@ -457,7 +456,7 @@
   .dot-container {
     text-align: center;
     padding: 2rem;
-    background: $yellow-light;
+    background: $yellow-1;
 
     /* The dots/bullets/indicators */
     .dot {
@@ -487,7 +486,6 @@
   }
   &__text--sub {
     padding-bottom: 5rem;
-    color: $dark-purple;
   }
   .premises__container {
     display: flex;
@@ -511,12 +509,7 @@
       width: 100%;
       position: absolute;
     }
-    // iframe {
-    //   max-width: $website-width;
-    //   box-shadow: rgba(17, 12, 46, 0.1) 0px 20px 30px 0px;
-    //   margin: auto;
 
-    // }
     a {
       color: $pink;
       font-size: 1.8rem;
@@ -679,10 +672,12 @@
 
 //------------------FOOTER  SECTION----------------//
 #footer {
-  border-top: 4px solid $midnight-blue;
+  // border-top: 4px solid $midnight-blue;
+  background-color: $blue;
   .footer-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
     @media only screen and (max-width: 768px) {
       display: flex;
       flex-direction: column;
@@ -696,7 +691,7 @@
     }
 
     .footer-box {
-      border-left: 1px solid $baby-pink;
+      border-left: 1px solid $pink;
       padding: 0 2rem;
     }
     .footer-icons {
