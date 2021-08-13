@@ -2,14 +2,16 @@
 
 // transparent navbar
 const navbar = document.getElementById('navbar');
+const logo = document.getElementById('logo');
 let scrolled = false; //we haven't started scoll yet
 
 window.onscroll = function () {
   if (window.pageYOffset > 500) {  //under 100px 
     navbar.classList.remove('top');     // remove the class "top" (the transparent bg)
-
+    logo.src = "./img/logo-color.png";
   } else {
     navbar.classList.add('top');
+    logo.src = "./img/logo-white.png";
     scrolled = false;
   }
 };
