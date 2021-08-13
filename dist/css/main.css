@@ -200,6 +200,9 @@ input[class^="btn-"]:hover {
   z-index: 100;
   border-radius: 0 0 18px 18px;
   padding: 0 2rem; }
+  @media only screen and (max-width: 768px) {
+    #navbar {
+      border-radius: 0; } }
   #navbar .img-logo {
     width: 17rem; }
   #navbar ul {
@@ -272,10 +275,11 @@ input[class^="btn-"]:hover {
   @media only screen and (max-width: 768px) {
     #navbar .nav-menu.active {
       left: 0;
-      padding: 0 3rem; } }
+      padding: 0 3rem;
+      margin-top: 2.3rem; } }
   @media only screen and (max-width: 768px) {
     #navbar .nav-item {
-      margin: 2.5rem 0; } }
+      margin: 1rem 2rem; } }
 
 #navbar.top {
   background: transparent; }
@@ -500,7 +504,7 @@ input[class^="btn-"]:hover {
           .project .slideshow-container .mySlides .slide-title {
             font-size: 2rem; } }
       .project .slideshow-container .mySlides p {
-        font-weight: 500;
+        font-weight: 400;
         color: #042744; }
         @media (min-width: 770px) {
           .project .slideshow-container .mySlides p {
@@ -551,7 +555,7 @@ input[class^="btn-"]:hover {
 .premises__text {
   display: inline-block;
   text-align: center;
-  font-weight: 500; }
+  font-weight: 400; }
 
 .premises__text--main {
   padding-bottom: 2rem; }
