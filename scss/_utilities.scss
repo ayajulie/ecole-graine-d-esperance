@@ -4,14 +4,22 @@
   margin: 0 auto;
 }
 
-/**************************/
-/* GENRAL REUSABLE COMPONENTS */
-/**************************/
-
 // mine    /////////////////////////////////////////
+.text-white {
+  color: #fff;
+}
 
-.text-muted {
-  color: $text-muted;
+.center-text {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 .title {
@@ -47,52 +55,6 @@
   border: none;
   cursor: pointer;
   border-radius: 100px;
-}
-
-.btn {
-  &-main {
-    @extend %btn-shared;
-    color: #333;
-    background-color: $yellow-light;
-  }
-
-  &-light {
-    @extend %btn-shared;
-    color: #333;
-    background-color: $bg-light;
-  }
-
-  &-dark {
-    @extend %btn-shared;
-    color: #f4f4f4;
-    background-color: $dark-color;
-  }
-}
-
-button[class^="btn-"]:hover, //selects any button that has a class of btn-
-a[class^="btn-"]:hover, //selects any link that has class of btn-
-input[class^="btn-"]:hover {
-  background-color: $yellow-light; //for all selected change the bcg
-}
-
-// Backgrounds colors
-.bg {
-  &-main {
-    background: $yellow-light;
-    color: set-text-color($yellow-light);
-  }
-  &-dark {
-    background: $dark-color;
-    color: set-text-color($dark-color);
-  }
-  &-light {
-    background: $bg-light;
-    color: set-text-color($bg-light);
-  }
-  &-medium {
-    background: $medium-color;
-    color: set-text-color($medium-color);
-  }
 }
 
 .text-center {
@@ -144,17 +106,4 @@ input[class^="btn-"]:hover {
   &-4 {
     margin: 4rem 0;
   }
-}
-
-.section-title {
-  font-size: 2rem;
-  display: block;
-  padding-bottom: 0.5rem;
-  text-align: center;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-.center-text {
-  text-align: center;
 }

@@ -60,11 +60,19 @@ strong {
   padding: 4rem 1.6rem;
   margin: 0 auto; }
 
-/**************************/
-/* GENRAL REUSABLE COMPONENTS */
-/**************************/
-.text-muted {
-  color: #6c757d; }
+.text-white {
+  color: #fff; }
+
+.center-text {
+  text-align: center; }
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase; }
 
 .title {
   padding-bottom: 3rem;
@@ -89,47 +97,6 @@ strong {
   margin: 1.5rem auto 1.5rem;
   background: #fff;
   background: #30d4d4; }
-
-.btn-main, .btn-light, .btn-dark {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  transition: all 0.5s;
-  border: none;
-  cursor: pointer;
-  border-radius: 100px; }
-
-.btn-main {
-  color: #333;
-  background-color: #ffde84; }
-
-.btn-light {
-  color: #333;
-  background-color: #fdf2e9; }
-
-.btn-dark {
-  color: #f4f4f4;
-  background-color: #333; }
-
-button[class^="btn-"]:hover,
-a[class^="btn-"]:hover,
-input[class^="btn-"]:hover {
-  background-color: #ffde84; }
-
-.bg-main {
-  background: #ffde84;
-  color: set-text-color(#ffde84); }
-
-.bg-dark {
-  background: #333;
-  color: set-text-color(#333); }
-
-.bg-light {
-  background: #fdf2e9;
-  color: set-text-color(#fdf2e9); }
-
-.bg-medium {
-  background: #ddd;
-  color: set-text-color(#ddd); }
 
 .text-center {
   text-align: center; }
@@ -169,17 +136,6 @@ input[class^="btn-"]:hover {
 
 .my-4 {
   margin: 4rem 0; }
-
-.section-title {
-  font-size: 2rem;
-  display: block;
-  padding-bottom: 0.5rem;
-  text-align: center;
-  font-weight: 100;
-  text-transform: uppercase; }
-
-.center-text {
-  text-align: center; }
 
 #logo {
   width: 30rem; }
