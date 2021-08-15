@@ -5,6 +5,10 @@
   @include laptop {
     padding: 4rem 4rem;
   }
+
+  @include tablet {
+    padding: 4rem 4rem;
+  }
 }
 
 .text-white {

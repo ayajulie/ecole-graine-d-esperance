@@ -160,6 +160,9 @@
     @media only screen and (max-width: 768px) {
       background-position: 50% 30%;
     }
+    @include tablet {
+      background-position: 50% 80%;
+    }
 
     .header-content {
       width: 50%;
@@ -172,8 +175,11 @@
       @media (max-width: 34em) {
         width: 100%;
       }
+      @include tablet {
+        width: 100%;
+      }
       @include laptop {
-        width: 55%;
+        width: 80%;
         padding-left: 2rem;
       }
 
