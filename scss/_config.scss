@@ -22,6 +22,21 @@ $light-grey: #f4f4f4;
 $bg-white: #fdfdfd;
 $bg-light: #fdf2e9;
 $bg-dark: #eb984e;
+@mixin phone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
 
 *,
 *::after,

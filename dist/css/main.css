@@ -142,7 +142,7 @@ strong {
 
 #navbar {
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #ffffffe6;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -478,6 +478,11 @@ strong {
       font-size: 2rem;
       border-radius: 0 3px 3px 0;
       user-select: none; }
+      @media (max-width: 768px) {
+        .project .slideshow-container .prev,
+        .project .slideshow-container .next {
+          top: 20%;
+          margin-top: 3rem; } }
       .project .slideshow-container .prev:hover,
       .project .slideshow-container .next:hover {
         background-color: #ffbc00;
