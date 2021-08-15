@@ -10,6 +10,7 @@
 #navbar {
   align-items: center;
   background-color: #ffffffe6;
+  border-radius: 0 0 18px 18px;
   display: flex; //to be able to organize
   flex-wrap: nowrap;
   justify-content: space-between; //for logo on one side and links & ul on the other
@@ -18,11 +19,10 @@
   margin: 0 auto;
   overflow: hidden;
   right: 0;
-  top: 0;
-  position: fixed;
-  z-index: 100;
-  border-radius: 0 0 18px 18px;
   padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 100;
   @media only screen and (max-width: 768px) {
     border-radius: 0;
   }
@@ -172,6 +172,10 @@
       @media (max-width: 34em) {
         width: 100%;
       }
+      @include laptop {
+        width: 55%;
+        padding-left: 2rem;
+      }
 
       .heading-primary {
         font-size: 3.5rem;
@@ -182,6 +186,7 @@
         @media (max-width: 34em) {
           font-size: 2.7rem;
         }
+
         &--sub {
           font-weight: 300;
           font-size: 3rem;
@@ -404,6 +409,7 @@
       @media (max-width: 768px) {
         padding: 2rem 6rem;
       }
+
       .slide-title {
         color: $yellow-dark;
         font-weight: 500;
@@ -418,6 +424,9 @@
         color: $dark-blue;
         @media (min-width: 770px) {
           height: 10rem;
+        }
+        @include laptop {
+          height: 14rem;
         }
       }
     }

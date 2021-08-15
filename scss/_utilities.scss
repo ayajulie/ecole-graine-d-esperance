@@ -2,9 +2,11 @@
   max-width: $website-width;
   padding: 4rem 1.6rem;
   margin: 0 auto;
+  @include laptop {
+    padding: 4rem 4rem;
+  }
 }
 
-// mine    /////////////////////////////////////////
 .text-white {
   color: #fff;
 }
