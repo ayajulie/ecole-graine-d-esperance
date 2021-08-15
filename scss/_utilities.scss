@@ -19,39 +19,28 @@
   text-align: center;
 }
 
-.section-title {
-  font-size: 2rem;
-  display: block;
-  padding-bottom: 0.5rem;
-  text-align: center;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
 .title {
-  // padding-top: 6rem;
-  padding-bottom: 3rem;
-  text-align: center;
   color: $blue;
   font-weight: 500;
+  padding-bottom: 3rem;
+  text-align: center;
   @media only screen and (max-width: 500px) {
     font-size: 2.5rem;
   }
 }
 .bottom-line {
-  height: 0.8rem;
-  width: 20rem;
+  background: $pink;
   display: block;
   margin: 0 auto 3rem auto;
-  background: $pink;
+  height: 0.8rem;
+  width: 20rem;
 }
-.white-line {
+.values-separator {
+  background: $blue;
+  display: block;
   height: 0.2rem;
   width: 5rem;
-  display: block;
   margin: 1.5rem auto 1.5rem;
-  background: #fff;
-  background: $blue;
 }
 // config for all buttons
 %btn-shared {
@@ -63,6 +52,15 @@
   border-radius: 100px;
 }
 
+.text-white {
+  color: #fff;
+}
+.text-pink {
+  color: $pink;
+}
+.text-yellow {
+  color: $yellow-dark;
+}
 .text-center {
   text-align: center;
 }
