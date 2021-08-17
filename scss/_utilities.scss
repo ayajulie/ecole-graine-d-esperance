@@ -71,13 +71,18 @@
 .text-pink {
   color: $pink;
 }
+.text-muted {
+  color: $text-muted;
+}
 .text-yellow {
   color: $yellow-dark;
 }
 .text-center {
   text-align: center;
 }
-
+.text-dark {
+  color: $dark-color;
+}
 // Padding top & bototm
 .py {
   &-1 {

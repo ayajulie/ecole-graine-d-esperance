@@ -115,11 +115,17 @@ strong {
 .text-pink {
   color: #fc17c6; }
 
+.text-muted {
+  color: #6c757d; }
+
 .text-yellow {
   color: #ffbc00; }
 
 .text-center {
   text-align: center; }
+
+.text-dark {
+  color: #333; }
 
 .py-1 {
   padding: 1rem 0; }
