@@ -66,12 +66,25 @@ strong {
   @media (min-width: 481px) and (max-width: 768px) {
     .container {
       padding: 4rem 4rem; } }
+  @media (min-width: 1024px) {
+    .container {
+      padding: 4rem 0; } }
 
 .text-white {
   color: #fff; }
 
 .center-text {
   text-align: center; }
+
+.quotation {
+  font-family: "Homemade Apple", cursive;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #6c757d;
+  letter-spacing: 0.2rem;
+  line-height: 3rem;
+  padding-top: 2.5rem; }
 
 .title {
   color: #30d4d4;
@@ -167,19 +180,15 @@ strong {
     width: 17rem; }
   #navbar ul {
     display: flex;
-    margin-right: 1rem; }
-  #navbar li {
-    justify-content: space-between;
-    padding: 1rem 1.5rem; }
+    justify-content: space-between; }
+    #navbar ul li {
+      padding: 1rem 1.5rem; }
   #navbar .nav-link {
-    font-weight: bold;
     color: #fc17c6;
+    font-weight: bold;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.6rem;
     transition: border-color 0.4s; }
-    @media (max-width: 768px) {
-      #navbar .nav-link {
-        padding-bottom: 0; } }
     #navbar .nav-link:hover, #navbar .nav-link:focus {
       border-color: #ffde84; }
   #navbar .cta {
@@ -338,7 +347,7 @@ strong {
     #school .commitment__content .commitment__text-box .highlighted-text {
       font-weight: 500;
       font-size: 1.7rem;
-      margin-bottom: 2rem; }
+      margin-bottom: 1rem; }
 
 .values {
   padding-bottom: 5rem;
@@ -430,9 +439,6 @@ strong {
         font-weight: 600;
         color: #fc17c6;
         font-size: 1.8rem; }
-      .project .pedagogy .intro .quotation {
-        font-style: italic;
-        font-weight: 600; }
   .project .slideshow-container {
     position: relative;
     background: #fdfdfd;
@@ -602,7 +608,8 @@ strong {
     #contact .form-container h3 {
       font-size: 1.8rem;
       margin-bottom: 2rem;
-      font-weight: 500; }
+      font-weight: 500;
+      line-height: 3rem; }
       #contact .form-container h3 span a {
         color: #fc17c6;
         font-weight: 600; }

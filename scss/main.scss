@@ -27,23 +27,18 @@
   }
   ul {
     display: flex;
-    margin-right: 1rem;
-  }
-
-  li {
     justify-content: space-between;
-    padding: 1rem 1.5rem; //adds padding between the lis
+    li {
+      padding: 1rem 1.5rem; //adds padding between the lis
+    }
   }
 
   .nav-link {
-    font-weight: bold;
     color: $pink;
+    font-weight: bold;
     border-bottom: 3px transparent solid; //used for the hover effect
     padding-bottom: 0.6rem;
     transition: border-color 0.4s; //for smooth effect on the hover
-    @include mobile-device {
-      padding-bottom: 0;
-    }
     &:hover,
     &:focus {
       border-color: $yellow-light;
@@ -254,7 +249,7 @@
       .highlighted-text {
         font-weight: 500;
         font-size: 1.7rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -370,10 +365,6 @@
         font-weight: 600;
         color: $pink;
         font-size: 1.8rem;
-      }
-      .quotation {
-        font-style: italic;
-        font-weight: 600;
       }
     }
   }
@@ -592,6 +583,7 @@
       font-size: 1.8rem;
       margin-bottom: 2rem;
       font-weight: 500;
+      line-height: 3rem;
       span a {
         color: $pink;
         font-weight: 600;

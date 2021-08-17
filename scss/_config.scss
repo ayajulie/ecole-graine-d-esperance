@@ -41,6 +41,11 @@ $bg-dark: #eb984e;
     @content;
   }
 }
+@mixin large-screen {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
 
 *,
 *::after,
