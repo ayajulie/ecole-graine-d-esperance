@@ -375,6 +375,8 @@ strong {
     padding: 4rem 2rem;
     line-height: 1.6rem;
     font-family: "Montserrat"; }
+    .values__boxes .value-text p {
+      color: #6c757d; }
     @media only screen and (max-width: 34em) {
       .values__boxes {
         display: flex;

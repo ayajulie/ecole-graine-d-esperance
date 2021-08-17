@@ -279,6 +279,11 @@
     padding: 4rem 2rem;
     line-height: 1.6rem;
     font-family: "Montserrat";
+    .value-text {
+      p {
+        color: $text-muted;
+      }
+    }
     @media only screen and (max-width: 34em) {
       display: flex;
       justify-content: space-between;
