@@ -240,7 +240,7 @@ strong {
       position: fixed;
       left: -100%;
       top: 5rem;
-      text-align: center;
+      text-align: left;
       transition: 0.3s;
       width: 100%; } }
   @media (max-width: 768px) {
