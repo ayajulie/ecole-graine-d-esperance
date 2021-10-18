@@ -68,7 +68,7 @@ strong {
       padding: 4rem 4rem; } }
   @media (min-width: 1024px) {
     .container {
-      padding: 4rem 0; } }
+      padding: 4rem 4rem; } }
 
 .text-white {
   color: #fff; }
@@ -544,10 +544,15 @@ strong {
   .premises .premises__container .map-responsive {
     overflow: hidden;
     position: relative;
-    padding-bottom: 30%; }
+    padding-top: 30%; }
+    @media only screen and (max-width: 34em) {
+      .premises .premises__container .map-responsive {
+        padding-top: 90%; } }
   .premises .premises__container .map-responsive iframe {
     left: 0;
     top: 0;
+    bottom: 0;
+    right: 0;
     height: 100%;
     width: 100%;
     position: absolute; }

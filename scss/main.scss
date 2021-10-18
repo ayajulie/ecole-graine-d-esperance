@@ -490,14 +490,20 @@
     }
 
     .map-responsive {
+      // border: 1px solid black;
       overflow: hidden;
       position: relative;
-      padding-bottom: 30%;
+      padding-top: 30%;
+      @media only screen and (max-width: 34em) {
+        padding-top: 90%;
+      }
     }
 
     .map-responsive iframe {
       left: 0;
       top: 0;
+      bottom: 0;
+      right: 0;
       height: 100%;
       width: 100%;
       position: absolute;
