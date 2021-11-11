@@ -315,7 +315,7 @@ strong {
   grid-template-columns: 1fr 3fr;
   align-items: center;
   padding-bottom: 3rem; }
-  @media (max-width: 48em) {
+  @media (max-width: 810px) {
     #school .commitment__content {
       display: flex;
       flex-direction: column-reverse;
@@ -335,7 +335,7 @@ strong {
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(to bottom left, #333, #ffef64);
+      background-image: linear-gradient(to bottom left, #333, #fbde6a);
       opacity: 0.4; }
     #school .commitment__content .gradient-overlay .commitment__photo {
       border-radius: 18px 0 0 18px; }
@@ -357,9 +357,9 @@ strong {
 
 .values {
   padding-bottom: 5rem;
-  background-color: #ffef64; }
+  background-color: #fbde6a; }
   .values h2 {
-    color: #fff; }
+    color: #19bacc; }
   .values__content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -394,41 +394,56 @@ strong {
       color: #042744; }
     .values__boxes .icons {
       padding-bottom: 5rem;
-      color: #30d4d4; }
+      color: #19bacc; }
 
-#team .founder__content {
+#team .team__content {
   display: flex;
   align-items: center;
-  padding-bottom: 6rem; }
-  @media (max-width: 768px) {
-    #team .founder__content {
+  padding-bottom: 6rem;
+  justify-content: center;
+  padding: 0 2rem; }
+  @media (max-width: 810px) {
+    #team .team__content {
       flex-direction: column-reverse; } }
+  #team .team__content:last-child {
+    flex-direction: row-reverse; }
+    @media (max-width: 810px) {
+      #team .team__content:last-child {
+        flex-direction: column-reverse; } }
 
-#team .founder__heading {
+#team .team__heading {
   padding-bottom: 4rem; }
 
-#team .founder__name {
+#team .team__name {
   font-size: 1.8rem;
   color: #fc17c6;
   font-weight: 500;
   padding-bottom: 1rem; }
 
-#team .founder__title {
+#team .team__title {
   padding-bottom: 2rem;
   font-size: 1.6rem;
   color: #ffbc00;
   font-weight: 500; }
 
-#team .founder__img {
+#team .team__img {
   width: 40rem;
   border-radius: 50%;
-  border: 1rem solid #ffbc00; }
+  border: 1rem solid #30d4d4; }
   @media (max-width: 34em) {
-    #team .founder__img {
+    #team .team__img {
       width: 25rem; } }
 
+#team .team .educator-pic {
+  align-self: flex-start;
+  margin: 5rem auto 0; }
+  @media (max-width: 34em) {
+    #team .team .educator-pic {
+      margin: 0;
+      align-self: auto; } }
+
 @media (max-width: 34em) {
-  #team .founder p {
+  #team .team p {
     text-justify: justify; } }
 
 .project {
@@ -508,7 +523,7 @@ strong {
   .project .dot-container {
     text-align: center;
     padding: 2rem;
-    background: #ffef64;
+    background: #fbde6a;
     /* The dots/bullets/indicators */
     /* Add a background color to the active dot/circle */ }
     .project .dot-container .dot {

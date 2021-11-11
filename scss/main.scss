@@ -202,7 +202,7 @@
     grid-template-columns: 1fr 3fr;
     align-items: center;
     padding-bottom: 3rem;
-    @media (max-width: 48em) {
+    @media (max-width: 810px) {
       display: flex;
       flex-direction: column-reverse;
       justify-content: space-between;
@@ -261,7 +261,7 @@
   background-color: $yellow-1;
 
   h2 {
-    color: #fff;
+    color: $blue-value;
   }
   &__content {
     display: grid;
@@ -305,20 +305,29 @@
     }
     .icons {
       padding-bottom: 5rem;
-      color: $blue;
+      color: $blue-value;
     }
   }
 }
 
 //------------------TEAM SECTION----------------//
 #team {
-  .founder {
+  .team {
     &__content {
       display: flex;
       align-items: center;
       padding-bottom: 6rem;
-      @media (max-width: 768px) {
+      justify-content: center;
+      padding: 0 2rem;
+
+      @media (max-width: 810px) {
         flex-direction: column-reverse;
+      }
+      &:last-child {
+        flex-direction: row-reverse;
+        @media (max-width: 810px) {
+          flex-direction: column-reverse;
+        }
       }
     }
     &__heading {
@@ -339,9 +348,17 @@
     &__img {
       width: 40rem;
       border-radius: 50%;
-      border: 1rem solid $yellow-dark;
+      border: 1rem solid $blue;
       @media (max-width: 34em) {
         width: 25rem;
+      }
+    }
+    .educator-pic {
+      align-self: flex-start;
+      margin: 5rem auto 0;
+      @media (max-width: 34em) {
+        margin: 0;
+        align-self: auto;
       }
     }
     p {
