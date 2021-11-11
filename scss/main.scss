@@ -356,6 +356,8 @@
     .educator-pic {
       align-self: flex-start;
       margin: 5rem auto 0;
+      float: left;
+      shape-outside: circle();
       @media (max-width: 34em) {
         margin: 0;
         align-self: auto;
