@@ -81,7 +81,7 @@ function closeMenu() {
   navMenu.classList.remove("active");
 }
 
-
+/*
 //modal config
 // Get the modal
 let modal = document.getElementById("myModal");
@@ -91,7 +91,7 @@ let modal = document.getElementById("myModal");
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the modal
 // btn.onclick = function () {
 //   modal.style.display = "block";
 // }
@@ -113,3 +113,4 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
+*/
