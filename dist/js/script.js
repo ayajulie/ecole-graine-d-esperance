@@ -96,6 +96,7 @@ let span = document.getElementsByClassName("close")[0];
 //   modal.style.display = "block";
 // }
 
+/*
 // Modal appears on load
 window.onload = function () {
   modal.style.display = "block";
@@ -113,4 +114,4 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
-
+*/
