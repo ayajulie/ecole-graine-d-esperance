@@ -163,8 +163,6 @@ strong {
 .my-4 {
   margin: 4rem 0; }
 
-/*
-//The Modal (background)
 .modal {
   display: none;
   position: fixed;
@@ -176,48 +174,40 @@ strong {
   height: 100%;
   overflow: hidden;
   backdrop-filter: blur(2px);
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.7);
-}
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7); }
 
-//Modal Content
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-
   border: 1px solid #888;
-  width: 80%;
-
-  .close {
-    color: $pink;
+  width: 80%; }
+  .modal-content .close {
+    color: #fc17c6;
     float: right;
     padding-top: 20px;
     padding-right: 30px;
     font-size: 34px;
-    font-weight: bold;
-  }
-  img {
+    font-weight: bold; }
+  .modal-content img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
-    @include mobile-device {
-      max-width: 100%;
-      height: auto;
-      width: 100%;
-    }
-  }
-  p {
-    color: black;
-  }
-}
+    width: 50%; }
+    @media (max-width: 768px) {
+      .modal-content img {
+        max-width: 100%;
+        height: auto;
+        width: 100%; } }
+  .modal-content p {
+    color: black; }
+
 .close:hover,
 .close:focus {
   color: #000;
   text-decoration: none;
-  cursor: pointer;
-}
-*/
+  cursor: pointer; }
+
 #navbar {
   align-items: center;
   background-color: #ffffffe6;
