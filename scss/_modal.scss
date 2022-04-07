@@ -1,4 +1,4 @@
-/*
+
 //The Modal (background)
 .modal {
   display: none;
@@ -35,7 +35,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 50%;
     @include mobile-device {
       max-width: 100%;
       height: auto;
@@ -52,4 +52,3 @@
   text-decoration: none;
   cursor: pointer;
 }
-*/
