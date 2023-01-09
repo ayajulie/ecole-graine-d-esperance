@@ -451,10 +451,14 @@ strong {
     #team .team__content {
       flex-direction: column-reverse; } }
   #team .team__content:last-child {
-    flex-direction: row-reverse; }
+    flex-direction: row-reverse;
+    background-color: #30d4d4;
+    text-align: center; }
     @media (max-width: 810px) {
       #team .team__content:last-child {
         flex-direction: column-reverse; } }
+    #team .team__content:last-child .team__title {
+      color: #333; }
 
 #team .team__heading {
   padding-bottom: 4rem; }
@@ -680,6 +684,8 @@ strong {
       #contact .form-container {
         width: 100%;
         padding: 2rem 2rem; } }
+    #contact .form-container .form-space {
+      height: 1.6rem; }
     #contact .form-container h3 {
       font-size: 1.8rem;
       margin-bottom: 2rem;

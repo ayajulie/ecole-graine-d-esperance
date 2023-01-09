@@ -326,8 +326,13 @@
       }
       &:last-child {
         flex-direction: row-reverse;
+        background-color: #30d4d4;
+        text-align: center;
         @media (max-width: 810px) {
           flex-direction: column-reverse;
+        }
+        .team__title {
+          color: #333;
         }
       }
     }
@@ -609,6 +614,9 @@
     @media (max-width: 34em) {
       width: 100%;
       padding: 2rem 2rem;
+    }
+    .form-space {
+      height: 1.6rem;
     }
     h3 {
       font-size: 1.8rem;
