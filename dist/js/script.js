@@ -103,6 +103,6 @@ links.forEach(link => {
     // show the corresponding card
     const cardId = this.getAttribute('data-card');
     const card = document.getElementById(cardId);
-    card.style.display = 'block';
+    card.style.display = 'flex';
   });
 });
