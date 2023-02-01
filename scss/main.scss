@@ -312,12 +312,31 @@
 
 //------------------TEAM SECTION----------------//
 #team {
+  .links {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+  .cards {
+    display: flex;
+    // flex-direction: column;
+    width: 70%;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    border: 2px black solid;
+    padding: 2%;
+  }
   .team {
+    &-text {
+      padding-left: 2%;
+    }
     &__content {
       display: flex;
       align-items: center;
       padding-bottom: 6rem;
-      justify-content: center;
+      justify-content: start;
       padding: 0 2rem;
 
       @media (max-width: 810px) {
@@ -329,6 +348,12 @@
           flex-direction: column-reverse;
         }
       }
+    }
+    &__container {
+      display: flex;
+      // flex-direction: column;
+      // justify-content: space-between;
+      background-color: #24babc;
     }
     &__heading {
       padding-bottom: 4rem;
@@ -346,21 +371,12 @@
       font-weight: 500;
     }
     &__img {
-      width: 40rem;
-      border-radius: 50%;
-      border: 1rem solid $blue;
+      width: 35rem;
       @media (max-width: 34em) {
         width: 25rem;
       }
     }
-    .educator-pic {
-      align-self: flex-start;
-      margin: 5rem auto 0;
-      @media (max-width: 34em) {
-        margin: 0;
-        align-self: auto;
-      }
-    }
+
     p {
       @media (max-width: 34em) {
         text-justify: justify;

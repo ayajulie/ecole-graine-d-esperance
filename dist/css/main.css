@@ -396,11 +396,29 @@ strong {
       padding-bottom: 5rem;
       color: #19bacc; }
 
+#team .links {
+  width: 30%;
+  display: flex;
+  flex-direction: column; }
+
+#team .cards {
+  display: flex;
+  width: 70%; }
+
+#team .card {
+  display: flex;
+  flex-direction: row;
+  border: 2px black solid;
+  padding: 2%; }
+
+#team .team-text {
+  padding-left: 2%; }
+
 #team .team__content {
   display: flex;
   align-items: center;
   padding-bottom: 6rem;
-  justify-content: center;
+  justify-content: start;
   padding: 0 2rem; }
   @media (max-width: 810px) {
     #team .team__content {
@@ -410,6 +428,10 @@ strong {
     @media (max-width: 810px) {
       #team .team__content:last-child {
         flex-direction: column-reverse; } }
+
+#team .team__container {
+  display: flex;
+  background-color: #24babc; }
 
 #team .team__heading {
   padding-bottom: 4rem; }
@@ -427,20 +449,10 @@ strong {
   font-weight: 500; }
 
 #team .team__img {
-  width: 40rem;
-  border-radius: 50%;
-  border: 1rem solid #30d4d4; }
+  width: 35rem; }
   @media (max-width: 34em) {
     #team .team__img {
       width: 25rem; } }
-
-#team .team .educator-pic {
-  align-self: flex-start;
-  margin: 5rem auto 0; }
-  @media (max-width: 34em) {
-    #team .team .educator-pic {
-      margin: 0;
-      align-self: auto; } }
 
 @media (max-width: 34em) {
   #team .team p {

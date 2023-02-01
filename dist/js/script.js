@@ -80,3 +80,29 @@ function closeMenu() {
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
 }
+
+
+// display cards 
+
+const links = document.querySelectorAll('.card-link');
+const cards = document.querySelectorAll('.card');
+
+// hide all cards except the first one
+cards.forEach((card, index) => {
+  if (index !== 0) {
+    card.style.display = 'none';
+  }
+});
+
+links.forEach(link => {
+  link.addEventListener('click', function () {
+    // hide all cards
+    cards.forEach(card => {
+      card.style.display = 'none';
+    });
+    // show the corresponding card
+    const cardId = this.getAttribute('data-card');
+    const card = document.getElementById(cardId);
+    card.style.display = 'block';
+  });
+});
