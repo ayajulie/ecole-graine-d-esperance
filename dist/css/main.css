@@ -511,19 +511,12 @@ strong {
   justify-content: start;
   padding: 0 2rem; }
   #team .team__content:last-child {
-<<<<<<< HEAD
     flex-direction: row-reverse;
     background-color: #30d4d4;
     text-align: center; }
-    @media (max-width: 810px) {
-=======
-    flex-direction: row-reverse; }
     @media (max-width: 820px) {
->>>>>>> team
       #team .team__content:last-child {
         flex-direction: column-reverse; } }
-    #team .team__content:last-child .team__title {
-      color: #333; }
 
 #team .team__container {
   display: flex;
@@ -562,22 +555,12 @@ strong {
       align-self: center;
       width: 25rem; } }
 
-<<<<<<< HEAD
 #team .team .educator-pic {
   align-self: flex-start;
-  margin: 5rem auto 0;
-  float: left;
-  shape-outside: circle(); }
+  margin: 5rem auto 0; }
   @media (max-width: 34em) {
     #team .team .educator-pic {
-      margin: 0;
-      align-self: auto; } }
-
-=======
->>>>>>> team
-@media (max-width: 34em) {
-  #team .team xs p {
-    text-justify: justify; } }
+      text-justify: justify; } }
 
 .project {
   padding-bottom: 10rem;
