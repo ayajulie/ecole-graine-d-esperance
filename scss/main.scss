@@ -312,6 +312,9 @@
 
 //------------------TEAM SECTION----------------//
 #team {
+  .bottom-line {
+    margin-bottom: 8rem;
+  }
   .links {
     display: flex;
     flex-direction: column;
@@ -435,7 +438,7 @@
         width: 25rem;
       }
     }
-    xs p {
+    p {
       @media (max-width: 34em) {
         text-justify: justify;
       }

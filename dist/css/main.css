@@ -396,6 +396,9 @@ strong {
       padding-bottom: 5rem;
       color: #19bacc; }
 
+#team .bottom-line {
+  margin-bottom: 8rem; }
+
 #team .links {
   display: flex;
   flex-direction: column;
@@ -509,7 +512,7 @@ strong {
       width: 25rem; } }
 
 @media (max-width: 34em) {
-  #team .team xs p {
+  #team .team p {
     text-justify: justify; } }
 
 .project {
