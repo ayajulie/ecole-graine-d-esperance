@@ -87,6 +87,8 @@ function closeMenu() {
 const links = document.querySelectorAll('.card-link');
 const cards = document.querySelectorAll('.card');
 
+
+
 // hide all cards except the first one
 cards.forEach((card, index) => {
   if (index !== 0) {
@@ -96,6 +98,9 @@ cards.forEach((card, index) => {
 
 links.forEach(link => {
   link.addEventListener('click', function () {
+    links.forEach(link => {
+      link.classList.remove('active');
+    });
     // hide all cards
     cards.forEach(card => {
       card.style.display = 'none';
@@ -104,5 +109,8 @@ links.forEach(link => {
     const cardId = this.getAttribute('data-card');
     const card = document.getElementById(cardId);
     card.style.display = 'flex';
+    // add active class to the clicked link
+    this.classList.add('active');
+
   });
 });

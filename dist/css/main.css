@@ -397,18 +397,45 @@ strong {
       color: #19bacc; }
 
 #team .links {
-  width: 10%;
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  color: #333;
-  margin-right: 2rem;
-  padding: rem 0rem;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  margin: 5rem 2rem 0 0;
+  width: 10%;
+  height: 90%; }
+  @media (max-width: 820px) {
+    #team .links {
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 0;
+      width: 100%; } }
+  @media (max-width: 34em) {
+    #team .links {
+      flex-wrap: wrap; } }
+
+#team .card-link {
+  color: #19bacc;
+  color: #19bacc;
+  margin-bottom: 2rem; }
+  @media (max-width: 810px) {
+    #team .card-link {
+      font-size: 1.6rem;
+      margin-right: 1rem; } }
+
+#team .card-link.active {
+  font-size: 2.8rem;
+  color: #fc17c6; }
+  @media (max-width: 820px) {
+    #team .card-link.active {
+      font-size: 1.8rem; } }
 
 #team .cards {
   width: 90%; }
+  @media (max-width: 820px) {
+    #team .cards {
+      width: 100%; } }
 
 #team .card {
   border-radius: 12px;
@@ -416,11 +443,20 @@ strong {
   flex-direction: row;
   padding: 2%;
   box-shadow: 0px 3px 20px #ddd; }
+  @media (max-width: 820px) {
+    #team .card {
+      flex-direction: column; } }
 
 #team .team-text {
   margin-left: 2%;
   padding: 1%;
   width: 65%; }
+  @media (max-width: 820px) {
+    #team .team-text {
+      width: 100%; } }
+  @media (max-width: 34em) {
+    #team .team-text p {
+      font-size: 1.6rem; } }
 
 #team .team__content {
   display: flex;
@@ -428,18 +464,18 @@ strong {
   padding-bottom: 6rem;
   justify-content: start;
   padding: 0 2rem; }
-  @media (max-width: 810px) {
-    #team .team__content {
-      flex-direction: column-reverse; } }
   #team .team__content:last-child {
     flex-direction: row-reverse; }
-    @media (max-width: 810px) {
+    @media (max-width: 820px) {
       #team .team__content:last-child {
         flex-direction: column-reverse; } }
 
 #team .team__container {
   display: flex;
   margin: 6rem auto 8rem; }
+  @media (max-width: 820px) {
+    #team .team__container {
+      flex-direction: column; } }
 
 #team .team__heading {
   padding-bottom: 4rem;
