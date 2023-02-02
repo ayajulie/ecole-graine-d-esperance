@@ -81,6 +81,7 @@ function closeMenu() {
   navMenu.classList.remove("active");
 }
 
+<<<<<<< HEAD
 //modal config
 // Get the modal
 let modal = document.getElementById("myModal");
@@ -112,3 +113,38 @@ window.onclick = function (event) {
   }
 }
 
+=======
+
+// display cards 
+
+const links = document.querySelectorAll('.card-link');
+const cards = document.querySelectorAll('.card');
+
+
+
+// hide all cards except the first one
+cards.forEach((card, index) => {
+  if (index !== 0) {
+    card.style.display = 'none';
+  }
+});
+
+links.forEach(link => {
+  link.addEventListener('click', function () {
+    links.forEach(link => {
+      link.classList.remove('active');
+    });
+    // hide all cards
+    cards.forEach(card => {
+      card.style.display = 'none';
+    });
+    // show the corresponding card
+    const cardId = this.getAttribute('data-card');
+    const card = document.getElementById(cardId);
+    card.style.display = 'flex';
+    // add active class to the clicked link
+    this.classList.add('active');
+
+  });
+});
+>>>>>>> team
