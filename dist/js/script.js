@@ -3,7 +3,7 @@
 // transparent navbar
 const navbar = document.getElementById('navbar');
 const logo = document.getElementById('logo');
-let scrolled = false; //we haven't started scoll yet
+let scrolled = false; //we haven't started scolling 
 
 window.onscroll = function () {
   if (window.pageYOffset > 500) {  //under 100px 
