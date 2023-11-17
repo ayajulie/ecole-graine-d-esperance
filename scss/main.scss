@@ -281,7 +281,7 @@
     font-family: "Montserrat";
     .value-text {
       p {
-        color: $text-muted;
+        color: $dark-color-2;
       }
     }
     @media only screen and (max-width: 34em) {
@@ -357,7 +357,32 @@
       width: 100%;
     }
   }
+  .training-block {
+    margin-top: 1.5rem;
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    ul li::before {
+      content: "\2022";
+      color: $yellow-dark;
+      font-weight: bold;
+      display: inline-block;
+      width: 2rem;
+      // margin-left: -1rem;
+    }
+    background-color: $yellow-bg;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 2rem;
+  }
   .card {
+    a {
+      color: $yellow-dark;
+      text-decoration: underline;
+    }
     border-radius: 12px;
     display: flex;
     flex-direction: row;
@@ -414,6 +439,7 @@
     &__name {
       font-size: 2.5rem;
       color: $pink;
+
       font-weight: 700;
       padding-bottom: 0.7rem;
       @media (max-width: 820px) {
@@ -669,10 +695,11 @@
 #contact {
   background-attachment: fixed;
   .form-container {
-    background-color: $yellow-light;
+    background-color: $yellow-1;
     padding: 2rem 4rem;
     text-align: center;
     border-radius: 18px;
+    color: $dark-color-2;
     font-size: 1.8rem;
     width: 90%;
     margin: 2rem auto;
