@@ -165,7 +165,6 @@
         width: 80%;
         padding-left: 2rem;
       }
-
       .heading-primary {
         font-size: 3.5rem;
         font-weight: 600;
@@ -175,7 +174,6 @@
         @include mobile-device {
           font-size: 2.7rem;
         }
-
         &--sub {
           font-weight: 300;
           font-size: 3rem;
@@ -192,6 +190,25 @@
         }
       }
     }
+    .heading-primary--banner {
+      color: $yellow-dark;
+      font-size: 1.8rem;
+      animation: neon 1s ease infinite;
+    }
+  }
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1rem $pink, 0 0 1rem $pink, 0 0 10px $pink, 0 0 1cqb $pink,
+      0 0 0.2rem $pink, 0.2rem 0.2rem 0.2rem $bg-dark;
+    color: $yellow-dark;
+  }
+  50% {
+    text-shadow: 0 0 0.2rem #4b063b, 0 0 0.5rem #4b063b, 0 0 0.5rem #4b063b,
+      0 0 0.5rem #4b063b, 0 0 2px #4b063b, 4px 4px 2px #fed0f3;
+    color: $yellow-dark;
   }
 }
 
@@ -232,7 +249,6 @@
       }
       .commitment__photo {
         border-radius: 18px 0 0 18px;
-        zoom: reset;
       }
     }
     .commitment__text-box {

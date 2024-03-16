@@ -399,7 +399,22 @@ strong {
     font-size: 1.6rem;
   }
 }
+#header-home .heading-primary--banner {
+  color: #ffbc00;
+  font-size: 1.8rem;
+  animation: neon 1s ease infinite;
+}
 
+@keyframes neon {
+  0%, 100% {
+    text-shadow: 0 0 1rem #fc17c6, 0 0 1rem #fc17c6, 0 0 10px #fc17c6, 0 0 1cqb #fc17c6, 0 0 0.2rem #fc17c6, 0.2rem 0.2rem 0.2rem #eb984e;
+    color: #ffbc00;
+  }
+  50% {
+    text-shadow: 0 0 0.2rem #4b063b, 0 0 0.5rem #4b063b, 0 0 0.5rem #4b063b, 0 0 0.5rem #4b063b, 0 0 2px #4b063b, 4px 4px 2px #fed0f3;
+    color: #ffbc00;
+  }
+}
 #school .commitment__content {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -434,7 +449,6 @@ strong {
 }
 #school .commitment__content .gradient-overlay .commitment__photo {
   border-radius: 18px 0 0 18px;
-  zoom: reset;
 }
 #school .commitment__content .commitment__text-box {
   font-size: 1.6rem;
