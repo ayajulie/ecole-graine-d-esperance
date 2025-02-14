@@ -399,11 +399,6 @@ strong {
     font-size: 1.6rem;
   }
 }
-#header-home .heading-primary--banner {
-  color: #ffbc00;
-  font-size: 1.8rem;
-  animation: neon 1s ease infinite;
-}
 
 @keyframes neon {
   0%, 100% {
