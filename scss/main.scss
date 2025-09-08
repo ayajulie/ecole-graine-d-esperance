@@ -491,7 +491,7 @@
 
 //------------------PROJECT PEDAGOGY  SECTION----------------//
 .project {
-  padding-bottom: 10rem;
+  // padding-bottom: 10rem;
   background-color: $blue;
   background-size: cover;
   #project-title {
@@ -657,10 +657,17 @@
 .pricing {
   background: $baby-pink;
   padding-bottom: 4rem;
+  &-container {
+    margin-left: 3%;
+    padding-bottom: 1rem;
+  }
   &__heading {
     padding-bottom: 3rem;
     font-weight: 500;
     font-size: 2rem;
+  }
+  &-detail {
+    list-style: disc;
   }
   .pricing__text {
     padding-bottom: 0.5rem;
@@ -671,6 +678,7 @@
       span {
         color: $pink;
         font-weight: 500;
+        font-size: 2rem;
       }
     }
   }
@@ -813,6 +821,40 @@
   }
 }
 
+//------------------FAQ  SECTION----------------//
+
+#faq {
+  background-color: $yellow-1;
+  padding: 4rem 2rem;
+  .faq-container {
+    width: 90%;
+    margin: 0 auto;
+    @media (max-width: 34em) {
+      width: 100%;
+    }
+    h2 {
+      color: $blue;
+      font-weight: 500;
+      padding-bottom: 3rem;
+    }
+    .faq-item {
+      margin-bottom: 2rem;
+      .faq-question {
+        font-weight: bold;
+        cursor: pointer;
+        color: $dark-blue;
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+      }
+      .faq-answer {
+        display: none; // Initially hidden
+        font-size: 1.6rem;
+        color: $text-muted;
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+}
 //------------------FOOTER  SECTION----------------//
 #footer {
   background-color: $blue;
