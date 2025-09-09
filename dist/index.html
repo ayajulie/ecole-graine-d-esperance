@@ -240,18 +240,24 @@
           <div class="team__content--text-box">
             <div class="team__container">
               <!-- créer des groupes : direction, classe maternelle, classe élémentaire -->
+              <div class="group-tabs">
+                <button class="group-tab active" data-group="group1">Direction</button>
+                <button class="group-tab" data-group="group2">Classe maternelle</button>
+                <button class="group-tab" data-group="group3">Classe élémentaire</button>
+              </div>
+
               <div class="links">
-                <a href="#/" class="card-link active" data-card="card1">Denise</a>
-                <a href="#/" class="card-link" data-card="card2">Grace</a>
-                <a href="#/" class="card-link" data-card="card3">Tahina</a>
-                <a href="#/" class="card-link" data-card="card4">Grâce</a>
-                <a href="#/" class="card-link" data-card="card5">Marie</a>
-                <a href="#/" class="card-link" data-card="card6">Cécile</a>
-                <a href="#/" class="card-link" data-card="card7">Selasse</a>
+                <a href="#/" class="card-link" data-group="group1" data-default data-card="card1">Denise</a>
+                <a href="#/" class="card-link" data-group="group1" data-card="card2">Grace</a>
+                <a href="#/" class="card-link" data-group="group2" data-default data-card="card3">Tahina</a>
+                <a href="#/" class="card-link" data-group="group3" data-card="card4">Grâce</a>
+                <a href="#/" class="card-link" data-group="group3" data-card="card5">Marie</a>
+                <a href="#/" class="card-link" data-group="group3" data-default data-card="card6">Cécile</a>
+                <a href="#/" class="card-link" data-group="group3" data-card="card7">Selasse</a>
               </div>
 
               <div class="cards">
-                <div class="card" id="card1">
+                <div class="card" id="card1" data-group="group1">
                   <img class="team__img " src="/img/Team_Denise Brou.png" alt="Photo de Denise K. Brou">
                   <div class="team-text">
                     <h3 class="team__name">Denise K. Brou</h3>
@@ -283,7 +289,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card" id="card2">
+                <div class="card" id="card2" data-group="group1">
                   <img class="team__img " src="/img/GracecEileanetJulesPhotographie.jpg" alt="Photo de Grace Freeman">
                   <div class="team-text">
                     <h3 class="team__name">Grace Freeman</h3>
@@ -312,7 +318,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card" id="card3">
+                <div class="card" id="card3" data-group="group2">
                   <img class="team__img " src="/img/Team_Tahina Pounoussamy_Team_007.png"
                     alt="Photo de Tahina Pounoussamy">
                   <div class="team-text">
@@ -340,7 +346,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card" id="card5">
+                <div class="card" id="card5" data-group="group3">
                   <img class="team__img " src="/img/Marie-lecomte.png" alt="Photo de Marie Lecomte">
                   <div class="team-text">
                     <h3 class="team__name">Marie Perrier</h3>
@@ -367,7 +373,7 @@
                       d’Espérance en tant que consultante pédagogique et formatrice. </p>
                   </div>
                 </div>
-                <div class="card" id="card4">
+                <div class="card" id="card4" data-group="group3">
                   <img class="team__img " src="/img/placeholder_profile.png" alt="Placeholder pour une photo de profil">
                   <div class="team-text">
                     <h3 class="team__name">Grâce Auteuil</h3>
@@ -402,7 +408,7 @@
                       in their development. </p>
                   </div>
                 </div>
-                <div class="card" id="card6">
+                <div class="card" id="card6" data-group="group3">
                   <img class="team__img " src="/img/placeholder_profile.png" alt="Placeholder pour une photo de profil">
 
                   <div class="team-text">
@@ -434,7 +440,7 @@
                       accompagner au mieux votre enfant dans son parcours.</p>
                   </div>
                 </div>
-                <div class="card" id="card7">
+                <div class="card" id="card7" data-group="group3">
                   <img class="team__img " src="/img/placeholder_profile.png" alt="Placeholder pour une photo de profil">
                   <div class="team-text">
                     <h3 class="team__name">Selasse Tewolde</h3>
@@ -758,13 +764,262 @@
       </div>
     </section>
     <!-------------FAQ----------------- -->
-    <section class="faq" id="faq">
+
+    <section class="faq" data-accordion id="faq" aria-label="Foire aux questions">
       <div class="container">
         <h2 class="title">FAQ</h2>
         <div class="bottom-line"></div>
-        <p>Vous trouverez les réponses aux questions les plus fréquemment posées dans notre <a
-            href="./faq.html">FAQ</a>.</p>
+
+
+        <!-- Accordéon -->
+
+        <!-- 1 -->
+        <div class="faq__item">
+          <h2 class="faq__heading">
+            <button class="faq__trigger" id="q1" aria-expanded="false" aria-controls="a1">
+              Quelles sont les valeurs portées par l’école ?
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </h2>
+          <div id="a1" class="faq__panel" role="region" aria-labelledby="q1" hidden>
+            <p>À l’école Les Clochettes d’Espérance, nous éduquons avec le cœur, dans un environnement sécurisé,
+              serein et bienveillant.</p>
+            <p>Dans un monde en perte de repères, nous souhaitons offrir à chaque enfant un cadre rassurant, où il se
+              sent respecté, écouté et encouragé à grandir en confiance.</p>
+            <p>Nos éducateurs incarnent l’empathie, la maîtrise de soi et la communication bienveillante, selon la
+              méthode du Dr Gordon. La posture Montessori, exigeante, repose sur un travail intérieur permettant
+              d’accompagner l’enfant avec justesse et respect.</p>
+            <p>Nous valorisons le goût de l’effort et le travail bien fait. Il nous semble essentiel de permettre aux
+              enfants de maîtriser les fondamentaux et de laisser vivre l’âme d’explorateur présente en chaque enfant.
+              L’entraide et la responsabilité sont au cœur de notre approche.</p>
+            <p>Enfin, nous sensibilisons les enfants à la préservation de l’environnement, les impliquant concrètement
+              dans les enjeux écologiques à leur portée. Enfin nous encourageons l’expression créative sous toutes ses
+              formes.</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="faq__item">
+          <h2 class="faq__heading">
+            <button class="faq__trigger" id="q2" aria-expanded="false" aria-controls="a2">
+              Bilinguisme ?
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </h2>
+          <div id="a2" class="faq__panel" role="region" aria-labelledby="q2" hidden>
+            <p>À l’école Les Clochettes d’Espérance, l’apprentissage de l’anglais se fait de manière naturelle et
+              immersive.</p>
+            <p>Les enfants francophones sont exposés à l’anglais tout au long de la journée, à travers des situations
+              variées du quotidien. Un·e référent·e anglophone s’adresse exclusivement à eux en anglais, ce qui
+              favorise une immersion authentique et progressive.</p>
+            <p>Certaines présentations Montessori ainsi que des ateliers de groupe sont également proposés en anglais,
+              permettant à l’enfant de développer une compréhension et une pratique concrète de la langue.</p>
+            <p>L’objectif est ambitieux : atteindre un niveau A1 du Cadre Européen de Référence pour les Langues
+              (CECRL) en fin de maternelle (alors que ce niveau est généralement attendu en fin de CM2), et le niveau
+              A2 en fin de primaire (habituellement atteint en fin de 3ᵉ). Certains enfants pourront aller au-delà
+              selon leur motivation et leur sensibilité linguistique.</p>
+            <p>Pour les enfants anglophones, l’apprentissage de la lecture et de l’écriture débute naturellement dans
+              leur langue maternelle, afin de renforcer leurs compétences fondamentales et leur confiance.</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="faq__item">
+          <h2 class="faq__heading">
+            <button class="faq__trigger" id="q3" aria-expanded="false" aria-controls="a3">
+              Qu’en est-il du programme de l’Éducation Nationale ?
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </h2>
+          <div id="a3" class="faq__panel" role="region" aria-labelledby="q3" hidden>
+            <p>Nous respectons les objectifs du programme de l’Éducation Nationale, notamment l’acquisition des
+              fondamentaux en lecture, écriture et mathématiques, que nous considérons comme essentiels.</p>
+            <p>Toutefois, notre pédagogie s’appuie sur l’approche Montessori, fondée sur l’observation du
+              développement naturel de l’enfant. Ainsi, les enfants avancent à leur rythme, en choisissant des
+              activités qui éveillent leur intérêt et leur curiosité.</p>
+            <p>Cette liberté favorise une motivation intrinsèque, une concentration durable et un plaisir d’apprendre.
+              Pour les accompagner, nous mettons à leur disposition un matériel riche, structuré et évolutif, ainsi
+              que de nombreux ouvrages stimulants.</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="faq__item">
+          <h2 class="faq__heading">
+            <button class="faq__trigger" id="q4" aria-expanded="false" aria-controls="a4">
+              Quelle est la place des parents ?
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </h2>
+          <div id="a4" class="faq__panel" role="region" aria-labelledby="q4" hidden>
+            <p>À l’école Les Clochettes d’Espérance, nous croyons que l’éducation d’un enfant se construit en
+              partenariat étroit entre l’école et la famille. Ensemble, nous œuvrons pour le bien-être et
+              l’épanouissement harmonieux des enfants.</p>
+            <p>Nous veillons à instaurer un climat de confiance, fondé sur l’écoute et le dialogue. Les remarques et
+              suggestions des familles sont les bienvenues, et les critiques constructives sont prises en compte :
+              elles nous aident à progresser et à ajuster notre organisation.</p>
+            <p>Des parents délégués rencontrent régulièrement la direction lors de séances de travail. Ces échanges
+              permettent de faire émerger des projets communs et de répondre rapidement aux besoins ou interrogations
+              des familles.</p>
+            <p>Nous favorisons une communication régulière grâce à différents outils : 1 réunion collective en début
+              d’année, des cafés parents tout au long de l’année, 2 réunions individuelles par an, ainsi qu’une
+              plateforme numérique permettant de partager les informations essentielles et la vie de la classe.</p>
+            <p>Enfin, nous sommes toujours heureux d’accueillir les parents dans les classes ou lors de sorties nature
+              et culturelles, renforçant ainsi le lien école-famille au cœur de notre projet.</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="faq__item">
+          <h2 class="faq__heading">
+            <button class="faq__trigger" id="q5" aria-expanded="false" aria-controls="a5">
+              Combien y a-t-il d’élèves par classe ?
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </h2>
+          <div id="a5" class="faq__panel" role="region" aria-labelledby="q5" hidden>
+            <p>Nos classes accueillent en moyenne 25 enfants, avec un encadrement adapté :</p>
+            <p>En maternelle, trois éducateurs Montessori formés accompagnent les enfants.</p>
+            <p>En primaire, deux enseignants Montessori assurent l’encadrement.</p>
+            <p>Contrairement aux idées reçues, une classe Montessori pleinement fonctionnelle nécessite un effectif
+              d’au moins une vingtaine d’élèves. Cette diversité favorise les interactions, l’entraide et une
+              émulation naturelle entre les enfants.</p>
+            <p>Ils apprennent ainsi à gérer leurs relations, à coopérer, à s’autonomiser et à se dépasser, dans un
+              cadre structuré et bienveillant.</p>
+            <p>Plus que le nombre d’élèves, c’est le ratio enfants/adultes et la qualité de l’encadrement qui
+              garantissent un accompagnement individualisé et respectueux du rythme de chacun.</p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="faq__item">
+          <h2 class="faq__heading">
+            <button class="faq__trigger" id="q6" aria-expanded="false" aria-controls="a6">
+              Les enfants passent-ils du temps en extérieur ?
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </h2>
+          <div id="a6" class="faq__panel" role="region" aria-labelledby="q6" hidden>
+            <p>Oui, et cela fait pleinement partie de notre projet éducatif.</p>
+            <p>La pédagogie Montessori encourage un lien régulier et vivant avec la nature, essentielle au
+              développement global de l’enfant. À l’école Les Clochettes d’Espérance, cet aspect est pleinement
+              respecté.</p>
+            <p>Les enfants vont au parc chaque jour, où ils peuvent s’aérer, explorer et se dépenser en toute
+              sécurité. Ils participent également à plusieurs sorties nature au cours de l’année, qui renforcent leur
+              curiosité, leur sens de l’observation et leur lien à l’environnement.</p>
+            <p>Des activités concrètes leur sont proposées : compostage, repas en plein air lorsque le temps le
+              permet, et bientôt un projet de jardin partagé où ils pourront planter, observer et prendre soin du
+              vivant.</p>
+            <p>Ces temps à l’extérieur sont essentiels pour développer leur sens de l’écologie, leur autonomie et leur
+              bien-être physique et émotionnel.</p>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="faq__item">
+          <h2 class="faq__heading">
+            <button class="faq__trigger" id="q7" aria-expanded="false" aria-controls="a7">
+              Quelle est la place de la dimension spirituelle ?
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </h2>
+          <div id="a7" class="faq__panel" role="region" aria-labelledby="q7" hidden>
+            <p>L’école Les Clochettes d’Espérance n’est pas confessionnelle, mais elle respecte toutes les croyances
+              et religions dans un esprit d’ouverture et de tolérance.</p>
+            <p>Fidèles à la vision de Maria Montessori, nous considérons l’enfant dans toutes les dimensions de son
+              être : corps, esprit et âme. Cette approche globale inclut une attention particulière au bien-être
+              intérieur et au développement de la conscience de soi.</p>
+            <p>Conformément au programme de l’Éducation Nationale, les enfants découvrent différentes traditions et
+              formes de spiritualité à travers une approche culturelle et respectueuse.</p>
+            <p>Ils sont également invités à se recentrer, à leur rythme, grâce à des temps de calme, de pleine
+              conscience et de reconnexion à soi. Ces moments favorisent l’équilibre émotionnel, la concentration, et
+              l’écoute de leur monde intérieur.</p>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="faq__item">
+          <h2 class="faq__heading">
+            <button class="faq__trigger" id="q8" aria-expanded="false" aria-controls="a8">
+              La collation ?
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </h2>
+          <div id="a8" class="faq__panel" role="region" aria-labelledby="q8" hidden>
+            <p>En maternelle, une collation saine est proposée aux enfants sous forme de fruits et/ou crudités,
+              disponibles en libre accès tout au long de la matinée.</p>
+            <p>Ces aliments sont préparés et partagés par les enfants eux-mêmes, dans le cadre des activités de Vie
+              pratique. Ils apprennent ainsi à laver, éplucher, couper ou encore presser les fruits pour le groupe,
+              avec soin et autonomie.</p>
+            <p>Au-delà de l’aspect nutritionnel, ces gestes du quotidien sont autant d’occasions de développer leur
+              motricité fine, leur sens des responsabilités, leur esprit de coopération, et le plaisir de faire pour
+              les autres.</p>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="faq__item">
+          <h2 class="faq__heading">
+            <button class="faq__trigger" id="q9" aria-expanded="false" aria-controls="a9">
+              Quel est le coût de la scolarité Montessori ?
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </h2>
+          <div id="a9" class="faq__panel" role="region" aria-labelledby="q9" hidden>
+            <p>La scolarité à l’école Les Clochettes d’Espérance est calculée en fonction du quotient familial, afin
+              de rendre notre pédagogie accessible au plus grand nombre, dans la mesure du possible.</p>
+            <p>Nous avons conscience que cela représente un engagement financier pour les familles. Toutefois, ce coût
+              reflète les exigences de qualité de notre école :</p>
+            <ul>
+              <li>des enseignants formés et engagés,</li>
+              <li>un matériel pédagogique riche et renouvelé,</li>
+              <li>un environnement sécurisé et bienveillant,</li>
+              <li>et une structure indépendante à taille humaine, tournée vers la pérennité.</li>
+            </ul>
+            <p>Un devis détaillé peut être transmis sur demande. Il inclut les frais de scolarité ainsi que les
+              éventuels services périscolaires.</p>
+          </div>
+        </div>
+
+
+        <p id="faqEmpty" class="faq__empty" hidden>Aucun résultat pour votre recherche.</p>
+
       </div>
+
+
+    </section>
+  </main>
+
+
+  </div>
+  </section>
 
   </main>
 

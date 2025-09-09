@@ -351,6 +351,51 @@
       flex-wrap: wrap;
     }
   }
+
+  /* Carte affichée quand sélectionnée */
+  .card.is-visible {
+    display: flex; /* ou block si ton layout n'utilise pas flex */
+  }
+
+  /* (Sécurité) si le JS ajoute .is-hidden sur les cartes */
+  .card.is-hidden {
+    display: none !important;
+  }
+
+  /* Liens (personnes) hors catégorie active */
+  .card-link.is-hidden {
+    display: none !important;
+  }
+
+  /* Onglets de catégories (minimal) */
+  .group-tabs {
+    // display: flex;
+    // flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .group-tab {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font: inherit;
+  }
+  .group-tab.active {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+  }
+
+  /* Accessibilité : pas d’animations si l’utilisateur les réduit */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
   .card-link {
     color: $blue-value;
     color: #19bacc;
@@ -400,8 +445,9 @@
       color: $yellow-dark;
       text-decoration: underline;
     }
+    display: none;
     border-radius: 12px;
-    display: flex;
+    // display: flex;
     flex-direction: row;
     padding: 3%;
     box-shadow: 0px 3px 20px #ddd;
@@ -824,6 +870,7 @@
 //------------------FAQ  SECTION----------------//
 
 #faq {
+  // display: none;
   background-color: $yellow-1;
   padding: 4rem 2rem;
   .faq-container {

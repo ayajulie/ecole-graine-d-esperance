@@ -518,6 +518,13 @@ strong {
   color: #19bacc;
 }
 
+#team {
+  /* Carte affichée quand sélectionnée */
+  /* (Sécurité) si le JS ajoute .is-hidden sur les cartes */
+  /* Liens (personnes) hors catégorie active */
+  /* Onglets de catégories (minimal) */
+  /* Accessibilité : pas d’animations si l’utilisateur les réduit */
+}
 #team .bottom-line {
   margin-bottom: 8rem;
 }
@@ -542,6 +549,38 @@ strong {
 @media (max-width: 34em) {
   #team .links {
     flex-wrap: wrap;
+  }
+}
+#team .card.is-visible {
+  display: flex; /* ou block si ton layout n'utilise pas flex */
+}
+#team .card.is-hidden {
+  display: none !important;
+}
+#team .card-link.is-hidden {
+  display: none !important;
+}
+#team .group-tabs {
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+#team .group-tab {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font: inherit;
+}
+#team .group-tab.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+@media (prefers-reduced-motion: reduce) {
+  #team * {
+    transition: none !important;
+    animation: none !important;
   }
 }
 #team .card-link {
@@ -591,8 +630,8 @@ strong {
   width: 2rem;
 }
 #team .card {
+  display: none;
   border-radius: 12px;
-  display: flex;
   flex-direction: row;
   padding: 3%;
   box-shadow: 0px 3px 20px #ddd;
