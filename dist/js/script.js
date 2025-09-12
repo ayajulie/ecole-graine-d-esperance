@@ -389,6 +389,11 @@
           hidePanel(document.getElementById(btn.getAttribute('aria-controls')));
         } else {
           openOnly(btn);
+          // Scroll vers le contenu de la réponse
+          const panel = document.getElementById(btn.getAttribute('aria-controls'));
+          if (panel) {
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         }
       });
 
