@@ -766,6 +766,13 @@
       color: #fff;
     }
   }
+  .devis {
+    display: flex;
+    background-color: #fff;
+    a {
+      color: $pink;
+    }
+  }
 }
 //------------------CONTACT SECTION----------------//
 #contact {
