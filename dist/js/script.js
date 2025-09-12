@@ -340,14 +340,12 @@
 
 
     /* --------------------------------------------------------------
-      ACCORDÉON – bootstrap robuste (un seul ouvert)
-      Marche avec :
-      - root : [data-accordion] ou .faq
-      - triggers : .faq__trigger OU button[aria-controls] OU [data-accordion-trigger]
-      - panels   : via aria-controls -> #id correspondant
+       ACCORDÉON – un seul ouvert + auto-scroll au début de la réponse
     -------------------------------------------------------------- */
     (function initAccordion() {
-      const root = document.querySelector('[data-accordion]') || document.querySelector('.faq');
+      // Trouve un conteneur qui contient bien des triggers
+      const roots = Array.from(document.querySelectorAll('[data-accordion], .faq'));
+      const root = roots.find(r => r.querySelector('.faq__trigger, button[aria-controls], [data-accordion-trigger]'));
       if (!root) { console.warn('[accordion] root introuvable'); return; }
 
       const triggers = Array.from(root.querySelectorAll('.faq__trigger, button[aria-controls], [data-accordion-trigger]'));
@@ -356,11 +354,31 @@
       const hidePanel = (p) => { if (!p) return; p.hidden = true; p.classList.remove('is-open'); p.style.display = 'none'; };
       const showPanel = (p) => { if (!p) return; p.hidden = false; p.classList.add('is-open'); p.style.display = ''; };
 
-      // Préparation & vérifications
+      const getPanel = (btn) => document.getElementById(btn.getAttribute('aria-controls'));
+
+      // Offset dynamique pour header fixe
+      const getStickyHeaderOffset = () => {
+        const nav = document.getElementById('navbar');
+        if (!nav) return 0;
+        const cs = getComputedStyle(nav);
+        if (cs.position === 'fixed' || cs.position === 'sticky') {
+          return Math.ceil(nav.getBoundingClientRect().height);
+        }
+        return 0;
+      };
+
+      // Scroll vers le haut du panel en compensant le header
+      const scrollToPanelTop = (panel) => {
+        if (!panel) return;
+        const offset = getStickyHeaderOffset() + 8; // petite marge
+        const y = panel.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      };
+
+      // Préparation & vérifs
       triggers.forEach((btn, i) => {
         if (!btn.id) btn.id = `acc-${i}-${Math.random().toString(36).slice(2, 7)}`;
-        const pid = btn.getAttribute('aria-controls');
-        const panel = pid && document.getElementById(pid);
+        const panel = getPanel(btn);
         if (!panel) {
           console.warn('[accordion] trigger sans panel correspondant', btn);
           return;
@@ -373,27 +391,31 @@
 
       const openOnly = (btn) => {
         triggers.forEach(b => {
-          const p = document.getElementById(b.getAttribute('aria-controls'));
+          const p = getPanel(b);
           const active = b === btn;
           b.setAttribute('aria-expanded', active ? 'true' : 'false');
           active ? showPanel(p) : hidePanel(p);
         });
       };
 
+      // Clic : ouvre + scroll jusqu’au début du contenu
       root.addEventListener('click', (e) => {
         const btn = e.target.closest('.faq__trigger, button[aria-controls], [data-accordion-trigger]');
         if (!btn || !root.contains(btn)) return;
+
         const expanded = btn.getAttribute('aria-expanded') === 'true';
         if (expanded) {
           btn.setAttribute('aria-expanded', 'false');
-          hidePanel(document.getElementById(btn.getAttribute('aria-controls')));
+          hidePanel(getPanel(btn));
         } else {
           openOnly(btn);
-          // Scroll vers le contenu de la réponse
-          const panel = document.getElementById(btn.getAttribute('aria-controls'));
-          if (panel) {
-            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+          const panel = getPanel(btn);
+          // attendre le reflow pour garantir la bonne position (surtout mobile)
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              scrollToPanelTop(panel);
+            });
+          });
         }
       });
 
@@ -405,22 +427,32 @@
         switch (e.key) {
           case 'Enter':
           case ' ':
-            e.preventDefault(); document.activeElement.click(); break;
+            e.preventDefault();
+            document.activeElement.click();
+            break;
           case 'ArrowDown':
-            e.preventDefault(); list[(idx + 1) % list.length].focus(); break;
+            e.preventDefault();
+            list[(idx + 1) % list.length].focus();
+            break;
           case 'ArrowUp':
-            e.preventDefault(); list[(idx - 1 + list.length) % list.length].focus(); break;
+            e.preventDefault();
+            list[(idx - 1 + list.length) % list.length].focus();
+            break;
           case 'Home':
-            e.preventDefault(); list[0].focus(); break;
+            e.preventDefault();
+            list[0].focus();
+            break;
           case 'End':
-            e.preventDefault(); list[list.length - 1].focus(); break;
+            e.preventDefault();
+            list[list.length - 1].focus();
+            break;
         }
       });
 
-      // Décommente pour ouvrir la première question par défaut :
+      // (Optionnel) ouvrir la première question par défaut
       // openOnly(triggers[0]);
 
-      console.log('[accordion] initialisé :', { triggers: triggers.length });
+      console.log('[accordion] initialisé avec auto-scroll :', { triggers: triggers.length });
     })();
 
 

@@ -913,12 +913,13 @@
         padding-bottom: 1.5rem;
         padding-left: 0.5rem;
         line-height: 1.7;
+        scroll-margin-top: 4rem;
         ul {
           padding-bottom: 3rem;
         }
         ul li {
           list-style: disc;
-          margin-left: 3rem;
+          margin-left: 2rem;
         }
       }
       &.is-open {

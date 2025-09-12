@@ -1095,13 +1095,14 @@ strong {
   padding-bottom: 1.5rem;
   padding-left: 0.5rem;
   line-height: 1.7;
+  scroll-margin-top: 4rem;
 }
 #faq .faq__item .faq__trigger .faq__panel ul {
   padding-bottom: 3rem;
 }
 #faq .faq__item .faq__trigger .faq__panel ul li {
   list-style: disc;
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 #faq .faq__item .faq__trigger.is-open {
   box-shadow: 0 4px 18px rgba(252, 23, 198, 0.1);
