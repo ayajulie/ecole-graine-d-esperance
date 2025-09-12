@@ -954,6 +954,17 @@ strong {
   background-color: #30d4d4;
   color: #fff;
 }
+.pricing .devis {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.pricing .devis a {
+  color: #fc17c6;
+}
+.pricing .devis a:hover {
+  color: #5c3f78;
+}
 
 #contact {
   background-attachment: fixed;

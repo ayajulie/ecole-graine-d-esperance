@@ -768,9 +768,13 @@
   }
   .devis {
     display: flex;
-    background-color: #fff;
+    justify-content: center;
+    padding-top: 2rem;
     a {
       color: $pink;
+      &:hover {
+        color: $hover-purple;
+      }
     }
   }
 }
