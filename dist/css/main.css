@@ -560,9 +560,6 @@ strong {
 #team .card-link.is-hidden {
   display: none !important;
 }
-#team .card-hidden {
-  display: none;
-}
 #team .group-tabs {
   display: flex;
   gap: 0.5rem;
