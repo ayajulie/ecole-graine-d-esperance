@@ -460,8 +460,9 @@
   .team {
     &-text {
       margin-left: 2%;
-      padding: 4%;
-      width: 65%;
+      // padding: 4%;
+      // width: 65%;
+      padding: 0 3rem;
 
       @media (max-width: 820px) {
         width: 100%;
@@ -470,6 +471,7 @@
       p {
         @media (max-width: 34em) {
           font-size: 1.6rem;
+          // padding: 0 2rem;
         }
       }
     }
