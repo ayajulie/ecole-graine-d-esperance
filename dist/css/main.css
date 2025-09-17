@@ -525,9 +525,6 @@ strong {
   /* Onglets de catégories (minimal) */
   /* Accessibilité : pas d’animations si l’utilisateur les réduit */
 }
-#team .bottom-line {
-  margin-bottom: 8rem;
-}
 #team .links {
   display: flex;
   flex-direction: column;
