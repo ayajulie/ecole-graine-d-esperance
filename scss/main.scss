@@ -888,6 +888,31 @@
 #faq {
   // display: none;
   background-color: $yellow-1;
+  .faq__panel {
+    font-size: 1.6rem;
+    color: $text-muted;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    line-height: 1.7;
+    scroll-margin-top: 4rem;
+    ul {
+      padding-bottom: 3rem;
+    }
+    ul li {
+      list-style: disc;
+      margin-left: 2rem;
+    }
+    ol {
+      padding-left: 2rem;
+    }
+    ol li {
+      padding-left: 1rem;
+    }
+    ol h3 {
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+  }
 
   .faq__item {
     background-color: #fff;
@@ -919,21 +944,7 @@
       &.is-open .faq__chevron {
         transform: rotate(180deg);
       }
-      .faq__panel {
-        font-size: 1.6rem;
-        color: $text-muted;
-        padding-bottom: 1.5rem;
-        padding-left: 0.5rem;
-        line-height: 1.7;
-        scroll-margin-top: 4rem;
-        ul {
-          padding-bottom: 3rem;
-        }
-        ul li {
-          list-style: disc;
-          margin-left: 2rem;
-        }
-      }
+
       &.is-open {
         box-shadow: 0 4px 18px rgba(252, 23, 198, 0.1); // ombre rose légère
         border-left-color: $yellow-dark;

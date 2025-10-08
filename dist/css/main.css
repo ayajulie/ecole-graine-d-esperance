@@ -1064,6 +1064,31 @@ strong {
 #faq {
   background-color: #ffd766;
 }
+#faq .faq__panel {
+  font-size: 1.6rem;
+  color: #6c757d;
+  padding-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  line-height: 1.7;
+  scroll-margin-top: 4rem;
+}
+#faq .faq__panel ul {
+  padding-bottom: 3rem;
+}
+#faq .faq__panel ul li {
+  list-style: disc;
+  margin-left: 2rem;
+}
+#faq .faq__panel ol {
+  padding-left: 2rem;
+}
+#faq .faq__panel ol li {
+  padding-left: 1rem;
+}
+#faq .faq__panel ol h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
 #faq .faq__item {
   background-color: #fff;
   border-radius: 12px;
@@ -1094,21 +1119,6 @@ strong {
 }
 #faq .faq__item .faq__trigger.is-open .faq__chevron {
   transform: rotate(180deg);
-}
-#faq .faq__item .faq__trigger .faq__panel {
-  font-size: 1.6rem;
-  color: #6c757d;
-  padding-bottom: 1.5rem;
-  padding-left: 0.5rem;
-  line-height: 1.7;
-  scroll-margin-top: 4rem;
-}
-#faq .faq__item .faq__trigger .faq__panel ul {
-  padding-bottom: 3rem;
-}
-#faq .faq__item .faq__trigger .faq__panel ul li {
-  list-style: disc;
-  margin-left: 2rem;
 }
 #faq .faq__item .faq__trigger.is-open {
   box-shadow: 0 4px 18px rgba(252, 23, 198, 0.1);
