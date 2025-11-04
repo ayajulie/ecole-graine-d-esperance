@@ -1,6 +1,3 @@
-
-
-
 (() => {
   'use strict';
 
@@ -14,7 +11,7 @@
   on(document, 'DOMContentLoaded', () => {
 
     /* ----------------------------------------------------------------
-       NAVBAR TRANSPARENTE (optimisé: listener passif + init à T0)
+      NAVBAR TRANSPARENTE (optimisé: listener passif + init à T0)
     ---------------------------------------------------------------- */
     const navbar = $('#navbar');
     const logo = $('#logo');
@@ -30,8 +27,8 @@
     applyNavbarState(); // état initial
 
     /* ----------------------------------------------------------------
-       SMOOTH SCROLL NATIF (remplace jQuery.animate)
-       - supporte .navbar a et .btn pointant vers ancre
+      SMOOTH SCROLL NATIF (remplace jQuery.animate)
+      - supporte .navbar a et .btn pointant vers ancre
     ---------------------------------------------------------------- */
     on(document, 'click', (e) => {
       const link = e.target.closest('.navbar a[href^="#"], .btn[href^="#"]');
@@ -49,7 +46,7 @@
     });
 
     /* ----------------------------------------------------------------
-       SLIDESHOW (scope local + cache des listes)
+      SLIDESHOW (scope local + cache des listes)
     ---------------------------------------------------------------- */
     (function slideshow() {
       const slides = $$('.mySlides');
@@ -82,7 +79,7 @@
     })();
 
     /* ----------------------------------------------------------------
-       HAMBURGER / NAV MOBILE
+      HAMBURGER / NAV MOBILE
     ---------------------------------------------------------------- */
     const hamburger = $('.hamburger');
     const navMenu = $('.nav-menu');
@@ -101,16 +98,16 @@
     navLinks.forEach(a => on(a, 'click', closeMenu));
 
     /* ----------------------------------------------------------------
-       DISPLAY CARDS avec catégories + carte par défaut
-       - Clic catégorie => filtre liens + cartes et ouvre une carte par défaut
-       - Clic lien => n'affiche que la carte correspondante du groupe actif
-       - Toujours 1 carte visible à la fois
+      DISPLAY CARDS avec catégories + carte par défaut
+      - Clic catégorie => filtre liens + cartes et ouvre une carte par défaut
+      - Clic lien => n'affiche que la carte correspondante du groupe actif
+      - Toujours 1 carte visible à la fois
     ---------------------------------------------------------------- */
     /* ----------------------------------------------------------------
-       DISPLAY CARDS avec catégories + carte par défaut (robuste)
-       - Clic catégorie => filtre liens + cartes et ouvre une carte par défaut
-       - Clic lien => n'affiche que la carte correspondante du groupe actif
-       - Toujours 1 carte visible à la fois
+      DISPLAY CARDS avec catégories + carte par défaut (robuste)
+      - Clic catégorie => filtre liens + cartes et ouvre une carte par défaut
+      - Clic lien => n'affiche que la carte correspondante du groupe actif
+      - Toujours 1 carte visible à la fois
     ---------------------------------------------------------------- */
     (function cardsSwitch() {
       const tabs = Array.from(document.querySelectorAll('.group-tab'));
@@ -226,7 +223,7 @@
 
 
     /* --------------------------------------------------------------
-       ACCORDÉON – un seul ouvert + auto-scroll au début de la réponse
+      ACCORDÉON – un seul ouvert + auto-scroll au début de la réponse
     -------------------------------------------------------------- */
     (function initAccordion() {
       // Trouve un conteneur qui contient bien des triggers
@@ -341,6 +338,289 @@
       console.log('[accordion] initialisé avec auto-scroll :', { triggers: triggers.length });
     })();
 
+
+
+
+    (function initInPageOverlay() {
+      const modal = document.getElementById('myModal');
+      if (!modal) return;
+      const sourceImg = modal.querySelector('img');
+      const src = sourceImg && sourceImg.src;
+      if (!src) return;
+
+      const fallback = document.getElementById('imageFallback');
+      const fallbackOpen = fallback && fallback.querySelector('.imageFallbackOpen');
+      const fallbackClose = fallback && fallback.querySelector('.imageFallbackClose');
+
+      const ensureStyles = () => {
+        if (document.getElementById('siteImageOverlayStyles')) return;
+        const s = document.createElement('style');
+        s.id = 'siteImageOverlayStyles';
+        s.textContent = `
+          /* Overlay (in-page) */
+          #siteImageOverlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+                              z-index:2147483647; -webkit-tap-highlight-color:transparent; }
+          #siteImageOverlay .backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.75); backdrop-filter: blur(2px);
+                                       animation: overlayIn .22s ease forwards; }
+          #siteImageOverlay .panel { position:relative; z-index:2; max-width:92vw; max-height:92vh; width:auto;
+                                     border-radius:12px; box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+                                     background: transparent; display:flex; align-items:center; justify-content:center;
+                                     animation: panelPop .26s cubic-bezier(.2,.8,.2,1) forwards; }
+          /* IMPORTANT: align-items:flex-start -> évite que l'image trop haute soit centrée et coupée */
+          #siteImageOverlay .panel .content { max-height:90vh; max-width:100%; overflow:auto; -webkit-overflow-scrolling:touch;
+                                              display:flex; align-items:flex-start; justify-content:center; padding: 1rem 0.5rem; }
+          #siteImageOverlay img { display:block; max-width:100%; height:auto; user-select:none; -webkit-user-drag:none; }
+          #siteImageOverlay .close { position:absolute; top:10px; right:10px; z-index:3; background:rgba(0,0,0,0.4);
+                                     border:0; color:#fff; font-size:22px; line-height:1; padding:6px 10px; border-radius:8px;
+                                     cursor:pointer; }
+          #siteImageOverlay .close:focus { outline:2px solid rgba(255,255,255,0.14); }
+          @keyframes overlayIn { from { opacity:0 } to { opacity:1 } }
+          @keyframes overlayOut { from { opacity:1 } to { opacity:0 } }
+          @keyframes panelPop { from { opacity:0; transform:scale(.98) } to { opacity:1; transform:scale(1) } }
+        `;
+        document.head.appendChild(s);
+      };
+
+      let overlayEl = null;
+
+      const createOverlay = (imageSrc) => {
+        ensureStyles();
+        if (document.getElementById('siteImageOverlay')) return document.getElementById('siteImageOverlay');
+
+        const ov = document.createElement('div');
+        ov.id = 'siteImageOverlay';
+        ov.innerHTML = `
+          <div class="backdrop" data-role="backdrop"></div>
+          <div class="panel" role="dialog" aria-modal="true" aria-label="Image agrandie">
+            <button class="close" aria-label="Fermer la vue agrandie">×</button>
+            <div class="content">
+              <img src="${imageSrc.replace(/"/g, '&quot;')}" alt="">
+            </div>
+          </div>
+        `;
+
+        const backdrop = ov.querySelector('.backdrop');
+        const closeBtn = ov.querySelector('.close');
+        const panel = ov.querySelector('.panel');
+        const content = ov.querySelector('.content');
+        const imageNode = ov.querySelector('img');
+
+        // Close only when clicking the backdrop or close button (not when interacting with the image)
+        backdrop.addEventListener('click', closeOverlay);
+        closeBtn.addEventListener('click', (e) => { e.stopPropagation(); closeOverlay(); });
+
+        // Allow scrolling / panning inside .content on mobile without closing
+        // Do not attach click-to-close on the image so scrolling/pinch won't close.
+        // Prevent accidental backdrop click when user starts a drag from the image area:
+        let touchMoved = false;
+        imageNode.addEventListener('touchstart', () => { touchMoved = false; }, { passive: true });
+        imageNode.addEventListener('touchmove', () => { touchMoved = true; }, { passive: true });
+        imageNode.addEventListener('click', (e) => {
+          // treat taps (no movement) as no-op (image won't close). This keeps behavior consistent.
+          if (touchMoved) e.preventDefault();
+        });
+
+        // ESC to close
+        const onKey = (e) => { if (e.key === 'Escape') closeOverlay(); };
+        ov._onKey = onKey;
+
+        document.body.appendChild(ov);
+        document.body.style.overflow = 'hidden'; // lock background scroll
+        document.addEventListener('keydown', onKey, { passive: true });
+
+        // accessibility: focus the close button
+        try { closeBtn.focus(); } catch (e) { /* noop */ }
+
+        overlayEl = ov;
+        return ov;
+      };
+
+      const closeOverlay = () => {
+        const ov = overlayEl || document.getElementById('siteImageOverlay');
+        if (!ov) return;
+        const backdrop = ov.querySelector('.backdrop');
+        const panel = ov.querySelector('.panel');
+
+        // play fade-out
+        if (backdrop) backdrop.style.animation = 'overlayOut .18s ease forwards';
+        if (panel) { panel.style.transition = 'opacity .16s ease, transform .16s ease'; panel.style.opacity = '0'; panel.style.transform = 'scale(.98)'; }
+
+        setTimeout(() => {
+          try {
+            if (ov._onKey) document.removeEventListener('keydown', ov._onKey);
+            ov.remove();
+          } catch (e) { /* noop */ }
+          if (document.body) document.body.style.overflow = '';
+          overlayEl = null;
+        }, 220);
+      };
+
+      // open automatically on load (short delay)
+      setTimeout(() => {
+        createOverlay(src);
+      }, 300);
+
+      // fallback handlers: allow manual open if auto-open suppressed or removed
+      if (fallbackOpen) {
+        fallbackOpen.addEventListener('click', (e) => {
+          e.preventDefault();
+          createOverlay(src);
+          if (fallback && fallback.classList.contains('is-open')) {
+            // ferme le fallback si ouvert
+            fallback.classList.remove('is-open');
+            fallback.style.display = 'none';
+          }
+        });
+      }
+      if (fallbackClose) {
+        fallbackClose.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (fallback && fallback.classList.contains('is-open')) {
+            fallback.classList.remove('is-open');
+            fallback.style.display = 'none';
+          }
+        });
+      }
+    })();
+
+
+    /* ----------------------------------------------------------------
+      REMPLACEMENT : overlay IN-PAGE UNIQUEMENT (masque #myModal)
+      - Supprime toute logique de pop-up / window.open
+      - Affiche un overlay centré responsive avec l'image
+      - Permet scroll/pan sur mobile sans fermer l'overlay
+      - Ferme sur backdrop / bouton close / Esc
+    ---------------------------------------------------------------- */
+    (function initSiteImageOverlayOnly() {
+      const modal = document.getElementById('myModal');
+      if (!modal) return;
+      const srcImgEl = modal.querySelector('img');
+      const src = srcImgEl && srcImgEl.src;
+      if (!src) return;
+
+      // S'assure que l'élément source n'est pas visible dans la page
+      try {
+        modal.setAttribute('aria-hidden', 'true');
+        modal.style.display = 'none';
+      } catch (e) { /* noop */ }
+
+      const ensureStyles = () => {
+        if (document.getElementById('siteImageOverlayStyles')) return;
+        const s = document.createElement('style');
+        s.id = 'siteImageOverlayStyles';
+        s.textContent = `
+          /* Overlay (in-page) */
+          #siteImageOverlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+                              z-index:2147483647; -webkit-tap-highlight-color:transparent; }
+          #siteImageOverlay .backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.78); backdrop-filter: blur(3px);
+                                       animation: overlayIn .22s ease forwards; }
+          #siteImageOverlay .panel { position:relative; z-index:2; width:auto; max-width:94vw; max-height:94vh;
+                                     border-radius:10px; overflow:hidden; display:flex; align-items:center; justify-content:center;
+                                     background:transparent; box-shadow: 0 20px 40px rgba(0,0,0,0.36);
+                                     animation: panelPop .26s cubic-bezier(.2,.8,.2,1) forwards; }
+          #siteImageOverlay .panel .content { max-height:92vh; max-width:92vw; overflow:auto; -webkit-overflow-scrolling:touch;
+                                              display:flex; align-items:center; justify-content:center; padding: 0.75rem; }
+          #siteImageOverlay img { display:block; max-width:100%; height:auto; user-select:none; -webkit-user-drag:none; }
+          #siteImageOverlay .close { position:absolute; top:10px; right:10px; z-index:3; background:rgba(0,0,0,0.45);
+                                     border:0; color:#fff; font-size:22px; line-height:1; padding:6px 10px; border-radius:8px;
+                                     cursor:pointer; }
+          #siteImageOverlay .close:focus { outline:2px solid rgba(255,255,255,0.14); }
+          @keyframes overlayIn { from { opacity:0 } to { opacity:1 } }
+          @keyframes overlayOut { from { opacity:1 } to { opacity:0 } }
+          @keyframes panelPop { from { opacity:0; transform:scale(.98) } to { opacity:1; transform:scale(1) } }
+
+          /* Mobile tweaks: allow image to take most of height and be scrollable */
+          @media (max-width: 720px) {
+            #siteImageOverlay .panel { max-width:98vw; max-height:98vh; border-radius:6px; }
+            #siteImageOverlay .panel .content { padding: 0.5rem; }
+          }
+        `;
+        document.head.appendChild(s);
+      };
+
+      let overlayEl = null;
+
+      const createOverlay = (imageSrc) => {
+        ensureStyles();
+        if (document.getElementById('siteImageOverlay')) return document.getElementById('siteImageOverlay');
+
+        const ov = document.createElement('div');
+        ov.id = 'siteImageOverlay';
+        ov.innerHTML = `
+          <div class="backdrop" data-role="backdrop" aria-hidden="true"></div>
+          <div class="panel" role="dialog" aria-modal="true" aria-label="Image agrandie">
+            <button class="close" aria-label="Fermer la vue agrandie">×</button>
+            <div class="content">
+              <img src="${imageSrc.replace(/"/g, '&quot;')}" alt="">
+            </div>
+          </div>
+        `;
+
+        const backdrop = ov.querySelector('.backdrop');
+        const closeBtn = ov.querySelector('.close');
+        const panel = ov.querySelector('.panel');
+        const content = ov.querySelector('.content');
+        const imageNode = ov.querySelector('img');
+
+        // Clic sur le backdrop ferme
+        backdrop.addEventListener('click', closeOverlay);
+        // Clic sur la croix ferme
+        closeBtn.addEventListener('click', (e) => { e.stopPropagation(); closeOverlay(); });
+
+        // Ne PAS fermer au clic sur l'image - pour permettre le scroll/pinch/zoom.
+        // Pour éviter fermeture accidentelle quand l'utilisateur glisse, on n'attache pas click-close sur l'image.
+        // Mais si tu veux fermer au simple tap, on peut l'ajouter conditionnellement.
+        // Configuration: touches -> si movement important, ne pas traiter comme tap.
+        let touchMoved = false;
+        imageNode.addEventListener('touchstart', () => { touchMoved = false; }, { passive: true });
+        imageNode.addEventListener('touchmove', () => { touchMoved = true; }, { passive: true });
+        imageNode.addEventListener('click', (e) => {
+          // aucun comportement de fermeture ici : on garde l'image interactive
+          if (touchMoved) e.preventDefault();
+        });
+
+        // ESC pour fermer
+        const onKey = (e) => { if (e.key === 'Escape') closeOverlay(); };
+        ov._onKey = onKey;
+
+        document.body.appendChild(ov);
+        // verrouille le scroll page en arrière-plan
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', onKey, { passive: true });
+
+        // accessibilité : focus sur close
+        try { closeBtn.focus(); } catch (e) { /* noop */ }
+
+        overlayEl = ov;
+        return ov;
+      };
+
+      const closeOverlay = () => {
+        const ov = overlayEl || document.getElementById('siteImageOverlay');
+        if (!ov) return;
+        const backdrop = ov.querySelector('.backdrop');
+        const panel = ov.querySelector('.panel');
+
+        // animation out
+        if (backdrop) backdrop.style.animation = 'overlayOut .18s ease forwards';
+        if (panel) { panel.style.transition = 'opacity .16s ease, transform .16s ease'; panel.style.opacity = '0'; panel.style.transform = 'scale(.98)'; }
+
+        setTimeout(() => {
+          try {
+            if (ov._onKey) document.removeEventListener('keydown', ov._onKey);
+            ov.remove();
+          } catch (e) { /* noop */ }
+          if (document.body) document.body.style.overflow = '';
+          overlayEl = null;
+        }, 220);
+      };
+
+      // ouverture automatique (court délai)
+      setTimeout(() => {
+        createOverlay(src);
+      }, 300);
+
+    })();
 
   });
 })();
